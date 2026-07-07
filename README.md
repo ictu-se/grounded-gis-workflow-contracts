@@ -12,7 +12,7 @@ The artifact is scoped only to this manuscript. It includes the workflow-contrac
 - `experiments/08_workflow_contract_execution/`: deterministic execution, role-default repair, synthetic-profile execution, and mutation-based negative controls.
 - `data/synthetic/workflow_contract_profile_v1/`: redistributable synthetic GIS profile used for cross-dataset execution checks.
 - `manuscript/gsis_latex/`: LaTeX source, figures, tables, PDF, and clean submission ZIP.
-- `release/`: citation and Zenodo release metadata.
+- `release/`: citation metadata for the GitHub artifact.
 
 ## Reproduction
 
