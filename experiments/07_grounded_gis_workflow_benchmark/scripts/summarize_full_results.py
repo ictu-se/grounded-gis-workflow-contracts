@@ -81,7 +81,7 @@ def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
     if not rows:
         return
     with path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

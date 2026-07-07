@@ -220,7 +220,7 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     for path, data in [(out_dir / "workflow_task_scores.csv", rows), (out_dir / "workflow_summary.csv", summary)]:
         with path.open("w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=list(data[0].keys()))
+            writer = csv.DictWriter(f, fieldnames=list(data[0].keys()), lineterminator="\n")
             writer.writeheader()
             writer.writerows(data)
         print(f"Wrote {path.relative_to(ROOT)}")

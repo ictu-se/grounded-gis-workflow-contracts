@@ -25,7 +25,7 @@ def write_csv(rows: list[dict[str, str]]) -> None:
     if not rows:
         return
     with OUT_CSV.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -52,4 +52,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
