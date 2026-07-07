@@ -1,0 +1,34 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg",
+    "field": "temp_mean",
+    "classes": [1, 2, 3],
+    "scheme": "quantiles",
+    "cmap": "viridis",
+    "title": "Combined Heat, Flood Exposure, and School Availability Risk",
+    "legend_title": "Temperature (°C)",
+    "source_note": "Data from temperature_raster.tif"
+  },
+  "params": {
+    "target_epsg": "EPSG:4326",
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This map will show the combined heat, flood exposure, and school availability risk for each tract in the zonal_input_for_map.gpkg dataset. The temperature data is used to create a choropleth map based on the specified classes and scheme. The flood zones are overlayed with the temperature map to highlight areas at higher risk of flooding. The school points are also included to indicate the presence of schools in each tract. The resulting map will provide a comprehensive overview of the combined risks for each tract."
+}
+```

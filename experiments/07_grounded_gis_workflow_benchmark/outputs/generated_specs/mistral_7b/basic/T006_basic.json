@@ -1,0 +1,33 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "base_layer": {
+      "filename": "los_angeles_county_census_tracts.shp"
+    },
+    "overlayer": {
+      "filename": "flood_zones.shp"
+    }
+  },
+  "params": {},
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      {
+        "name": "tract_id",
+        "type": "integer"
+      }
+    ],
+    "geometry": [
+      "polygon"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Intersecting Los Angeles County census tracts with flood zones to identify areas within flood zones."
+}

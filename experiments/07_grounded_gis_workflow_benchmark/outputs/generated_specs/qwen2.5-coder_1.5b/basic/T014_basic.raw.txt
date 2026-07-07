@@ -1,0 +1,21 @@
+```json
+{
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "school_data": "path_to_school_data.shp", // Replace with the actual path to your school data shapefile
+    "tract_data": "path_to_tracts.shp" // Replace with the actual path to your tract data shapefile
+  },
+  "params": {
+    "join_field": "tract_id",
+    "school_count_field": "school_count"
+  },
+  "output": {
+    "filename": "T014_tracts_with_schools.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count"]
+  },
+  "validation": {},
+  "rationale": "This task involves joining school data with tract data to create a new layer that includes only tracts with at least one school. The output is saved as T014_tracts_with_schools.gpkg, and it contains the 'tract_id' and 'school_count' fields."
+}
+```

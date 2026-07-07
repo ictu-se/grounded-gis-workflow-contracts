@@ -1,0 +1,26 @@
+{
+  "task_id": "T028",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "flood_zones"
+  },
+  "params": {
+    "stats": ["percent_covered"],
+    "column_prefix": "flood_exposure_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T028_flood_exposure_zonal_statistics.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "flood_exposure_percent_covered"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate flood exposure area for each census tract and export as a vector file with appropriate fields."
+}

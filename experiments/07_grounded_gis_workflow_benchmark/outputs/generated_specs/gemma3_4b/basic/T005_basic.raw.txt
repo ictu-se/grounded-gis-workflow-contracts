@@ -1,0 +1,45 @@
+```json
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "input_features": "hospitals",
+    "buffer_distance": 1000,
+    "buffer_units": "meters"
+  },
+  "params": {
+    "output_filename": "T005_buffer_hospitals_area.gpkg",
+    "projected_crs": "EPSG:3857",
+    "calculate_area": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [
+      {
+        "field": "name",
+        "type": "string"
+      },
+      {
+        "field": "area_m2",
+        "type": "double"
+      }
+    ],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates 1km buffers around hospitals, clips to Los Angeles County, and calculates the area of each buffer in meters."
+}
+```

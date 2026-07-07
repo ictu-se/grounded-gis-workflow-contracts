@@ -1,0 +1,23 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals_layer": "path_to_hospitals_layer.shp",
+    "los_angeles_county_layer": "path_to_los_angeles_county_layer.shp"
+  },
+  "params": {
+    "buffer_distance": "1000 meters",
+    "projected_crs": "EPSG:32633"  // UTM zone 33N for Los Angeles County
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": ["name", "area_m2"]
+  },
+  "validation": {
+    "crs": ["EPSG:32633"],
+    "schema": ["Polygon"],
+    "geometry": ["within_los_angeles_county"]
+  },
+  "rationale": "Create 1 km hospital buffers, clip to Los Angeles County, compute area_m2 for each clipped buffer in a projected CRS, and save T005_buffer_hospitals_area.gpkg."
+}

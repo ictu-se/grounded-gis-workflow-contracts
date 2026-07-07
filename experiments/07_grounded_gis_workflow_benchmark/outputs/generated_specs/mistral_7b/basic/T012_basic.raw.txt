@@ -1,0 +1,27 @@
+ {
+  "task_id": "T012",
+  "operation": "point_count_join",
+  "inputs": {
+    "tract_polygons": "tract_polygons.gpkg",
+    "hospitals": "hospitals.shp"
+  },
+  "params": {
+    "join_field_tract": "tract_id",
+    "count_field_hospital": "hospital_id"
+  },
+  "output": {
+    "filename": "T012_hospital_count_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [
+      {"name": "tract_id", "type": "integer"},
+      {"name": "hospital_count", "type": "integer"}
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Count the number of hospitals within each census tract polygon and save the results as a new vector file."
+}

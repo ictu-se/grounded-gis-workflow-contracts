@@ -1,0 +1,28 @@
+{
+  "task_id": "T020",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T020_temperature_clip_metadata.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "raster": [
+      {
+        "min": -9998,
+        "max": 10
+      }
+    ]
+  },
+  "rationale": "Clipping the temperature raster to study boundary ensures that we are only considering data within our study area."
+}

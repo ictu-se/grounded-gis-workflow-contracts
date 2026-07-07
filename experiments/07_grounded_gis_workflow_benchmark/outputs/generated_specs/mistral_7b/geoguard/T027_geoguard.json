@@ -1,0 +1,42 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "school_count",
+    "classes": [
+      "Very Low",
+      "Low",
+      "Medium",
+      "High",
+      "Very High"
+    ],
+    "scheme": "quantile",
+    "cmap": "YlOrRd",
+    "title": "School Density by Census Tract",
+    "legend_title": "School Count per Tract",
+    "source_note": "Data from hospital_points, census_tracts, and school_points"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "clear legend",
+      "title",
+      "classification scheme",
+      "sequential color ramp",
+      "readable borders",
+      "source note"
+    ]
+  },
+  "rationale": "Creates a choropleth map of school density by census tract with a clear legend and title."
+}

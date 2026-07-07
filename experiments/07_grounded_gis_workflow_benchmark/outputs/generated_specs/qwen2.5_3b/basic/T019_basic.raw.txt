@@ -1,0 +1,29 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "input_raster": "temperature raster",  # Placeholder for actual input raster name
+    "output_filename": "T019_temperature_clip_compressed.tif",
+    "output_crs": "-122.6718,36.7749,-115.5861,43.0737",  # Example bounding box for Los Angeles County
+    "resolution": null,
+    "extent_mode": "user_defined",
+    "compression": "DEFLATE"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "extent_mode",
+      "compression"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County and save it as a compressed GeoTIFF."
+}

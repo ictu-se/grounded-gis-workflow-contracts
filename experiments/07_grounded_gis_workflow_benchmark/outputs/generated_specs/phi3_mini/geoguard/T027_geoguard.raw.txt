@@ -1,0 +1,30 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "school_points": "school_points.gpkg",
+    "zonal_input_for_map": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "land_area_m2/population (calculated from school points and census tracts)",
+    "classes": [0,1,5], // Assuming these represent density classes for illustration purposes
+    "scheme": ["Reds", "#FF3300","#CC6600"], // Sequential color ramp with dark to light red indicating low to high school density
+    "title": "School Density by Census Tract in District XYZ",
+    "legend_title": "Density Classes (per 1,000 people)",
+    "cmap": "Reds", // Color map for visual representation of densities
+    "source_note": "Data represents the number of schools per square kilometer in each census tract"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": ["tract_id"] // Assuming this field is required for the choropleth map to be meaningful and informative
+  },
+  "validation": {
+    "crs": [EPSG:4269], // Required CRS alignment of input layers before processing
+    "schema": ["school_points", "zonal_input_for_map"], // Input layer validation for required fields and types
+    "geometry": [], // Validation on geometry to ensure no invalid geometries are present post-processing steps like buffering or dissolving
+    "raster": [] // No raster output needed, but masks may be involved in processing if not already aligned with the CRS of zonal_input_for_map layer
+    "map_quality": ["required fields preserved", "valid geometries after repair"]
+  },
+  "rationale": "To visualize school density across census tracts, a choropleth map will be created using population data from the provided layers. The output must have clear legends and titles for interpretability."
+}

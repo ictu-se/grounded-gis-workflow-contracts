@@ -1,0 +1,23 @@
+ {
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "vector_layer": "hospitals",
+    "distance": 2500,
+    "unit": "meter",
+    "county_boundary": "county_boundary"
+  },
+  "params": {},
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the input data is in WGS84 (EPSG:4326)
+    "schema": [],
+    "geometry": ["polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates a buffer around hospitals with a radius of 2500 meters, clipped to the county boundary and saved as T002_buffer_hospitals_2500m.gpkg"
+}

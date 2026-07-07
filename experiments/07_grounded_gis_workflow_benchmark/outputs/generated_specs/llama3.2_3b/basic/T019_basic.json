@@ -1,0 +1,15 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "clip": "Los Angeles County"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  }
+}

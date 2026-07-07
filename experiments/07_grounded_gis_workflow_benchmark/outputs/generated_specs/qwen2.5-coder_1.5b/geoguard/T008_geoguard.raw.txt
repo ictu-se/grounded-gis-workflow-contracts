@@ -1,0 +1,28 @@
+```json
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts.gpkg",
+    "input_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "EPSG:3857",
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T008_sfha_overlay.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "sfha_tf"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["buffer(0)"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To intersect census tracts with flood zones and preserve the tract_id and sfha_tf fields, we use the overlay_intersection operation. The inputs are census_tracts.gpkg and flood_zones.gpkg, which are both in EPSG:4326. We specify the target_epsg as EPSG:3857 to ensure the output is projected correctly. We aggregate by tract_id and calculate the land_area_m2 field for each intersection. The output is saved as T008_sfha_overlay.gpkg, which contains the intersected tracts with their corresponding sfha_tf values."
+}
+```

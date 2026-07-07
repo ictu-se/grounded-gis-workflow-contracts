@@ -1,0 +1,24 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "tracts_layer": "Los Angeles County census tracts",
+    "flood_zones_layer": "flood zones"
+  },
+  "params": {},
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersect Los Angeles County census tracts with flood zones to identify areas at risk and save the result as a GeoPackage."
+}

@@ -1,0 +1,27 @@
+```json
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -999
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326", "EPSG:3857"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "The task requires clipping the temperature raster to the Los Angeles County study boundary, which involves reprojecting the mask and raster to ensure they are aligned and then applying a clip operation. The output is a raster file with the clipped data."
+}
+```

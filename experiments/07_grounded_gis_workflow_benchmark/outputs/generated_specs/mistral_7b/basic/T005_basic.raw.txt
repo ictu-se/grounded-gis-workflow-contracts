@@ -1,0 +1,27 @@
+ {
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "vector_layer": "hospitals",
+    "distance": "1000",
+    "dissolve": true,
+    "geometry_column": "geom"
+  },
+  "params": {
+    "clip_polygon": "LA_County_boundary",
+    "crs": "EPSG:4326",
+    "output_crs": "EPSG:3857"
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326", "EPSG:3857"],
+    "schema": [{"name": "name", "type": "string"}, {"name": "area_m2", "type": "double"}],
+    "geometry": ["polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates 1 km hospital buffers, clips to Los Angeles County, computes area in square meters for each clipped buffer, and saves the result as a projected GeoPackage file."
+}

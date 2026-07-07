@@ -1,0 +1,22 @@
+ {
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "T017_temperature.tif"
+  },
+  "params": {
+    "clipper": "county_boundary"
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the county boundary is in EPSG:4326 (WGS84)
+    "schema": [],
+    "geometry": [],
+    "raster": ["FLOAT32", "INT16", "INT32", "INT8"], // Common raster data types
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the county boundary, preserving nodata handling."
+}

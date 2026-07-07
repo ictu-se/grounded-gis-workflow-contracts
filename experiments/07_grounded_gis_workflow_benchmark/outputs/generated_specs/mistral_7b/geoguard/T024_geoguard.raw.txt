@@ -1,0 +1,76 @@
+ {
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T024_temperature.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate mean temperature for each tract using zonal statistics."
+},
+{
+  "task_id": "T024",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "zonal_input_for_map",
+    "join": "school_points"
+  },
+  "params": {
+    "target_epsg": 3857,
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T024_school_count.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [3857],
+    "schema": [],
+    "geometry": ["Point"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Join school points with tract data to get school count for each tract."
+},
+{
+  "task_id": "T024",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "T024_temperature.gpkg",
+    "input_b": "T024_school_count.gpkg"
+  },
+  "params": {
+    "target_epsg": 3857,
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [3857],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Combine temperature and school count data for each tract."
+}

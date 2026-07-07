@@ -1,0 +1,37 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "count_schools",
+    "classes": 5,
+    "scheme": "Sequential",
+    "cmap": "Blues",
+    "title": "School Density by Census Tract",
+    "legend_title": "Number of Schools",
+    "source_note": "Data from school_points.gpkg"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": [
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "count_schools"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This operation creates a choropleth map of school density by census tract, ensuring the required fields are preserved and the output is in the correct format."
+}

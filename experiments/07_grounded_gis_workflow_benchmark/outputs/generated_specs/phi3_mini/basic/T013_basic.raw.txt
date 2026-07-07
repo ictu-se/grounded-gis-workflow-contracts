@@ -1,0 +1,26 @@
+```json
+{
+  "task_id": "T013",
+  "operation": "point_count_join",
+  "inputs": {
+    "vector_file": "schools.gpkg",
+    "census_tracts.gpkg"
+  },
+  "params": {
+    "output_filename": "T013_school_density_by_tract.gpkg",
+    "field_to_count": ["id"],
+    "fields_from_vector": ["geometry"]
+  },
+  "output": {
+    "filename": "T013_school_density_by endpoints.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [4326], // Assuming the census tracts are in WGS84 coordinate system, which is common for GIS data; this should be verified with actual dataset specifications.
+    "schema": [],
+    "geometry": ["Point"],
+    "raster": []
+  },
+  "rationale": "To calculate and save the number of schools per square kilometer in each census tract, which is essential for understanding educational resource distribution."
+}
+```

@@ -1,0 +1,30 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000, // Buffer distance in meters (approximately equivalent to 1 km)
+    "target_epsg": 4269, // Los Angeles County CRS for accurate area calculation
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4269"], // Los Angeles County CRS for accurate area calculation
+    "schema": [],
+    "geometry": ["Point", "MultiPolygon"],
+    "raster": []
+  },
+  "map_quality": [
+    "Use a buffer distance of approximately 1 km to create buffers around hospitals.",
+    "Clip the buffers using Los Angeles County boundary for accurate area calculation in square meters."
+  ],
+  "rationale": "To analyze hospital accessibility within Los Angeles County, we need precise measurements. Therefore, a buffer service operation is performed with a distance of approximately 1 km around each hospital point to create potential catchment areas.",
+    "The buffers are then clipped using the county boundary and transformed into an accurate CRS (EPSG:4269) for area calculation."
+  }
+}

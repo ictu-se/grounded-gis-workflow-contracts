@@ -1,0 +1,37 @@
+{
+  "task_id": "T027",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts.gpkg",
+    "join": "school_points.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "within"
+  },
+  "output": {
+    "filename": "census_tracts_with_school_density.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "school_count"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "buffer(0)"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "First, we need to count the number of schools within each census tract."
+}

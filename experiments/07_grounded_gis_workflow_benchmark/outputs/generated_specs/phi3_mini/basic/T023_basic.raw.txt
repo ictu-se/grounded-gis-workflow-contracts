@@ -1,0 +1,20 @@
+```json
+{
+  "task_id": "T023",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "output": {
+      "filename": "T023_temperature_stats_hot_tracts.gpkg"
+    },
+    "validation": {
+      "crs": ["EPSG:4326"], // Assuming the input data is in WGS84 coordinate system, but this should be verified and adjusted if necessary
+      "schema": [],
+      "geometry": ["Polygon", "Point"], // Expecting geometry types for zonal statistics calculations
+      "raster": []
+    },
+    "map_quality": [10] // Assuming a map quality of 10, but this should be adjusted based on the actual data resolution and accuracy requirements
+  },
+  "rationale": "The task is to compute zonal statistics for temperature within tracts. The hottest quartile by mean temperature will help identify areas with extreme heat conditions."
+}
+```

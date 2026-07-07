@@ -1,0 +1,27 @@
+ {
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "vector_layer": "tracts",
+    "raster_layer": "temp_mean",
+    "categorical_layer": "schools",
+    "area_layer": "flood_areas"
+  },
+  "params": {
+    "stats_type": "mean",
+    "field_to_statistics": ["temp_mean", "count", "sum"],
+    "categorized_field": "school_id",
+    "area_field": "area_m2"
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [["tract_id", "integer"], ["temp_mean", "real"], ["school_count", "integer"], ["flood_area_m2", "real"]],
+    "geometry": ["polygon"],
+    "raster": []
+  },
+  "rationale": "Calculate mean temperature, count of schools, and total flood area for each tract."
+}

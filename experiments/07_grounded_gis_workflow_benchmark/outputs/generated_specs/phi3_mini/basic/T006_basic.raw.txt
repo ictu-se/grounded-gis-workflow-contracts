@@ -1,0 +1,23 @@
+```json
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "census_tracts": "Los Angeles County census tract data shapefile path or URL",
+    "flood_zones": "Flood zone map shapefile path or GeoJSON object"
+  },
+  "params": {},
+  "output": {
+    "filename": "T0 end6_flood_tract_overlay.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id"]
+  },
+  "validation": {
+    "crs": [4326], // Assuming the census tract data is in WGS84 coordinate reference system, but this should be verified and adjusted if necessary.
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": []
+  },
+  "rationale": "To identify which areas of Los Angeles County are within flood zones for disaster preparedness planning."
+}
+```

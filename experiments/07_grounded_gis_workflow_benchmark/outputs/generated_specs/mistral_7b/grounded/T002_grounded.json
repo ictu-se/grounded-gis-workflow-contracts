@@ -1,0 +1,28 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 4326,
+    "dissolve": true
+  },
+  "clip_boundary": "census_tracts",
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      4326
+    ],
+    "geometry": [
+      "Point"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates a buffer around each hospital point with a radius of 2500 meters, clips the resulting polygons to the county boundary, and saves the output as T002_buffer_hospitals_2500m.gpkg"
+}

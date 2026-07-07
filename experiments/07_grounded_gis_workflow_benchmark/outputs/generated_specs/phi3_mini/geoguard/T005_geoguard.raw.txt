@@ -1,0 +1,24 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000, // Converted to meters for a 1 km buffer in the projected CRS (EPSG:3857)
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:3857"], // Required for metric buffers and area calculations
+    "schema": [],
+    "geometry": [["Polygon"]],
+    "raster": []
+  },
+  "rationale": "To create a buffer around hospitals within Los Angeles County, convert the CRS to EPSG:3857 for accurate metric buffers and area calculations."
+}

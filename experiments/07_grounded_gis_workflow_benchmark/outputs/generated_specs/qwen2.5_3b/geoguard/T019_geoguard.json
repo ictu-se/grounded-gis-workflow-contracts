@@ -1,0 +1,34 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "align_mask_to_raster_crs": false,
+    "nodata": null,
+    "mask": "study_boundary.gpkg"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {
+        "name": "nodata_value",
+        "value": null
+      },
+      {
+        "name": "projection",
+        "value": "EPSG:3857"
+      }
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County and ensure the output is in EPSG:3857 projection for compression."
+}

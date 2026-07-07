@@ -1,0 +1,52 @@
+{
+  "task_id": "T013",
+  "operation": "point_count_join",
+  "inputs": {
+    "schools_layer": {
+      "type": "vector",
+      "description": "Layer containing school points"
+    },
+    "census_tracts_layer": {
+      "type": "vector",
+      "description": "Layer containing census tracts with land area information"
+    }
+  },
+  "params": {
+    "join_field": "tract_id",
+    "count_field": "school_count",
+    "density_field": "schools_per_km2",
+    "area_field": "land_area"
+  },
+  "output": {
+    "filename": "T013_school_density_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "school_count",
+      "schools_per_km2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      {
+        "name": "tract_id",
+        "type": "string"
+      },
+      {
+        "name": "school_count",
+        "type": "integer"
+      },
+      {
+        "name": "schools_per_km2",
+        "type": "float"
+      }
+    ],
+    "geometry": [
+      "Polygon"
+    ]
+  },
+  "rationale": "Count schools per census tract and compute density based on land area to generate a new geopackage file."
+}

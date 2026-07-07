@@ -1,0 +1,30 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary",
+    "distance_m": 1000
+  },
+  "params": {
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      3857
+    ],
+    "schema": [
+      "name",
+      "area_m2"
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates 1km hospital buffers, clips to Los Angeles County in a projected CRS, and computes area_m2 for each clipped buffer."
+}

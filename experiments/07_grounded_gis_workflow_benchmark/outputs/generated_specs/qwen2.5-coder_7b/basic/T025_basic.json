@@ -1,0 +1,42 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "temperature_layer": "path_to_temperature_layer.gpkg",
+    "school_layer": "path_to_school_layer.shp",
+    "flood_layer": "path_to_flood_layer.tif"
+  },
+  "params": {
+    "statistics_type": [
+      "mean"
+    ],
+    "output_format": "gpkg"
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves calculating the mean temperature, counting schools, and summing flood areas within each tract. The output will be a geopackage file with the specified fields."
+}

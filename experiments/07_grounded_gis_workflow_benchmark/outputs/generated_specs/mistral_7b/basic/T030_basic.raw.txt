@@ -1,0 +1,31 @@
+ {
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "tracts",
+    "heat_data": "heat_data_layer",
+    "flood_exposure_data": "flood_exposure_layer",
+    "school_availability_data": "school_availability_layer"
+  },
+  "params": {
+    "palette": ["#ffffb2", "#feebd7", "#fd8d3c", "#f03b20", "#bd0026"], // Heatmap color palette (darker colors represent higher risk)
+    "transparency": 0.8,
+    "legend_position": "bottom-left",
+    "legend_title": "Combined Risk Score",
+    "legend_labels": ["Low", "Medium", "High"],
+    "dissolve": true,
+    "buffer_size": 0 // No buffer around polygons
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Use WGS84 for global maps
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["high"]
+  },
+  "rationale": "The map combines three risk factors (heat, flood exposure, and school availability) at the tract level to provide a comprehensive view of multivariate risk. The heat data layer represents high temperatures, the flood exposure data layer indicates areas prone to flooding, and the school availability data layer shows areas with limited access to schools. By overlaying these layers, we can identify areas that are both hot (high temperature), flood-prone, and have limited school availability."
+}

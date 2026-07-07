@@ -1,0 +1,29 @@
+ {
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": {
+      "school_points": "school_id",
+      "hospital_points": "source_id"
+    }
+  },
+  "params": {
+    "target_epsg": "4269",
+    "group_field": "tract_id",
+    "count_field": ["school_count", "hospital_count"],
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Join the school and hospital points to census tracts based on intersection, counting the number of schools and hospitals for each tract."
+}

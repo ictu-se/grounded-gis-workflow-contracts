@@ -1,0 +1,34 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "point_layer": "hospitals",
+    "study_boundary": "Los Angeles County boundary"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "output_crs": "EPSG:4326"
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "geometry": [
+      "within_study_boundary"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create buffer areas around hospital points in Los Angeles County and clip to the study boundary."
+}

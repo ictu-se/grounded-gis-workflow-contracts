@@ -1,0 +1,22 @@
+{
+  "task_id": "T012",
+  "operation": "point_count_join",
+  "inputs": {
+    "tracts": {"type": "vector", "filename": "census_tracts.gpkg"},
+    "hospitals": {"type": "vector", "filename": "hospitals.shp"}
+  },
+  "params": {},
+  "output": {
+    "filename": "T012_hospital_count_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "hospital_count"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Count the number of hospitals within each census tract and output the result as a GeoPackage with the required fields."
+}

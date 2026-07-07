@@ -1,0 +1,24 @@
+ {
+  "task_id": "T009",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "flood_zones": "path/to/flood_zones.shp",
+    "tracts": "path/to/tracts.shp"
+  },
+  "params": {},
+  "output": {
+    "filename": "T009_flood_summary_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [
+      {"name": "tract_id", "type": "string"},
+      {"name": "flood_area_m2", "type": "number"}
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersect flood zones and tracts, aggregate flood area by tract_id, and save the result as T009_flood_summary_by_tract.gpkg"
+}

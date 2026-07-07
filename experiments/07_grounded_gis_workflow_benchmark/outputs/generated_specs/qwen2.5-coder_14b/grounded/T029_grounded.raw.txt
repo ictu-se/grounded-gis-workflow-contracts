@@ -1,0 +1,29 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "hospital_count",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "Blues",
+    "title": "Hospital Count per Census Tract",
+    "legend_title": "Number of Hospitals",
+    "source_note": "Data source: Various local and state health departments"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": [],
+    "map_quality": ["readable borders", "clear legend"]
+  },
+  "rationale": "This task involves creating a choropleth map to visualize the distribution of hospitals across census tracts. The zonal_input_for_map.gpkg file already contains the necessary data with hospital counts per tract, which will be used as the input layer for the choropleth export operation."
+}

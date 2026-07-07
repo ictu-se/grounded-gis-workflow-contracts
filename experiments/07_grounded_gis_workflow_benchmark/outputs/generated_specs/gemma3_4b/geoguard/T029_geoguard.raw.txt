@@ -1,0 +1,35 @@
+```json
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "Quantile",
+    "cmap": "Viridis",
+    "title": "Hospital Count per Census Tract (Mean Temperature)",
+    "legend_title": "Temperature Mean",
+    "source_note": "Data source: census_tracts.gpkg, temperature_raster.tif"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "temperature_raster.tif"
+    ],
+    "map_quality": []
+  },
+  "rationale": "This task requires creating a choropleth map showing hospital count based on mean temperature per census tract. The zonal input layer provides the necessary data, and the choropleth_export operation will generate the PNG image with specified parameters."
+}
+```

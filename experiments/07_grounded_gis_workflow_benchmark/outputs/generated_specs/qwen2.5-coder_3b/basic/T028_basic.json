@@ -1,0 +1,20 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "flood_exposure_data.csv",
+    "census_tract_column": "census_tract_id",
+    "value_column": "flood_exposure_percentage"
+  },
+  "params": {
+    "color_ramp": "sequential",
+    "min_value": 0,
+    "max_value": 100
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png"
+  },
+  "validation": {},
+  "rationale": "Creates a choropleth map of flood exposure areas by census tract using a sequential color ramp."
+}

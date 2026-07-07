@@ -1,0 +1,19 @@
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts.gpkg",
+    "join": "school_points.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "1=1"
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count", "hospital_count"]
+  }
+}

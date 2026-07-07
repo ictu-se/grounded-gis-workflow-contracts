@@ -1,0 +1,24 @@
+ {
+  "task_id": "T007",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts",
+    "input_b": "flood_zones"
+  },
+  "params": {
+    "target_epsg": 3857,
+    "area_field": "flood_area_m2"
+  },
+  "output": {
+    "filename": "T007_flood_tract_overlay_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [3857],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersecting census tracts and flood zones to create a flood exposure overlay, computing the flood area in a metric CRS."
+}

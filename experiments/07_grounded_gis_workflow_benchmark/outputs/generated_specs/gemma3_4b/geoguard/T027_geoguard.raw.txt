@@ -1,0 +1,33 @@
+```json
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "Quantile",
+    "cmap": "Viridis",
+    "title": "School Density by Census Tract",
+    "legend_title": "Density (Schools per Square Meter)",
+    "source_note": "Data from zonal_input_for_map"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task requires creating a choropleth map of school density by census tract. The input layer is zonal_input_for_map, which contains temperature data and census tract information. We will use the temp_mean field to calculate school density and create a choropleth map with a quantile classification scheme."
+}
+```

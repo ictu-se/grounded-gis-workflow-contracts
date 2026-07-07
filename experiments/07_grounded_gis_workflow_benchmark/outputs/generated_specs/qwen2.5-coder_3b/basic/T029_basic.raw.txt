@@ -1,0 +1,27 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "census_tract_hospital_data.csv",
+    "geography_file": "census_tract_boundaries.shp"
+  },
+  "params": {
+    "title": "Hospital Count per Census Tract",
+    "legend_title": "Number of Hospitals",
+    "color_scheme": "sequential",
+    "min_value": 0,
+    "max_value": 100
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves creating a choropleth map to visualize hospital counts per census tract. The output is a PNG file with a title, legend, readable borders, and source note."
+}

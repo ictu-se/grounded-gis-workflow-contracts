@@ -1,0 +1,28 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "flood_exposure_data.geojson",
+    "census_tract_boundaries": "census_tracts.geojson"
+  },
+  "params": {
+    "color_ramp": "sequential",
+    "legend_title": "Flood Exposure Level",
+    "value_field": "exposure_index",
+    "title": "Choropleth Map of Flood Exposure by Census Tract",
+    "dpi": 300
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": ["high"]
+  },
+  "rationale": "Create a high-quality choropleth map to visualize flood exposure levels across different census tracts using a sequential color ramp for better interpretation."
+}

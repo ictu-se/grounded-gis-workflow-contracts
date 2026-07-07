@@ -1,0 +1,43 @@
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": {
+      "file": "census_tracts.gpkg",
+      "type": "vector",
+      "crs": "EPSG:4269"
+    },
+    "raster": {
+      "file": "temperature_raster.tif",
+      "type": "raster",
+      "crs": "EPSG:4326"
+    }
+  },
+  "params": {
+    "stats": [
+      "mean",
+      "sum"
+    ],
+    "column_prefix": "",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To compute the mean temperature and school count for each tract, we use zonal statistics on the census tracts layer with the temperature raster. The output is a combined tract layer named T024_temperature_school_join.gpkg that includes the tract ID, mean temperature, and school count."
+}

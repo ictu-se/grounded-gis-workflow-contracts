@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Generated GIS artifacts are reproducible but too large/noisy for Git.
+experiments/08_workflow_contract_execution/outputs/artifacts/
+
+# LaTeX build intermediates.
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out

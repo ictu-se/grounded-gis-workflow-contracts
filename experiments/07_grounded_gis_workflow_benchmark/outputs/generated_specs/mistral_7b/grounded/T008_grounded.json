@@ -1,0 +1,25 @@
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts",
+    "input_b": "flood_zones"
+  },
+  "params": {
+    "target_epsg": "4269"
+  },
+  "output": {
+    "filename": "T008_sfha_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersecting census tracts with flood zones to identify areas within flood zones and preserve the tract_id and sfha_tf fields."
+}

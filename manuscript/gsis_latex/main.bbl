@@ -1,0 +1,207 @@
+\begin{thebibliography}{39}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\normalfont{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[Anselin(1995)]{Anselin_1995}
+Anselin, Luc. 1995. ``Local indicators of spatial association--{LISA}.''
+  \emph{Geographical Analysis} 27 (2): 93--115.
+
+\bibitem[Camelli et~al.(2012)]{Camelli_2012_SeamlessSurfaces}
+Camelli, Fernando, Jyh-Ming Lien, Dayong Shen, David~W. Wong, Matthew Rice,
+  Rainald L{\"o}hner, and Chaowei Yang. 2012. ``Generating Seamless Surfaces
+  for Transport and Dispersion Modeling in GIS.'' \emph{GeoInformatica} 16:
+  307--327.
+
+\bibitem[Du et~al.(2024)]{Du_2024}
+Du, Xueying, Mingwei Liu, Kaixin Wang, Hanlin Wang, Junwei Liu, Yixuan Chen,
+  Jiayi Feng, Chaofeng Sha, Xin Peng, and Yiling Lou. 2024. ``Evaluating large
+  language models in class-level code generation.'' In \emph{Proceedings of the
+  IEEE/ACM 46th International Conference on Software Engineering}, 1--13.
+
+\bibitem[Fick and Hijmans(2020)]{WorldClim_21}
+Fick, Stephen~E., and Robert~J. Hijmans. 2020. ``{WorldClim} version 2.1
+  climate data.'' Public raster climate data.
+
+\bibitem[Gazzola, Micucci, and Mariani(2019)]{Gazzola_2019}
+Gazzola, Luca, Daniela Micucci, and Leonardo Mariani. 2019. ``Automatic
+  software repair: A survey.'' \emph{IEEE Transactions on Software Engineering}
+  45 (1): 34--67.
+
+\bibitem[Gebru et~al.(2021)]{Gebru2021Datasheets}
+Gebru, Timnit, Jamie Morgenstern, Briana Vecchione, Jennifer~Wortman Vaughan,
+  Hanna Wallach, Hal Daum{\'e}~III, and Kate Crawford. 2021. ``Datasheets for
+  datasets.'' \emph{Communications of the ACM} 64 (12): 86--92.
+
+\bibitem[Goodchild(1992)]{Goodchild_1992}
+Goodchild, Michael~F. 1992. ``Geographical information science.''
+  \emph{International Journal of Geographical Information Systems} 6 (1):
+  31--45.
+
+\bibitem[Harley(1989)]{Harley_1989}
+Harley, J.~B. 1989. ``Deconstructing the map.'' \emph{Cartographica} 26 (2):
+  1--20.
+
+\bibitem[Hou et~al.(2025{\natexlab{a}})]{Hou_2025_GeoCode}
+Hou, Shuyang, et~al. 2025{\natexlab{a}}. ``Can large language models generate
+  geospatial code?'' \emph{Geo-spatial Information Science} 1--23.
+
+\bibitem[Hou et~al.(2025{\natexlab{b}})]{Hou_2025_GEEOPs}
+Hou, Shuyang, Jianyuan Liang, Anqi Zhao, and Huayi Wu. 2025{\natexlab{b}}.
+  ``{GEE-OPs}: An operator knowledge base for geospatial code generation on
+  Google Earth Engine.'' \emph{Geo-spatial Information Science} 1--23.
+
+\bibitem[Janowicz et~al.(2019)]{Janowicz_2019}
+Janowicz, Krzysztof, Song Gao, Grant McKenzie, Yingjie Hu, and Budhendra
+  Bhaduri. 2019. ``{GeoAI}: Spatially explicit artificial intelligence
+  techniques for geographic knowledge discovery and beyond.''
+  \emph{International Journal of Geographical Information Science} 34 (4):
+  625--636.
+
+\bibitem[Jiang et~al.(2026)]{Jiang_2026}
+Jiang, Juyong, Fan Wang, Jiasi Shen, Sungju Kim, and Sunghun Kim. 2026. ``A
+  survey on large language models for code generation.'' \emph{ACM Transactions
+  on Software Engineering and Methodology} 35 (2): 1--72.
+
+\bibitem[Kang, Gao, and Roth(2024)]{Kang_2024}
+Kang, Yuhao, Song Gao, and Robert~E. Roth. 2024. ``Artificial intelligence
+  studies in cartography: A review and synthesis of methods, applications, and
+  ethics.'' \emph{Cartography and Geographic Information Science} 51 (4):
+  599--630.
+
+\bibitem[Karpatne et~al.(2017)]{Karpatne_2017}
+Karpatne, Anuj, Gowtham Atluri, James~H. Faghmous, Michael Steinbach, Arindam
+  Banerjee, Auroop Ganguly, Shashi Shekhar, Nagiza Samatova, and Vipin Kumar.
+  2017. ``Theory-guided data science: A new paradigm for scientific discovery
+  from data.'' \emph{IEEE Transactions on Knowledge and Data Engineering} 29
+  (10): 2318--2331.
+
+\bibitem[Le~Goues et~al.(2012)]{Le_Goues_2012}
+Le~Goues, Claire, ThanhVu Nguyen, Stephanie Forrest, and Westley Weimer. 2012.
+  ``{GenProg}: A generic method for automatic software repair.'' \emph{IEEE
+  Transactions on Software Engineering} 38 (1): 54--72.
+
+\bibitem[Li et~al.(2022)]{Li_2022}
+Li, Yujia, David Choi, Junyoung Chung, Nate Kushman, Julian Schrittwieser, Remi
+  Leblond, Tom Eccles, et~al. 2022. ``Competition-level code generation with
+  {AlphaCode}.'' \emph{Science} 378 (6624): 1092--1097.
+
+\bibitem[Li et~al.(2025)]{Li_2025_AutonomousGIS}
+Li, Zhenlong, Huan Ning, Song Gao, Krzysztof Janowicz, Wenwen Li, Samantha~T.
+  Arundel, Chaowei Yang, et~al. 2025. ``{GIScience} in the Era of Artificial
+  Intelligence: A Research Agenda Towards Autonomous GIS.'' \emph{Annals of
+  GIS} 1--36.
+
+\bibitem[{Los Angeles County Department of Public
+  Works}(2026)]{LACountyDPW_FloodZones}
+{Los Angeles County Department of Public Works}. 2026. ``FEMA flood-zone
+  adopted layer for Los Angeles County.'' ArcGIS REST service.
+
+\bibitem[{Los Angeles County Enterprise GIS}(2026)]{LACountyGIS_Hospitals}
+{Los Angeles County Enterprise GIS}. 2026. ``Los Angeles County public hospital
+  points.'' ArcGIS REST service.
+
+\bibitem[Ma et~al.(2019)]{Ma_2019}
+Ma, Lei, Yu~Liu, Xueliang Zhang, Yuanxin Ye, Gaofei Yin, and Brian~Alan
+  Johnson. 2019. ``Deep learning in remote sensing applications: A
+  meta-analysis and review.'' \emph{ISPRS Journal of Photogrammetry and Remote
+  Sensing} 152: 166--177.
+
+\bibitem[Mitchell et~al.(2019)]{Mitchell2019ModelCards}
+Mitchell, Margaret, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman,
+  Ben Hutchinson, Elena Spitzer, Inioluwa~Deborah Raji, and Timnit Gebru. 2019.
+  ``Model cards for model reporting.'' In \emph{Proceedings of the Conference
+  on Fairness, Accountability, and Transparency}, 220--229.
+
+\bibitem[Monperrus(2018)]{Monperrus_2018}
+Monperrus, Martin. 2018. ``Automatic software repair: A bibliography.''
+  \emph{ACM Computing Surveys} 51 (1): 1--24.
+
+\bibitem[Munzner(2009)]{Munzner_2009}
+Munzner, Tamara. 2009. ``A nested model for visualization design and
+  validation.'' \emph{IEEE Transactions on Visualization and Computer Graphics}
+  15 (6): 921--928.
+
+\bibitem[{National Center for Education Statistics}(2025)]{NCES_EDGE_2425}
+{National Center for Education Statistics}. 2025. ``{EDGE} geocode public
+  schools, 2024--2025.'' Public geospatial data.
+
+\bibitem[Ni et~al.(2024)]{Ni_2024}
+Ni, Ansong, Pengcheng Yin, Yilun Zhao, Martin Riddell, Troy Feng, Rui Shen,
+  Stephen Yin, et~al. 2024. ``{L2CEval}: Evaluating language-to-code generation
+  capabilities of large language models.'' \emph{Transactions of the
+  Association for Computational Linguistics} 12: 1311--1329.
+
+\bibitem[Pannoon and Netek(2025)]{PannoonNetek_2025_Choropleth}
+Pannoon, P., and R.~Netek. 2025. ``Creating choropleth maps by artificial
+  intelligence: Case study on ChatGPT-4.'' \emph{ISPRS International Journal of
+  Geo-Information} 14, 486.
+
+\bibitem[Roth(2013)]{Roth_2013}
+Roth, Robert~E. 2013. ``Interactive maps: What we know and what we need to
+  know.'' \emph{Journal of Spatial Information Science} 6.
+
+\bibitem[Roth(2015)]{Roth_2015}
+Roth, Robert~E. 2015. ``Interactivity and cartography: A contemporary
+  perspective on user interface and user experience design from geospatial
+  professionals.'' \emph{Cartographica} 50 (2): 94--115.
+
+\bibitem[Shekhar, Liu, and Chawla(1999)]{Shekhar_1999_ObjectDirection}
+Shekhar, Shashi, Xuan Liu, and Sanjay Chawla. 1999. ``An Object Model of
+  Direction and Its Implications.'' \emph{GeoInformatica} 3: 357--379.
+
+\bibitem[Shekhar, Lu, and Zhang(2003)]{Shekhar_2003_SpatialOutliers}
+Shekhar, Shashi, Chang-Tien Lu, and Pusheng Zhang. 2003. ``A Unified Approach
+  to Detecting Spatial Outliers.'' \emph{GeoInformatica} 7 (2): 139--166.
+
+\bibitem[Tobler(1970)]{Tobler_1970}
+Tobler, W.~R. 1970. ``A computer movie simulating urban growth in the {Detroit}
+  region.'' \emph{Economic Geography} 46: 234--240.
+
+\bibitem[{United States Census Bureau}(2025)]{USCensus_TIGER2025}
+{United States Census Bureau}. 2025. ``{TIGER/Line} shapefiles: 2025 county and
+  census tract boundaries.'' Public geospatial data.
+
+\bibitem[Wang et~al.(2025)]{Wang_2025_CartoAgent}
+Wang, C., Y.~Kang, Z.~Gong, P.~Zhao, Y.~Feng, W.~Zhang, and G.~Li. 2025.
+  ``{CartoAgent}: A multimodal large language model-powered multi-agent
+  cartographic framework for map style transfer and evaluation.''
+  \emph{International Journal of Geographical Information Science} 39 (9):
+  1904--1937.
+
+\bibitem[Xu et~al.(2022)]{Xu_2022}
+Xu, Frank~F., Uri Alon, Graham Neubig, and Vincent~Josua Hellendoorn. 2022. ``A
+  systematic evaluation of large language models of code.'' In
+  \emph{Proceedings of the 6th ACM SIGPLAN International Symposium on Machine
+  Programming}, 1--10.
+
+\bibitem[Yang et~al.(2025)]{Yang_2025_MapColorAI}
+Yang, N., Y.~Wang, F.~Wu, and Z.~Wei. 2025. ``{MapColorAI}: Designing
+  contextually relevant choropleth map color schemes using a large language
+  model.'' \emph{Cartography and Geographic Information Science} 53 (4):
+  479--497.
+
+\bibitem[Yoo and Shekhar(2005)]{Yoo_2005_InRouteNN}
+Yoo, Jin~Soung, and Shashi Shekhar. 2005. ``In-Route Nearest Neighbor
+  Queries.'' \emph{GeoInformatica} 9: 117--137.
+
+\bibitem[Zhang et~al.(2025)]{Zhang_2025_MapGenerator}
+Zhang, W., Y.~Zhang, H.~Hao, J.~Lin, Q.~Guan, and W.~Yu. 2025.
+  ``{MapGenerator}: A framework for learning a diffusion model for text
+  promptable map generation.'' \emph{Cartography and Geographic Information
+  Science} 1--23.
+
+\bibitem[Zhang et~al.(2024)]{Zhang_2024_MapGPT}
+Zhang, Y., Z.~He, J.~Li, J.~Lin, Q.~Guan, and W.~Yu. 2024. ``{MapGPT}: An
+  autonomous framework for mapping by integrating large language model and
+  cartographic tools.'' \emph{Cartography and Geographic Information Science}
+  51 (6): 717--743.
+
+\bibitem[Zhu et~al.(2017)]{Zhu_2017}
+Zhu, Xiao~Xiang, Devis Tuia, Lichao Mou, Gui-Song Xia, Liangpei Zhang, Feng Xu,
+  and Friedrich Fraundorfer. 2017. ``Deep learning in remote sensing: A
+  comprehensive review and list of resources.'' \emph{IEEE Geoscience and
+  Remote Sensing Magazine} 5 (4): 8--36.
+
+\end{thebibliography}

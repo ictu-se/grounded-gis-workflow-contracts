@@ -1,0 +1,27 @@
+```json
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["align_mask_to_raster_crs", "nodata"],
+    "map_quality": []
+  },
+  "rationale": "The temperature raster is clipped to the study boundary, which is in EPSG:4269. The output is a compressed GeoTIFF."
+}
+```

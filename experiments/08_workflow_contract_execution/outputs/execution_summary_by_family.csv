@@ -1,0 +1,7 @@
+task_type,contracts,contract_compatible_rate,execution_success_rate,output_valid_rate,top_error
+buffer_service_area,48,0.8958,0.8958,0.8958,ValueError
+choropleth_export,38,0.8158,0.7632,0.7632,ValueError
+overlay_intersection,2,1.0000,1.0000,1.0000,
+point_count_join,38,0.9474,0.9474,0.9474,ValueError
+raster_clip,88,0.9091,0.9091,0.9091,ValueError
+zonal_statistics,20,1.0000,1.0000,1.0000,

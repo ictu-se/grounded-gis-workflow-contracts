@@ -1,0 +1,24 @@
+{
+  "task_id": "T020",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "file:///path/to/temperature_raster.tif"
+  },
+  "params": {
+    "mask": "file:///path/to/study_boundary.gpkg?crs=epsg:4269",
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999  // Assuming this is the nodata value in your raster dataset
+  },
+  "output": {
+    "filename": "file:///path/to/T020_temperature_clip_metadata.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["epsg:4326"], // Input CRS must be converted to EPSG:4269 for the operation, but this is not possible as per task requirements. Hence, it's listed here assuming a conversion would have been done prior or in another step outside of these instructions
+    "schema": [],
+    "geometry": ["epsg:4326"], // Input CRS must be converted to EPSG:4269 for the operation and this is not possible as per task requirements. Hence, it's listed here assuming a conversion would have been done prior or in another step outside of these instructions
+    "raster": ["epsg:4326"], // Input CRS must be converted to EPSG:4269 for the operation and this is not possible as per task requirements. Hence, it's listed here assuming a conversion would have been done prior or in another step outside of these instructions
+    "map_quality": ["Ensure that raster metadata such as resolution, extent, and nodata value are preserved after clipping"]
+  },
+  "rationale": "Clip the temperature raster to study boundary while preserving CRS (converted from EPSG:4326), transforming during processing if necessary. Save output with appropriate metadata."
+}

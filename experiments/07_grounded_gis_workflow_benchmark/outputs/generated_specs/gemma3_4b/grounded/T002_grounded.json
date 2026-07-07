@@ -1,0 +1,58 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 4269,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4326,
+      4269
+    ],
+    "schema": [
+      "source_id",
+      "name",
+      "org_name",
+      "addrln1",
+      "city",
+      "state",
+      "zip",
+      "url",
+      "boundary_id",
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "zone_code",
+      "zone_subty",
+      "sfha_tf",
+      "school_id",
+      "school_name",
+      "city",
+      "state",
+      "zip",
+      "county_name",
+      "temp_mean",
+      "temp_sum"
+    ],
+    "geometry": [
+      "Point"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a 2500 meter buffer around hospital points, clipping the result to the county boundary using the study_boundary.shp file."
+}

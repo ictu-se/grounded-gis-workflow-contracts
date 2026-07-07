@@ -1,0 +1,23 @@
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {},
+  "params": {
+    "required_output_fields": [
+      "tract_id",
+      "sfha_tf"
+    ]
+  },
+  "output": {
+    "filename": "T008_sfha_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "short"
+}

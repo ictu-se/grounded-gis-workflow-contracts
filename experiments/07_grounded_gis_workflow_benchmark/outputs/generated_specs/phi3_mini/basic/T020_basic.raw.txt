@@ -1,0 +1,19 @@
+```json
+{
+  "task_id": "T020",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "boundary_shapefile": "study_area.shp",
+    "output_filename": "T020_temperature_clip_metadata.tif"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the study area is in WGS84, but this should be confirmed with actual CRS used for boundary shapefile
+    "schema": [],
+    "geometry": [{"type": "Polygon", "coordinates": [[[...]]}], // Coordinates of the clipping region must match those from the study area's shapefile or vector layer defining its boundaries
+    "raster": ["T020_temperature.tif"],
+    "map_quality": []
+  },
+  "rationale": "To clip a temperature raster to the specific boundary of our study area, preserving CRS and metadata for accurate analysis."
+}
+```

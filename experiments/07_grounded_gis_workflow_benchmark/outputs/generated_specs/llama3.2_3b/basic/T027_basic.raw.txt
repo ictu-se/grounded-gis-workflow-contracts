@@ -1,0 +1,30 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "census_tract": "school_density",
+    "output_filename": "T027_school_density_choropleth.png"
+  },
+  "params": {
+    "colorbar": true,
+    "legend": true
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": "EPSG:4326",
+    "schema": [
+      {
+        "name": "school_density",
+        "type": "float"
+      }
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["high"]
+  },
+  "rationale": "The choropleth map will display the school density by census tract with a clear legend and title."
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "file:///path/to/temperature_raster.tif"
+  },
+  "params": {
+    "mask": "/path/to/los_angeles_county_shapefile.shp",
+    "compression": "deflate"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [{"Los Angeles County shapefile"}, {"temperature raster"}],
+    "raster": [true]
+  },
+  "rationale": "Clipping the temperature data to Los Angeles County for analysis of localized climate conditions."
+}

@@ -1,0 +1,20 @@
+```json
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "raster",
+    "required_fields": ["crs", "schema"],
+    "validation": {
+      "crs": [4326], // Assuming the data is in WGS84 coordinate reference system, which is common for mapping applications
+      "schema": [],
+      "geometry": [],
+      "raster": []
+    },
+    "map_quality": ["high"]
+  },
+  "rationale": "To visualize and understand the distribution of school density across different census tracts within a city, creating a choropleth map will provide an immediate geographical representation that can be easily interpreted by stakeholdnerd policymakers."
+}
+```

@@ -1,0 +1,10 @@
+# Execution Summary by Task Family
+
+|task_type|contracts|contract_compatible_rate|execution_success_rate|output_valid_rate|top_error|
+|---|---|---|---|---|---|
+|buffer_service_area|180|0.7389|0.7389|0.7389|FileNotFoundError|
+|choropleth_export|180|0.8000|0.7889|0.7889|FileNotFoundError|
+|overlay_intersection|180|0.8389|0.8389|0.8389|FileNotFoundError|
+|point_count_join|180|0.8667|0.8667|0.8667|FileNotFoundError|
+|raster_clip|180|0.8056|0.8056|0.8056|FileNotFoundError|
+|zonal_statistics|180|0.8111|0.8111|0.8111|FileNotFoundError|

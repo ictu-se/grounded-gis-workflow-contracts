@@ -1,0 +1,43 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "fields": [
+      {
+        "name": "combined_heat_exposure",
+        "type": "number"
+      },
+      {
+        "name": "flood_exposure",
+        "type": "number"
+      },
+      {
+        "name": "school_availability_risk",
+        "type": "number"
+      }
+    ],
+    "output_field_name": "risk_score",
+    "color_scheme": "diverging"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {
+        "name": "risk_score",
+        "type": "number"
+      }
+    ],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map using combined heat, flood exposure, and school availability risk data to visualize the areas with the highest risk score."
+}

@@ -1,0 +1,29 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "raster",
+    "required_fields": [
+      "census_tract_id"
+    ],
+    "map_quality": [
+      "high"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "WGS84"
+    ],
+    "schema": [
+      {
+        "field": "flood_exposure",
+        "type": "numeric"
+      }
+    ],
+    "geometry": [],
+    "raster": []
+  },
+  "rationale": "A high-quality PNG choropleth map to visualize flood exposure by census tract, using a sequential color ramp for clear differentiation of risk levels."
+}

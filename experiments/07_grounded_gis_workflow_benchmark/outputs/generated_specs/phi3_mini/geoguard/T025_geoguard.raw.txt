@@ -1,0 +1,26 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "source_a": "temperature_raster.tif",
+    "source_b": "school_points.gpkg"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_mean",
+    "align_polygons_to_raster_crs": true,
+    "aggregate_by": null, // Not required for zonal statistics operation but can be specified if needed.
+    "area_field": null // Also not necessary as the area is calculated within this step.
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input CRS must be converted to EPSG:4326 for zonal statistics operation, but since the raster is already in this CRS it's not needed here.
+    "schema": [],
+    "geometry": [["Polygon", null], // The geometry will depend on output and does not need explicit definition as per GeoGuard rules.
+    "raster": []
+  },
+  "rationale": "To calculate the mean temperature within each school catchment area, intersecting it with flood zones to find areas at risk."
+}

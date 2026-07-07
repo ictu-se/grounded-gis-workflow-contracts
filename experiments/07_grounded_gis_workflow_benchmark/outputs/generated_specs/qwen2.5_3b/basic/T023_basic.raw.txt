@@ -1,0 +1,22 @@
+{
+  "task_id": "T023",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "field_name": "temp_mean",
+    "output_field_names": ["temp_mean", "temp_sum"],
+    "top_percent": 0.5
+  },
+  "output": {
+    "filename": "T023_temperature_stats_hot_tracts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Compute temperature zonal statistics and keep the hottest quartile by temp_mean, saving to T023_temperature_stats_hot_tracts.gpkg with required fields."
+}

@@ -1,0 +1,95 @@
+{
+  "task_id": "T0 start by using the overlay_intersection operation to intersect hospital points with study boundaries and clip them at a distance of 50 meters. This will create buffers around hospitals within the study area:
+
+```json
+{
+  "task_id": "T0",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": {"filename": "hospital_points.gpkg"},
+    "source_b": {"filename": "study_boundary.gpkg"}
+  },
+  "params": {
+    "distance_m": 50,
+    "target_epsg": 4269
+  },
+  "output": {
+    "filename": "hospital_buffered.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [{"required_fields": ["source_id", "name", "org_name", "addrln1", "city", "state", "zip"]],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To identify hospitals within the study area for further analysis."
+}
+```
+
+Next, dissolve hospital buffers to create a single polygon per hospital:
+
+```json
+{
+  "task_id": "T1",
+  "operation": "dissolve",
+  "inputs": {
+    "vector": {"filename": "hospital_buffered.gpkg"}
+  },
+  "params": {},
+  "output": {
+    "filename": "hospitals_within_study_area.gpkg"
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [{"required_fields": []}],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To simplify the analysis by reducing multiple buffers to single entities."
+}
+```
+
+Now, intersect flood zones with study boundaries and clip them at a distance of 50 meters:
+
+```json
+{
+  "task_id": "T2",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": {"filename": "flood_zones.gpkg"},
+    "source_b": {"filename": "study_boundary.gpkg"}
+  },
+  "params": {
+    "distance_m": 50,
+    "target_epsg": 4269
+  },
+  "output": {
+    "filename": "flood_zones_within_study_area.gpkg"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [{"required_fields": ["source_id", "dfirm_id", "zone_code", "sfha_tf"]],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To identify flood zones within the study area for further analysis."
+}
+```
+
+Intersect these two layers to find overlapping areas:
+
+```json
+{
+  "task_id": "T3",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "vector1": {"filename": "hospitals_within_study_area.gpkg"},
+    "vector2": {"filename": "flood_zones_within_study_area.gpkg"}
+  },
+  "params": {},
+  "output": {
+    "filename": "hospital

@@ -1,0 +1,25 @@
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "county_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [{"nodata": -9999}],
+    "map_quality": ["Temperature raster is clipped to county boundary", "Preserves nodata handling"]
+  },
+  "rationale": "Clip the temperature raster to the county boundary for further analysis"
+}

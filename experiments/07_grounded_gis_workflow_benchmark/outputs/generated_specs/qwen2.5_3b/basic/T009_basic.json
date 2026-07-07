@@ -1,0 +1,27 @@
+{
+  "task_id": "T009",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "flood_zones_layer": "",
+    "tracts_layer": ""
+  },
+  "params": {
+    "output_filename": "T009_flood_summary_by_tract.gpkg",
+    "fields_to_keep": [
+      "tract_id",
+      "flood_area_m2"
+    ]
+  },
+  "output": {
+    "filename": "T009_flood_summary_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Estimate flood-zone area per census tract by intersecting tracts and flood zones, aggregating flood area by tract_id, joining it back to tracts, and saving the result in a GeoPackage file."
+}

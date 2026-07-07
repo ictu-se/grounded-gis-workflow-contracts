@@ -1,0 +1,28 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "hospital_points": "hospital_points.gpkg",
+    "study_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "field": "source_id",
+    "classes": [1,2,3], // Assuming these represent different hospital access levels for the choropleth map
+    "scheme": "sequential", // Color scheme to be used in the legend and map visualization
+    "cmap": "Blues", // Colormap style chosen for better distinction of data intensity
+    "title": "Hospital Access by Census Tracts",
+    "legend_title": "Number of Hospitals per Census Tract",
+    "source_note": "Data represents the number of hospitals within each census tract based on buffer analysis around study boundary."
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Validation of CRS is required for accurate map representation and overlay operations
+    "schema": [],
+    "geometry": ["Point", "MultiPolygon"], // Input geometries must be validated to ensure proper processing
+    "raster": []
+  },
+  "rationale": "To visualize the distribution of hospitals across census tracts within a study area, creating a choropleth map will provide clear insights into healthcare accessibility."
+}

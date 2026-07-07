@@ -1,0 +1,24 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000, // Converted to meters for a 1 km buffer in EPSG:4326 (WGS84) which is approximately equal to the desired distance since it's close to sea level and flat terrain. This value may need adjustment based on local topography
+    "target_epsg": 4326, // Keeping consistent with input CRS for simplicity in this example; however, using a projected system like State Plane California III might be more accurate if working at the scale of Los Angeles County.
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the output needs to be in WGS84 for consistency with input data or other GIS operations that may follow, but this could change based on project requirements.
+    "schema": [],
+    "geometry": [{"type": "Polygon", "coordinates": []}], // The exact geometry will depend on the buffer operation results and subsequent dissolve process
+    "raster": []
+  },
+  "rationale": "To create a single layer representing all hospitals within or near Los Angeles County, using safe metric distances to account for local topography."
+}

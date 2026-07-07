@@ -1,0 +1,25 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 4326, // converting to metric CRS for distance calculation and then back if necessary after clipping
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // input CRS and target EPSG for buffer operation must match, but output will be in the same as source after conversion back to WGS84 if necessary
+    "schema": [],
+    "geometry": [{"name": "POINT", "required_fields": ["source_id"]}, // Validate that input points have a 'source_id' field and are of type Point for buffer operation
+    "raster": []
+  },
+  "map_quality": [],
+  "rationale": "To create buffers around hospitals within the study area, ensuring they cover an equitable service radius while respecting county boundaries."
+}

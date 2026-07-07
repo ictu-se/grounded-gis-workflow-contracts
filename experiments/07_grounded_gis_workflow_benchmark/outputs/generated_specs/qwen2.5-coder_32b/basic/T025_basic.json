@@ -1,0 +1,55 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "tract_layer": {
+      "filename": "tracts.shp",
+      "type": "vector"
+    },
+    "temperature_raster": {
+      "filename": "temperature.tif",
+      "type": "raster"
+    },
+    "school_points": {
+      "filename": "schools.shp",
+      "type": "vector"
+    },
+    "flood_raster": {
+      "filename": "flood.tif",
+      "type": "raster"
+    }
+  },
+  "params": {
+    "stats": [
+      "mean"
+    ],
+    "fields_to_count": [
+      "school_id"
+    ]
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [
+      "temperature.tif",
+      "flood.tif"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Perform zonal statistics to calculate mean temperature and count schools within each tract, and sum flood area in square meters."
+}

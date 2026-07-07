@@ -1,0 +1,31 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "heat_exposure_data": "path_to_heat_exposure_data.shp",
+    "flood_exposure_data": "path_to_flood_exposure_data.shp",
+    "school_availability_data": "path_to_school_availability_data.shp"
+  },
+  "params": {
+    "join_field": "tract_id", // Assuming all datasets have a common field to join on
+    "heat_exposure_column": "heat_risk_score",
+    "flood_exposure_column": "flood_risk_score",
+    "school_availability_column": "school_accessibility_score",
+    "color_scheme": ["blue", "yellow", "red"], // Blue for low risk, yellow for medium, red for high
+    "legend_title": "Multivariate Risk Index",
+    "output_crs": "EPSG:3857" // Web Mercator projection commonly used for web maps
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:3857"],
+    "schema": [],
+    "geometry": ["Polygon"], // Assuming the input data is in polygon format
+    "raster": [],
+    "map_quality": ["high"]
+  },
+  "rationale": "This task combines heat, flood exposure, and school availability risks into a single multivariate risk index for each tract. The map uses a color scheme to visually represent varying levels of risk, with blue indicating low risk, yellow medium risk, and red high risk. The output is saved as a PNG file in Web Mercator projection for easy web-based visualization."
+}

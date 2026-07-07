@@ -1,0 +1,24 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": -4326, // Assuming the buffer service area needs to be in WGS84 for consistency with other data layers that might not have been projected. If EPSG:3857 is required due to metric calculations as per GeoGuard rules, it should replace this value
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:3857"], // Required for metric calculations, but if using WGS84 as per task instructions it should be EPSG:4326. If the buffer service area needs to use a projected CRS due to GeoGuard rules and accurate distance measurements
+    "schema": ["source_id", "name"], // Required fields preserved or created after clipping process
+    "geometry": [], // Validation of geometry will be performed post-processing as per instructions. If invalid geometries are found, they should be repaired with buffer(0).
+    "raster": [], // Not applicable for this operation
+    "map_quality": ["short"] // A brief rationale is provided in the task description itself
+  }
+}

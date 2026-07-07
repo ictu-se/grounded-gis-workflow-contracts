@@ -1,0 +1,23 @@
+```json
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": "2500m",
+    "metric_crs": true,
+    "clip_to_boundary": "county"
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the initial data is in WGS84, which needs to be converted for metric CRS before buffering and clipping
+    "schema": [],
+    "geometry": ["Polygon", "Point"],
+    "raster": []
+  },
+  "rationale": "To create service-area buffers around hospitals within a county, ensuring they are in meters for accurate representation of accessibility."
+}
+```

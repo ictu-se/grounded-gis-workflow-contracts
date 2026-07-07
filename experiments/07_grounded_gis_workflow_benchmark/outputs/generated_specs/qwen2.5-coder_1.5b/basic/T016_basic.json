@@ -1,0 +1,16 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "path/to/temperature_raster.tif",
+    "study_boundary": "path/to/study_boundary.shp"
+  },
+  "params": {},
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {},
+  "rationale": "Clip the temperature raster to the Los Angeles County study boundary and save T016_temperature_clip.tif."
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "service_area": "https://services.arcgisonline.com/arcgis/rest/services/MapServer/1/viewer?request=GetMap&mapId=LA_County_Hospitals&layers=LA_County_Hospitals&time=0&outFields=*&where=1%3D1&inSR=3857",
+    "buffer_distance": 1000,
+    "buffer_unit": "kilometers"
+  },
+  "params": {
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": "EPSG:3857"
+  },
+  "rationale": "short"

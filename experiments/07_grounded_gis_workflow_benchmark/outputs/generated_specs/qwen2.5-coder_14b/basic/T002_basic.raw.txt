@@ -1,0 +1,26 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals_layer": "path_to_hospitals_layer.gpkg",
+    "county_boundary_layer": "path_to_county_boundary_layer.gpkg"
+  },
+  "params": {
+    "distance": 2500,
+    "unit": "meters",
+    "crs": "EPSG:3857" // Assuming a metric CRS is used
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": ["EPSG:3857"],
+    "schema": [],
+    "geometry": ["polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a buffer around hospitals to define a 2500 meter service area, clip it to the county boundary, and save the result as a geopackage file."
+}

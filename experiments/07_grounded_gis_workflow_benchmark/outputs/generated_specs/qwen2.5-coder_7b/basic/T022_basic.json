@@ -1,0 +1,39 @@
+{
+  "task_id": "T022",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "temperature_raster": "path_to_temperature_raster.tif",
+    "census_tracts": "path_to_census_tracts.gpkg"
+  },
+  "params": {
+    "statistics_type": "mean",
+    "output_field_name": "temp_mean"
+  },
+  "output": {
+    "filename": "T022_temperature_mean_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      "tract_id",
+      "temp_mean"
+    ],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [
+      "temperature_raster.tif"
+    ],
+    "map_quality": [
+      "mean_temperature_accuracy"
+    ]
+  },
+  "rationale": "Compute mean temperature per census tract, handle CRS alignment, and save T022_temperature_mean_by_tract.gpkg."
+}

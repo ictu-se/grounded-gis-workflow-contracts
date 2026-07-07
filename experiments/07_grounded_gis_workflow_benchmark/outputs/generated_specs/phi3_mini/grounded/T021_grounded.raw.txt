@@ -1,0 +1,24 @@
+{
+  "task_id": "T021",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "source_a": ["temperature_raster.tif"],
+    "source_b": ["census_tracts.gpkg"]
+  },
+  "params": {
+    "stats": ["mean", "sum"],
+    "column_prefix": "",
+    "align_polygons_to extraneous fields: tract_id, land_area_m2, water_area_m2"
+  },
+  "output": {
+    "filename": "T021_temperature_zonal_stats.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [], // Assuming the schema is not provided, so an empty array can be used as a placeholder for validation purposes
+    "geometry": [], // No specific geometry required in this task description
+    "raster": [] // Raster data will not be directly outputted from zonal statistics operation but may need to align polygons with raster CRS if necessary.
+  },
+  "rationale": "To compute the mean and sum of temperature for each census tract using a provided temperature raster, we perform zonal statistics on the overlaid Census Tracts vector layer."
+}

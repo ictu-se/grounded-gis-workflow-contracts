@@ -1,0 +1,29 @@
+ {
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "school_count",
+    "classes": [1, 5, 10, 25, 50],
+    "scheme": "quantile",
+    "cmap": "YlGnBu",
+    "title": "Hospital Access by Census Tract",
+    "legend_title": "Number of Hospitals",
+    "source_note": "Data from hospital_points.gpkg"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["readable borders"]
+  },
+  "rationale": "Creates a choropleth map showing the count of hospitals per census tract."
+}

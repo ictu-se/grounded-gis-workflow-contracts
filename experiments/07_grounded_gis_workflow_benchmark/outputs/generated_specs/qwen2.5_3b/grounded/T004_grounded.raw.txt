@@ -1,0 +1,25 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary",
+    "distance_m": 1000,
+    "target_epsg": 4269,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector",
+    "required_fields": ["name", "source_id"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1000 meters and preserve specified fields after clipping."
+}

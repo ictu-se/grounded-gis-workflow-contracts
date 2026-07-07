@@ -1,0 +1,20 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "census_tracts.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 3857,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  }
+}

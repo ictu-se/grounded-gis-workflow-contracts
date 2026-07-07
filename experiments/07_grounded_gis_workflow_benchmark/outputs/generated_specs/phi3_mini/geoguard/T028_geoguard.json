@@ -1,0 +1,40 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "flood_zones": "flood_zones.gpkg",
+    "zonal_input_for_map": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_sum",
+    "classes": [
+      0,
+      10000,
+      25000
+    ],
+    "scheme": [
+      "#FFD700",
+      "#FFFFE6",
+      "#FED8B0"
+    ],
+    "cmap": "YlOrBr",
+    "title": "T028 Flood Exposure Choropleth Map",
+    "legend_title": "Exposure Levels (in square meters)",
+    "source_note": "Data represents the sum of flood zones within census tract boundaries."
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": []
+  },
+  "rationale": "To create a choropleth map that visualizes the exposure area of flood zones within census tracts, we first need to ensure all layers are in CRS EPSG:4326. Then, using zonal statistics on 'temp_sum' from 'zonal_input_for_map', which represents aggregated data by land and water areas for each tract, we can classify the exposure levels accordingly. The sequential color ramp will help in distinguishing different exposure zones clearly."
+}

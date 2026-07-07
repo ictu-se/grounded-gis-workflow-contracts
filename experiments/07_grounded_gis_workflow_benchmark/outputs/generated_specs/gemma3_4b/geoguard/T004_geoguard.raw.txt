@@ -1,0 +1,33 @@
+```json
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4326,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "source_id"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4326
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer the hospital points by 1000 meters using the study boundary as a clipping boundary. Preserve name and source_id fields."
+}
+```

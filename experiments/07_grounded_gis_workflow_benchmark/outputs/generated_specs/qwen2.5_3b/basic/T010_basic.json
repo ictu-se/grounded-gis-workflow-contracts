@@ -1,0 +1,27 @@
+{
+  "task_id": "T010",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_vector_layer": "flood_area_m2",
+    "input_vector_layer_2": "tract_layer"
+  },
+  "params": {
+    "output_filename": "T010_high_flood_tracts.gpkg",
+    "required_fields": [
+      "tract_id",
+      "flood_area_m2"
+    ]
+  },
+  "output": {
+    "filename": "T010_high_flood_tracts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a tract layer with flood_area_m2 and keep only tracts with any flood exposure."
+}

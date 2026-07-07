@@ -1,0 +1,36 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "zone_code",
+    "classes": [
+      "No Flood Zone",
+      "Low Flood Risk",
+      "Moderate Flood Risk",
+      "High Flood Risk"
+    ],
+    "scheme": "sequential",
+    "cmap": "YlGnBu",
+    "title": "Flood Exposure Area by Census Tract",
+    "legend_title": "Flood Zone",
+    "source_note": "Data source: Flood Zones"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "choropleth maps require title, legend, classification scheme, sequential color ramp, readable borders, and source note"
+    ]
+  },
+  "rationale": "Creates a choropleth map of flood exposure area by census tract using the provided data and sequential color ramp."
+}

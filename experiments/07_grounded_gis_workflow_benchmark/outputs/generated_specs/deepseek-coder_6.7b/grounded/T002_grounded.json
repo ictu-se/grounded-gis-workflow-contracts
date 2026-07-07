@@ -1,0 +1,32 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 4326,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4326
+    ],
+    "schema": [],
+    "geometry": [
+      "Point"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creating a buffer of 2500 meters around the hospitals to represent their service area."
+}

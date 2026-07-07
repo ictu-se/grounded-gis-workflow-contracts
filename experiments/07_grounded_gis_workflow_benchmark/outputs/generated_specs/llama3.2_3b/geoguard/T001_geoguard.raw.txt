@@ -1,0 +1,1 @@
+{"task_id": "T001", "operation": "buffer_service_area", "inputs": {"source": "hospital_points.gpkg", "clip_boundary": "study_boundary.gpkg"}, "params": {"distance_m": "1000", "target_epsg": "3857", "dissolve": "false", "output_vector": "T001_buffer_hospitals.gpkg"}}

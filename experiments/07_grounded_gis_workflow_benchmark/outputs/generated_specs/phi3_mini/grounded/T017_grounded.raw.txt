@@ -1,0 +1,24 @@
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "file: temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to extraneous information is not required for this operation.",
+    "nodata": true, // to preserve nodata values during clipping process
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // input and output CRS must match for raster clipping to work correctly
+    "schema": [],
+    "geometry": [{"source_id", "name"}, {"city", "state"}], // required fields in the temperature layer that should be present after clipping, if any
+    "raster": ["temp_mean"], // expected output raster field containing mean temperatures within study area
+    "map_quality": []
+  },
+  "rationale": "Clipping a TIFF file to county boundary while preserving nodata values ensures that areas outside the specified region are not filled with incorrect temperature data, maintaining map accuracy."
+}

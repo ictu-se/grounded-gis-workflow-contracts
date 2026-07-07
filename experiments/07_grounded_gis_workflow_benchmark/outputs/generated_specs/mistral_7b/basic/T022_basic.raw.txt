@@ -1,0 +1,28 @@
+ {
+  "task_id": "T022",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "layer1": {"filename": "tracts.shp", "type": "vector"},
+    "layer2": {"filename": "temperature.tif", "type": "raster"}
+  },
+  "params": {
+    "categories": null,
+    "statistics": ["mean"],
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T022_temperature_mean_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming both layers are in the same CRS (WGS84)
+    "schema": [
+      {"name": "tract_id", "type": "integer"},
+      {"name": "temp_mean", "type": "float"}
+    ],
+    "geometry": ["polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate the mean temperature for each census tract by performing zonal statistics on the temperature raster using the tracts polygon layer as zones."
+}

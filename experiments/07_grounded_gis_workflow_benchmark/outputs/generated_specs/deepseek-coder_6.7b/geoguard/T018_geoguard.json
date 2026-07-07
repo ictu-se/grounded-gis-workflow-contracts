@@ -1,0 +1,35 @@
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {
+        "min": -9999,
+        "max": 9999
+      }
+    ],
+    "map_quality": [
+      "Reprojected boundary aligns with raster CRS",
+      "Raster values within the valid range"
+    ]
+  },
+  "rationale": "Clip temperature data to study area for further analysis"
+}

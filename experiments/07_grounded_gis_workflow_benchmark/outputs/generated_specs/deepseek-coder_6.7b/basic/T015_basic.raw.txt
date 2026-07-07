@@ -1,0 +1,8 @@
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+ "inputs": {
+    "school_points": "...",
+    "hospital_points": "...",
+    "census_tracts": "..."
+  },"

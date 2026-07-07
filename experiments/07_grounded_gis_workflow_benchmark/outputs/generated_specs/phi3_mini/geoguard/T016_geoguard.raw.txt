@@ -1,0 +1,23 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "file:///path/to/temperature_raster.tif",
+    "mask": file:///path/to/study_boundary.gpkg" // Assuming the study boundary is provided in a vector format and needs to be clipped first before rasterizing it for masking purposes
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999 // Assuming this value represents missing data in the temperature raster dataset
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input CRS must be converted to EPSG:3857 for accurate buffering and area calculations, but since the task is raster clipping only this requirement can be relaxed.
+    "schema": [],
+    "geometry": [{"type": "Polygon", "coordinates": []}], // No geometry output needed as it's a raster operation
+    "raster": ["EPSG:3857"] // Raster CRS for accurate clipping and area calculations, but since the task is only about masking this can be relaxed.
+  },
+  "rationale": "Clip temperature data to Los Angeles County study boundary."
+}

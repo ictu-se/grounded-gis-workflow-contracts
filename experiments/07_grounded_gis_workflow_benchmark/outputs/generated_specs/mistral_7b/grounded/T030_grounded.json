@@ -1,0 +1,62 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": [
+      "temp_mean",
+      "flood_zones.zone_code"
+    ],
+    "classes": [
+      {
+        "min": -10,
+        "max": 10,
+        "color": "#00FF7F"
+      },
+      {
+        "min": 10,
+        "max": 25,
+        "color": "#FFFF00"
+      },
+      {
+        "min": 25,
+        "max": 35,
+        "color": "#FFA500"
+      },
+      {
+        "min": 35,
+        "max": 45,
+        "color": "#FF6347"
+      },
+      {
+        "min": 45,
+        "max": 100,
+        "color": "#FF0000"
+      }
+    ],
+    "scheme": "quantile",
+    "title": "Tract-level Multivariate Risk Map",
+    "legend_title": "Heat and Flood Exposure Risk",
+    "source_note": "Data from hospital_points, study_boundary, census_tracts, flood_zones, school_points, temperature_raster"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "ensure_good_contrast",
+      "avoid_overlapping_polygons"
+    ]
+  },
+  "rationale": "The task creates a tract-level PNG map that combines heat and flood exposure risk by using quantile classification for temperature and flood zone data. The map provides an overview of the multivariate risk in different census tracts."
+}

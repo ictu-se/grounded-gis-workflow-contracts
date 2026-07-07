@@ -1,0 +1,24 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "vector": "los_angeles_county.shp"
+  },
+  "params": {
+    "compression": "LZW"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": ["clip_to_vector"],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the boundary of Los Angeles County and compress the output GeoTIFF using LZW compression."
+}

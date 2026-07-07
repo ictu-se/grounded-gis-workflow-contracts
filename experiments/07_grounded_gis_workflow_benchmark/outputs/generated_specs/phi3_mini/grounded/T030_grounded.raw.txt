@@ -1,0 +1,37 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "study_boundary": "file:///path/to/study_boundary.gpkg",
+    "zonal_statistics": [
+      {"name": "flood_exposure", "raster": "file:///path/to/temperature_raster.tif"},
+      {"name": "school_availability", "polygons": "file:///path/to/zonal_input_for_map.gpkg"}
+    ],
+    "heat_data": {
+      "source": "buffer_service_area", 
+      "params": {"distance_m": 500, "target_epsg": "+proj=aea:3067", "dissolve": true} // Buffer service area to create a heat zone around each school and dissolve overlapping areas for clarity.
+    }
+  },
+  "params": {
+    "zonal_statistics": {"stats": ["mean"], "column_prefix": "flood", "align_polygons_to extraneous fields"}, // Calculate mean temperature within each tract to represent heat exposure risk.
+    "choropleth_export": {
+      "field": "school_availability", 
+      "classes": ["Low Risk", "Medium Risk", "High Risk"], 
+      "scheme": "Rainbow Bluescale", // Use a color scheme that is intuitive for risk perception.
+      "title": "School Availability and Flood Exposure Risks in Study Area"
+    }
+  },
+  "output": {
+    "filename": "/path/to/T030_multivariate_risk_map.png", 
+    "type": "png", // Output as a PNG for easy sharing and viewing on various platforms.
+    "required_fields": ["study_boundary", "zonal_statistics"]
+  },
+  "validation": {
+    "crs": ["EPSG:4269"], // Ensure all inputs are in the same CRS for accurate overlay and analysis.
+    "schema": [], // No specific schema validation required as we're dealing with vector data here.
+    "geometry": [{"study_boundary", "zonal_statistics"}], 
+    "raster": ["temperature_raster"], // Validate raster alignment and integrity before clipping/overlaying.
+    "map_quality": ["high"] // High-quality map with clear, distinct color coding for risk levels.
+  },
+  "rationale": "The buffer service area operation creates a heat zone around each school to visualize proximity risks effectively. Zonal statistics calculate the mean temperature within tracts as an indicator of flood exposure due to climate patterns associated with temperatures, and choropleth mapping clearly communicates these combined risks."
+}

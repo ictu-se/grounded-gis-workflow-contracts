@@ -1,0 +1,21 @@
+```json
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster.tif": {},
+    "study_boundary.gpkg": {}
+  },
+  "params": {
+    "crs": "EPSG:4326", // Assuming the study boundary is in WGS84
+    "output_filename": "T018_temperature_clip_boundary_crs.tif"
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {},
+  "rationale": "The task involves clipping a temperature raster using a study boundary shapefile. The boundary is reprojected to the same coordinate system as the raster before masking, and the result is saved with the specified filename."
+}
+```

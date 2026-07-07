@@ -1,0 +1,28 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4269,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326",
+      "EPSG:4269"
+    ],
+    "geometry": [
+      "Point"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates a dissolved 1 km hospital coverage layer for Los Angeles County using safe metric buffering."
+}

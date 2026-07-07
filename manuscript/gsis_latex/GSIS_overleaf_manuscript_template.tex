@@ -1,0 +1,224 @@
+\documentclass[12pt]{gsis}  % 12pt font required by GSIS;
+\usepackage[misc]{ifsym} 
+\usepackage{graphicx,subfigure}
+\usepackage{hyperref,caption}
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{multirow,booktabs}
+\usepackage{geometry}
+\usepackage{natbib}% Citation support using natbib.sty
+\bibpunct[, ]{(}{)}{;}{a}{}{,}% Citation support using natbib.sty
+%==============================================================================
+\begin{document}
+
+\copyrightyear{2022}
+\datereceived{ xx xx 2021}
+\dateaccepted{ xx xx 2021}
+
+%%% Full title of the paper (Capitalized)
+\title{Title}
+
+%%% Authors and Affiliations 
+\author[a]{Firstname1 Lastname1}
+\author[a]{Firstname2 Lastname2}
+\author[b]{Firstname3 Lastname3}
+\affil[a]{Department of A, A University, City, Country.}
+\affil[b]{Department of B, B University, City, Country.}
+
+%%% Contact information of the corresponding author
+\thanks{\textbf{CONTACT:} Firstname2 Lastname2  \quad \Letter : e-mail@e-mail.com}
+
+%%% Keywords
+\keywords{keyword 1; keyword 2; keyword 3 (List three to eight pertinent keywords specific to the article. Read making your article more discoverable, including information on choosing a title and search engine optimization.)}
+
+%%% Abstract 
+\Abstract{A single paragraph of about 300 words maximum. For research articles, abstracts should give a pertinent overview of the work. We strongly encourage authors to use the following style of structured abstracts, but without headings: (1) Background: place the question addressed in a broad context and highlight the purpose of the study; (2) Methods: describe briefly the main methods or treatments applied; (3) Results: summarize the article's main findings; (4) Conclusions: indicate the main conclusions or interpretations. The abstract should be an objective representation of the article, it must not contain results which are not presented and substantiated in the main text and should not exaggerate the main conclusions.}
+
+%%% GSIS inner commands
+\newgeometry{top=20.0mm,bottom=40.0mm,left=15mm,right=15mm,headsep=8mm}
+\maketitle
+\restoregeometry
+\newpage
+%==============================================================================
+
+\section{Introduction}
+This document shows the required format and appearance of a manuscript prepared for submission to the journal of  Geo-spatial Information Science Journal (GSIS). It is prepared using LaTeX2e with the class file \texttt{gsis.cls}. 
+Note that this template is only intended to be used as a guideline for author convenience. It is designed for optimum clarity and ease of reading for editors and reviewers, but the template does not reflect the final page layout of a published journal paper. Accepted papers are professionally typeset in XML according to the layout and design of the journal. 
+
+The LaTeX source file used to create this document is \texttt{manuscript.tex}, which contains important formatting information embedded in it. Authors may use it as a template to create their own manuscript. While LaTeX properly handles most formatting issues, the author may occasionally need to intervene to obtain a satisfactorily formatted manuscript.
+
+\section{Methods}
+Methods should be described with sufficient details to allow others to replicate and build on published results. Please note that publication of your manuscript implicates that you must make all materials, data, computer code, and protocols associated with the publication available to readers. Please disclose at the submission stage any restrictions on the availability of materials or information. New methods and protocols should be described in detail while well-established methods can be briefly described and appropriately cited.
+
+\subsection{Formatting of Mathematical Components}
+For those of your equations that you wish to be automatically numbered sequentially throughout the text for future reference, use the \texttt{equation} environment. For example:
+
+From the degradation model of the image, we can know the relationship between the images before and after the degradation in image reconstruction as:
+\begin{equation}
+g(x_1,y_2)=\sum_{(x_0,y_0)}f(x_0,y_0)h(x_0,y_0;x_1',y_1')+n(x_1,y_1) ,
+\label{eq1}
+\end{equation}
+where $g(x_1,y_2)$ is degraded image, $h(x_0,y_0;x_1',y_1')$ is the point spread function at point $(x_0,y_0)$   in the degenerate model,  $f(x_0,y_0)$ is the original high-resolution image, and  $n(x_1,y_1)$ is the possible additive noise. 
+
+Equations should be cited by \verb"\eqref{}" command, which produces a citation as ``Equation~\eqref{eq1}".
+
+The text continues here.
+
+Theorem-type environments (including propositions, lemmas, corollaries etc.) can be formatted via the \texttt{Theorem} environment as follows:
+%% Example of a theorem:
+\begin{Theorem}
+Example text of a theorem.
+\end{Theorem}
+
+Proofs must be formatted via the \texttt{proof} environment as follows:
+
+%% Example of a proof:
+\begin{proof}[Proof of Theorem 1]
+Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear which theorem is being referred to.
+\end{proof}
+The text continues here.
+
+\section{Results}
+This section may be divided by subheadings. It should provide a concise and precise description of the experimental results, their interpretation as well as the experimental conclusions that can be drawn.
+
+\subsection{Figures}
+
+
+The \texttt{gsis} class file will deal with positioning your figures in the same way as standard \LaTeX. It should not normally be necessary to use the optional \texttt{[htb]} location specifiers of the \texttt{figure} environment in your manuscript. To ensure that figures are correctly numbered automatically, the \verb"\label" command should be included just after the \verb"\caption" command, or in its argument. All figures should be cited in the main text as Figure~\ref{fig1}.
+
+\begin{figure}[htb]
+	\centering
+	\subfigure[cover image]{%
+	\includegraphics[width=0.3\textwidth]{figs/figure1}}\hspace{10pt}
+	\subfigure[the cover image of Geo-Spatial Information Science journal]{%
+	\includegraphics[width=0.3\textwidth]{figs/figure1}}\hspace{10pt}
+    \subfigure[the cover image of Geo-Spatial Information Science journal]{%
+	\includegraphics[width=0.3\textwidth]{figs/figure1}}
+	\caption{Example of a three-part figure with individual sub-captions showing that captions are flush left and justified if greater than one line of text. (Note: Figures must be provided separate to text when submitting.  Minimum 1200 dpi for line art; Minimum 600 dpi for greyscale; Minimum 300 dpi for colour. )} \label{fig1}
+\end{figure}
+
+Please supply any additional figure macros used with your article in the preamble of your .tex file.
+
+The source files of any figures will be required when the final, revised version of a manuscript is submitted. Authors should ensure that these are suitable (in terms of lettering size, etc.) for the reductions they envisage.
+
+The \texttt{epstopdf} package can be used to incorporate encapsulated PostScript (.eps) illustrations when using PDF\LaTeX, etc. Please provide the original .eps source files rather than the generated PDF images of those illustrations for production purposes.
+
+\subsection{Tables}
+The \texttt{gsis} class file will deal with positioning your tables in the same way as standard \LaTeX. It should not normally be necessary to use the optional \texttt{[htb]} location specifiers of the \texttt{table} environment in your manuscript. All tables should be cited in the main text as Table~\ref{tab1}.
+
+\begin{table}[htb]
+    \caption{Some very informative caption.}
+    \begin{threeparttable}
+    \begin{tabular}{c c c c}
+        \toprule
+        \textbf{1st Column} & \textbf{2nd Column} & \textbf{3rd Column} & \textbf{4th Column} \\ \midrule
+          QWERTY\tnote{1}   &                     &                     &  \\
+          ASDFGH\tnote{2}   &                     &                     &  \\ \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+    \item[1] qwerty; \item[2] asdfgh
+    \end{tablenotes}
+    \end{threeparttable}
+    \label{tab1}
+\end{table}
+
+The \texttt{threeparttable} environment can be used as shown to create tables with single horizontal rules at the head, foot and elsewhere as appropriate. The captions appear above the tables in the \textsf{gsis} style, and the \texttt{tablenotes} environment can be used to list detailed explanations beneth the table. 
+
+
+\subsection{References}
+References should be cited in Chicago author-date style, e.g.\ `\citep{yao2024research}',`\citep{batz2015hybrid, gao2013convergence}'. For further details on this reference style, please see the Instructions for Authors on the Taylor \& Francis website. Each bibliographic entry has a key, which is assigned by the author and is used to refer to that entry in the text. 
+
+References should be listed at the end of the main text in alphabetical order by authors' surnames, then chronologically (earliest first).
+
+Each entry takes the form:
+\begin{verbatim}
+\bibitem[authors' names(date of publication)]{key}
+ Bibliography entry
+\end{verbatim}
+where `\texttt{authors' names}' is the list of names to appear where the \verb"bibitem" is cited in the text, and `\texttt{key}' is the tag that is to be used as an argument for the \verb"\citep{}" commands in the text of the article. `\texttt{Bibliography entry}' is the material that is to appear in the list of references, suitably formatted. 
+
+Instead of typing the bibliography by hand, you may prefer to create the list of references using a \textsc{Bib}\TeX\ database. The \texttt{tfcad.bst} file needs to be in your working folder or an appropriate directory, and the lines
+\begin{verbatim}
+\bibliographystyle{tfcad}
+\bibliography{ref}
+\end{verbatim}
+included where the list of references is to appear, where \texttt{tfcad.bst} is the name of the \textsc{Bib}\TeX\ bibliography style file for Taylor \& Francis' Chicago author-date reference style and \texttt{ref.bib} is the bibliographic database (to be replaced with the name of your own .bib file). \LaTeX/\textsc{Bib}\TeX\ will extract from your .bib file only those references that are cited in your .tex file and list them in the References section.
+
+Please include a copy of your .bib file and/or the final generated .bbl file among your source files if your .tex file does not contain a reference list in a \texttt{thebibliography} environment.
+
+\section{Conclusion}
+Authors should discuss the results and conclude how they can be interpreted from the perspective of previous studies and of the working hypotheses. The findings and their implications should be discussed in the broadest context possible. Future research directions may also be highlighted.
+
+%==============================================================================
+%%% Data availability statement 
+\section*{Data availability statement}
+The data that support the findings of this study are available from [third party]. Restrictions apply to the availability of these data, which were used under license for this study. Data are available [from the authors/at URL] with the permission of
+as [third party].
+
+%%% Author conflicts statement 
+\section*{Disclosure statement}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. 
+
+%%% Funding
+\section*{Funding}
+Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.
+
+%%% Author Contribution statement 
+\section*{Author contributions}
+CRediT:  \textbf{Firstname1 Lastname1}: Data curation,……,Writing-original draft;  \textbf{Firstname2 Lastname2}: Conceptualization, ……,Writing-review \& editing; \textbf{Firstname3 Lastname3}: Formal analysis, ……,Writing-review \& editing.
+
+%%% Notes on contributor(s)
+\section*{Notes on contributor(s)}
+\noindent \emph{\textbf{Firstname1 Lastname1}} is an associate professor in Dept. of xxx ... He received the PhD degree from ... His research interests are ...
+
+\noindent \emph{\textbf{Firstname2 Lastname2}} received her PhD degree from ...
+
+\noindent \emph{\textbf{Firstname3 Lastname3}} is an xxx member and an associate professor ...
+
+%%% ORCID
+\section*{ORCID}
+\noindent Firstname1 Lastname1 \quad \url{https://orcid.org/0000-0001-6190-9072}
+
+\noindent Firstname2 Lastname2 \quad  \url{https://orcid.org/0000-0001-***8-**}
+
+\noindent Firstname3 Lastname3    \quad     \url{https://orcid.org/0000-0001-****-**}
+
+
+
+%%% References 
+%The following list shows some sample references prepared in the Taylor \& Francis Chicago author-date style.
+%==============================================
+% References, variant A: internal bibliography
+%==============================================
+\begin{thebibliography}{}
+
+\bibitem[B{\"a}tz et~al.(2015)]{batz2015hybrid}
+B{\"a}tz, M., A. Eichenseer, J. Seiler, M. Jonscher, and
+  A. Kaup. 2015. ``Hybrid super-resolution combining example-based
+  single-image and interpolation-based multi-image reconstruction approaches.''
+  In \emph{the Proceedings of the IEEE International Conference on Image
+  Processing}, Quebec City, Canada, September 27–30, 58--62. doi:\url{10.1109/ICIP.2015.7350759}
+
+
+\bibitem[Gao et~al.(2013)]{gao2013convergence}
+Gao, J., A. Stanton, M. Naghizadeh, M.D. Sacchi, and
+  X. Chen. 2013. ``Convergence improvement and noise attenuation
+  considerations for beyond alias projection onto convex sets reconstruction.''
+  \emph{Geophysical prospecting} 61: 138--151. doi: \url{10.1111/j.1365-2478.2012.01103.x}
+
+\bibitem[Dongyu Yao(2024)]{yao2024research}
+Dongyu, Yao. 2024. ``Research on GNSS Data Simulation Method of Complex Urban Environment Based on Error Grafting.” \emph{Master’s thesis}, Wuhan University.
+
+
+\bibitem[Badarch et~al.(2010)]{badarch2010metallogenesis}
+Badarch, G., G. Dejidmaa, O. Gerel, A. A. Obolenskiy, A. V. Prokopiev, V. F. Timofeev, and W. J. Nokleberg. 2010. ``Metallogenesis and Tectonics of Northeast Asia Devonian through Early Carboniferous (Mississippian) Metallogenesis and Tectonics of Northeast Asia". \emph{U.S. Geological Survey Professional Paper}. doi: \url{https://doi.org/10.3133/pp17656}
+
+\end{thebibliography}
+
+%=============================================
+% References, variant A: external bibliography
+%=============================================
+
+%\bibliographystyle{tfcad}
+%\bibliography{ref}
+
+\end{document}

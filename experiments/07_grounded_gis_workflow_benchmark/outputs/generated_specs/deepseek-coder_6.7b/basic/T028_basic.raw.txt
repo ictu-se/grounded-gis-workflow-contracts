@@ -1,0 +1,7 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+ "inputs": {
+    "data": "flood_exposure_area_by_census_tract",
+    "projection": "EPSG:4326"
+  },"

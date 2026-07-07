@@ -1,0 +1,38 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "Blues",
+    "title": "School Density by Census Tract",
+    "legend_title": "Number of Schools per Census Tract",
+    "source_note": "Data source: GeoGuard GIS Analysis"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "title",
+      "legend",
+      "classification_scheme",
+      "sequential_color_ramp",
+      "readable_borders",
+      "source_note"
+    ]
+  },
+  "rationale": "Create a choropleth map of school density by census tract with clear visual elements and a source note."
+}

@@ -1,0 +1,102 @@
+ {
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_temperature.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate the mean temperature for each census tract."
+},
+{
+  "task_id": "T025",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "zonal_input_for_map",
+    "join": "school_points"
+  },
+  "params": {
+    "target_epsg": 3857,
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T025_school_count.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [3857],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Join the school points to the tract layer and count the number of schools in each tract."
+},
+{
+  "task_id": "T025",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "flood_zones",
+    "mask": "census_tracts"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T025_flood_zones.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": []
+  },
+  "rationale": "Clip the flood zones raster to the census tract polygons."
+},
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "T025_flood_zones"
+  },
+  "params": {
+    "stats": ["sum"],
+    "column_prefix": "flood_area_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_flood_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": []
+  },
+  "rationale": "Calculate the sum of flood area for each census tract."
+},
+{
+  "task_id": "T025",
+  "operation": "overlay_intersection",
+  "inputs": {

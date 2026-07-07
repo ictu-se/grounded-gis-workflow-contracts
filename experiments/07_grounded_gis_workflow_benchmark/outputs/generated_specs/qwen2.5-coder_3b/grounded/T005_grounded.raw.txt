@@ -1,0 +1,28 @@
+```json
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4326,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": ["name", "area_m2"]
+  },
+  "validation": {
+    "crs": [4326],
+    "schema": [],
+    "geometry": ["Point"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create hospital buffers, clip to study boundary, compute area_m2 in projected CRS."
+}
+```

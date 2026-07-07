@@ -1,0 +1,26 @@
+{
+  "task_id": "T009",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts.gpkg",
+    "input_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "aggregate_by": "tract_id",
+    "area_field": "flood_area_m2"
+  },
+  "output": {
+    "filename": "T009_flood_summary_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "flood_area_m2"]
+  },
+  "validation": {
+    "crs": [4326],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersect census tracts with flood zones to calculate the area of each tract affected by flooding, then aggregate and join the results back to the original census tract data."
+}

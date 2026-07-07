@@ -1,0 +1,24 @@
+```json
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T028_flood_exposure_choropleth.png",
+    "color_ramp": "YlGnBu"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": null,
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Generating a choropleth map of flood exposure by census tract using the YlGnBu sequential color ramp and exporting it as a PNG file."
+}
+```

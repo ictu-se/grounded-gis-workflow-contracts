@@ -1,0 +1,26 @@
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": null,
+    "mask": "study_boundary.gpkg"
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "temperature_raster.tif",
+      "study_boundary.gpkg"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Clip temperature raster using study boundary and reproject the mask to align with raster CRS."
+}

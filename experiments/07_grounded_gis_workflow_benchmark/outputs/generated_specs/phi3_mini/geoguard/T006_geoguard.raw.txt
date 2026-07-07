@@ -1,0 +1,24 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": "study_boundary.gpkg",
+    "source_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "4326", // Assuming the output needs to be in WGS84 for consistency with other datasets, but this may need adjustment based on actual requirements and CRS compatibility after reprojection if necessary.
+    "aggregate_by": null,
+    "area_field": null
+  },
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4269"], // Input CRS must be EPSG:4269 for census tracts and flood zones intersection to work correctly, but this may need adjustment based on actual requirements.
+    "schema": [],
+    "geometry": [["MultiPolygon", {"required_fields": ["tract_id"]}], // Ensuring the 'tract_id' field is present in output after overlay operation
+    "raster": []
+  },
+  "rationale": "To intersect Los Angeles County census tracts with flood zones and save as a vector layer, ensuring that CRS-aligned inputs are used for accurate results."
+}

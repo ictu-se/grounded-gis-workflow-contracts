@@ -1,0 +1,33 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": 2500,
+    "unit": "meters",
+    "clip_to_boundary": true,
+    "output_filename": "T002_buffer_hospitals_2500m.gpkg",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creating 2500m hospital service areas by buffering from hospital locations, clipping the results to county boundaries, and saving the output as a vector package."
+}

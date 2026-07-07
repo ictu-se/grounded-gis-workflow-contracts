@@ -1,0 +1,45 @@
+{
+  "task_id": "T023",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "vector": "T023_tracts.shp",
+    "raster": "T023_temperature.tif"
+  },
+  "params": {
+    "zone_field": "tract_id",
+    "statistics_fields": [
+      "mean",
+      "sum"
+    ],
+    "quantile": 0.75,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T023_temperature_stats_hot_tracts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      {
+        "name": "tract_id",
+        "type": "integer"
+      },
+      {
+        "name": "temp_mean",
+        "type": "float"
+      },
+      {
+        "name": "temp_sum",
+        "type": "float"
+      }
+    ],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": []
+  },
+  "rationale": "Computes temperature zonal statistics for tracts, keeps the hottest quartile by temp_mean and saves the result as T023_temperature_stats_hot_tracts.gpkg"
+}

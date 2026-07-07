@@ -1,0 +1,25 @@
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "source_a": ["school_points.gpkg"],
+    "source_b": ["temperature_raster.tif"]
+  },
+  "params": {
+    "stats": [("mean", "temp_mean"), ("count", "school_id")],
+    "column_prefix": "",
+    "align_polygons_to extraneous fields to be removed: tract_name, land_area_m2, water_area_m2"
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean", "school_count"]
+  },
+  "validation": {
+    "crs": [EPSG:4326, EPSG:4269],
+    "schema": [], // Assuming no specific schema validation is required for this task.
+    "geometry": ["MultiPolygon"],
+    "raster": []
+  },
+  "rationale": "To compute the mean temperature and school count within each census tract, zonal statistics are calculated using a raster representing temperatures overlaid on top of vector data from schools."
+}

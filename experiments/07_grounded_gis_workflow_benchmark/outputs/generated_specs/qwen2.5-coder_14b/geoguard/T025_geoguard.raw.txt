@@ -1,0 +1,26 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts.gpkg",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": ["tract_id", "temp_mean"],
+    "geometry": ["buffer(0) if invalid"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate mean temperature for each census tract."
+}

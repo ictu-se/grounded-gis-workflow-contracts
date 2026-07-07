@@ -1,0 +1,35 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "census_tract_temperature_data",
+    "geometry_source": "census_tracts_shapefile"
+  },
+  "params": {
+    "color_scheme": "sequential_blue",
+    "statistic": "mean",
+    "variable": "temperature",
+    "title": "Mean Temperature by Census Tract",
+    "legend_title": "Temperature (\u00b0C)",
+    "source_note": "Data source: National Weather Service"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": [
+      "high"
+    ]
+  },
+  "rationale": "Generate a high-quality choropleth map showing mean temperature by census tract using a sequential blue color scheme, with appropriate title, legend, and source note."
+}

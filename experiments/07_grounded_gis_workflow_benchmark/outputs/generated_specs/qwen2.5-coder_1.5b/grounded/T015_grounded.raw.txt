@@ -1,0 +1,31 @@
+```json
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": "school_points",
+    "group_field": "tract_id",
+    "count_field": ["school_count", "hospital_count"],
+    "predicate": "intersects"
+  },
+  "params": {
+    "target_epsg": "EPSG:4269",
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count", "hospital_count"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task requires counting the number of schools and hospitals within each census tract, which is a common requirement in demographic studies. The point_count_join operation allows us to join the school points with the census tracts based on their spatial relationship (intersects), and then aggregate the counts by tract ID."
+}
+```

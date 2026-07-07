@@ -1,0 +1,11 @@
+{
+  "task_id": "T023",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "zonal_stats_field": "temp_mean",
+    "output_filename": "T023_temperature_stats_hot_tracts.gpkg",
+    "group_by_field": "tract_id",
+    "aggregation_type": "hot"
+  }
+}

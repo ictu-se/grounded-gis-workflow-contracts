@@ -1,0 +1,24 @@
+```json
+{
+  "task_id": "T009",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "tracts": "path/to/tracts.shp",
+    "flood_zones": "path/to/flood_zones.shp"
+  },
+  "params": {},
+  "output": {
+    "filename": "T009_flood_summary_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "flood_area_m2"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersects tracts and flood zones, aggregates flood area by tract_id, joins it back to tracts."
+}
+```

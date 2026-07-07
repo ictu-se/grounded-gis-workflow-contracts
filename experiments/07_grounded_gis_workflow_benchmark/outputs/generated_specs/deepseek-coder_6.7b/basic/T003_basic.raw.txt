@@ -1,0 +1,23 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "layer": "hospitals",
+    "distance": 1000,
+    "crs": "EPSG:4326"
+  },
+  "params": {},
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": [],
+    "map_quality": ["dissolved"]
+  },
+  "rationale": "This task is to create a dissolved 1 km hospital coverage layer for Los Angeles County using safe metric buffering."
+}

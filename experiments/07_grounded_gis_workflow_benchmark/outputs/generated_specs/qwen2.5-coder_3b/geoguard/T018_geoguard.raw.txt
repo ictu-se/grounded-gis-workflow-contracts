@@ -1,0 +1,27 @@
+```json
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": null
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["EPSG:4326", "no_nodata_value"],
+    "map_quality": []
+  },
+  "rationale": "Reproject the study boundary to EPSG:4326, align it with the raster CRS, and clip the temperature raster using the reprojected boundary."
+}
+```

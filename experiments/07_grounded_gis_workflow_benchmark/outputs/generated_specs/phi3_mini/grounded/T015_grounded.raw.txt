@@ -1,0 +1,29 @@
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "study_boundary.gpkg",
+    "join": [
+      {"name": "school_points.gpkg"},
+      {"name": "hospital_points.gpkg"}
+    ],
+    "group_field": ["tract_id"],
+    "count_field": {
+      "school_count": "name",
+      "hospital_count": "source_id"
+    },
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count", "hospital end of the task, where we join school and hospital point data based on their intersection with census tract boundaries using a spatial join operation in GIS software like QGIS or ArcGIS. The 'group_field' parameter specifies that points should be grouped by the 'tract_id', while 'count_field' indicates which fields to count for each group, namely school and hospital names/ids respectively. We use "intersects" as a predicate because we want to find schools and hospitals within or touching census tract boundaries. The output is expected in vector format with the required fields being 'tract_id', 'school_count', and 'hospital_count'.
+  },
+  "validation": {
+    "crs": ["EPSG:4269"], // Assuming that all input data are already projected to this CRS for consistency. If not, they should be reprojected before joining.
+    "schema": [],
+    "geometry": ["Point", "MultiPolygon"],
+    "raster": []
+  },
+  "rationale": "To calculate the number of schools and hospitals within each census tract for analysis or decision-making purposes."
+}

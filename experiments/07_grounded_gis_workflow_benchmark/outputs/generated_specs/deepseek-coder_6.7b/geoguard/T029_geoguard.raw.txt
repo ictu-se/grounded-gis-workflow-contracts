@@ -1,0 +1,29 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "hospital_count",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "viridis",
+    "title": "Hospital Access Choropleth Map",
+    "legend_title": "Number of Hospitals per Census Tract",
+    "source_note": "Source: US Census Bureau"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["title", "legend", "classification scheme", "sequential color ramp", "readable borders", "source note"]
+  },
+  "rationale": "This task aims to visualize the distribution of hospital accessibility across census tracts using a choropleth map."
+}

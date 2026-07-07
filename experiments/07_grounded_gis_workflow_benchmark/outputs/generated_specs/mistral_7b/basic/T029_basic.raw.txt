@@ -1,0 +1,31 @@
+ {
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "vector_data": "hospital_count_per_census_tract",
+    "style": {
+      "fill": "#546E7A",
+      "border_color": "#FFFFFF",
+      "legend": {
+        "title": "Hospitals per Census Tract"
+      }
+    },
+    "map_options": {
+      "zoom": 10,
+      "center": [-98.5795, 39.8283]
+    }
+  },
+  "params": {},
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["band_count=1"],
+    "map_quality": ["readable_borders", "clear_labels"]
+  },
+  "rationale": "Creates a choropleth map showing the count of hospitals per census tract, with readable borders and clear labels."
+}

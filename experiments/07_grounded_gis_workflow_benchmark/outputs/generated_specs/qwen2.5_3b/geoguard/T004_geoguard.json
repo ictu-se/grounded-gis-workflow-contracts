@@ -1,0 +1,34 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4269,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "source_id"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [
+      {
+        "rule": "buffer(0) should be applied to repair invalid geometries.",
+        "field": "invalid_geom"
+      }
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1000 meters and ensure the output file has required fields."
+}

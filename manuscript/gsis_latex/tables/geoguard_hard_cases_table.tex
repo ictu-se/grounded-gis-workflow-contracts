@@ -1,0 +1,31 @@
+\begin{table}[H]
+\centering
+\caption{Lowest-scoring GeoGuard cases after excluding malformed JSON responses. This table focuses on geospatial planning weaknesses rather than format-compliance failures; the complete GeoGuard ledger remains in the archived reproduction package.}
+\label{tab:geoguard-hard-cases}
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lllrrrrrrr}
+\toprule
+Task & Family & Model & Tool & Data & Field & CRS & Map & Output & PRS \\
+\midrule
+T029 & Choropleth & qwen2.5-coder:32b & 0.000 & 1.000 & 0.500 & 1.000 & 0.000 & 0.000 & 0.556 \\
+T027 & Choropleth & qwen2.5-coder:32b & 0.000 & 1.000 & 0.714 & 1.000 & 0.000 & 0.000 & 0.584 \\
+T027 & Choropleth & qwen2.5-coder:7b & 0.000 & 1.000 & 0.857 & 1.000 & 0.000 & 0.000 & 0.603 \\
+T001 & Buffer & llama3.2:3b & 1.000 & 1.000 & 0.000 & 1.000 & 1.000 & 0.000 & 0.622 \\
+T013 & Point count & llama3.2:3b & 1.000 & 1.000 & 0.000 & 1.000 & 1.000 & 0.000 & 0.622 \\
+T023 & Zonal & mistral:7b & 1.000 & 1.000 & 0.000 & 1.000 & 1.000 & 0.000 & 0.622 \\
+T024 & Zonal & mistral:7b & 1.000 & 1.000 & 0.000 & 1.000 & 1.000 & 0.000 & 0.622 \\
+T025 & Zonal & mistral:7b & 1.000 & 1.000 & 0.000 & 1.000 & 1.000 & 0.000 & 0.622 \\
+T028 & Choropleth & qwen2.5-coder:32b & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.622 \\
+T030 & Choropleth & qwen2.5-coder:1.5b & 1.000 & 0.000 & 0.000 & 1.000 & 0.000 & 1.000 & 0.622 \\
+T029 & Choropleth & qwen2.5-coder:7b & 0.000 & 1.000 & 0.857 & 1.000 & 0.200 & 0.000 & 0.625 \\
+T026 & Choropleth & deepseek-coder:6.7b & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.733 \\
+T027 & Choropleth & llama3.2:3b & 1.000 & 1.000 & 0.000 & 1.000 & 1.000 & 0.000 & 0.733 \\
+T027 & Choropleth & qwen2.5:3b & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.733 \\
+T028 & Choropleth & deepseek-coder:6.7b & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.733 \\
+T028 & Choropleth & qwen2.5:3b & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.733 \\
+T030 & Choropleth & qwen2.5:3b & 1.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.733 \\
+T025 & Zonal & qwen2.5-coder:7b & 1.000 & 0.000 & 0.500 & 1.000 & 1.000 & 1.000 & 0.744 \\
+\bottomrule
+\end{tabular}
+\end{table}

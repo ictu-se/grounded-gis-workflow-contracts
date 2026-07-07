@@ -1,0 +1,38 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "layer": "zonal_input_for_map",
+    "field": "school_id",
+    "classes": [
+      {"class_name": "1-5", "min_value": 1, "max_value": 5},
+      {"class_name": "6-10", "min_value": 6, "max_value": 10},
+      {"class_name": "11+", "min_value": 11, max_value: INF}
+    ],
+    "scheme": "Quantitative",
+    "cmap": "Blues",
+    "title": "Hospital Count per Census Tract",
+    "legend_title": "Number of Hospitals",
+    "source_note": "Data sourced from hospital_points.gpkg and census_tracts.gpkg"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [
+      {"rule": "All geometries are valid", "exception_count": 0}
+    ],
+    "raster": [],
+    "map_quality": [
+      {"rule": "Map has readable borders and labels", "exception_count": 0},
+      {"rule": "Map title is present", "exception_count": 0},
+      {"rule": "Map legend is present", "exception_count": 0}
+    ]
+  },
+  "rationale": "Create a choropleth map showing the count of hospitals per census tract with appropriate validation checks."
+}

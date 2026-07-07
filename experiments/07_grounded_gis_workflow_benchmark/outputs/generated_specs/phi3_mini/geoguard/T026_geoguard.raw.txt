@@ -1,0 +1,29 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "temperature_raster": {"file": "temperature_raster.tif"},
+    "zonal_input_for_map": {"file": "zonal_input_for_map.gpkg"}
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": [{"min": -10, "max": 35, "color": ["#476BFF", "#A9C4FE", "#FFFFFF", "#E0F8FF"] // Sequential blue color scheme from cool to warm shades of blue.
+  },
+    "scheme": "sequential",
+    "cmap": "Blues_r",
+    "title": "Mean Temperature by Census Tract in Blue Shades"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": ["tract_id", "temp_mean"] // Assuming these fields are present after zonal statistics operation and choropleth map creation.
+  },
+  "validation": {
+    "crs": [4326, 4269],
+    "schema": [],
+    "geometry": ["zonal_input_for_map", "temperature_raster"], // Inputs must be CRS-aligned.
+    "raster": ["temperature_raster"],
+    "map_quality": [true] // Assuming the choropleth map meets quality standards with readable borders and source note included in legend title.
+  },
+  "rationale": "To visualize mean temperature data by census tract using a sequential blue color scheme for easy interpretation."
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "T023",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts.gpkg",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "stats": [
+      "mean",
+      "sum"
+    ],
+    "column_prefix": "temp",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T023_temperature_stats_hot_tracts.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "temp"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [
+      {
+        "field": "tract_id",
+        "type": "str"
+      },
+      {
+        "field": "temp_mean",
+        "type": "float"
+      },
+      {
+        "field": "temp_sum",
+        "type": "float"
+      }
+    ],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task computes zonal statistics for the temperature raster over the census tracts. The output is a vector layer with fields 'tract_id', 'temp_mean' and 'temp_sum'. These are computed as mean and sum of the temperature values within each census tract."
+}

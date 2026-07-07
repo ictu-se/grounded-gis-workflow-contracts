@@ -1,0 +1,24 @@
+{
+    "task_id": "T006",
+    "operation": "overlay_intersection",
+    "inputs": {
+        "census_tracts": "https://www2.census.gov/geo/tiger/GENZ2019/shp/county_tract_2019.zip",
+        "flood_zones": "https://www2.census.gov/geo/tiger/GENZ2019/shp/flood_zone_2019.zip"
+    },
+    "params": {
+        "output_filename": "T006_flood_tract_overlay.gpkg",
+        "required_fields": ["tract_id"]
+    },
+    "output": {
+        "filename": "T006_flood_tract_overlay.gpkg",
+        "type": "vector",
+        "required_fields": []
+    },
+    "validation": {
+        "crs": "EPSG:4326",
+        "schema": [],
+        "geometry": ["Polygon"],
+        "raster": [],
+        "map_quality": []
+    },
+    "rationale": "The task will intersect the Los Angeles County census tracts with flood zones and save the resulting polygon overlay as T006_flood_tract_overlay.gpkg."

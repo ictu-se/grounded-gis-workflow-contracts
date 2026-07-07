@@ -1,0 +1,26 @@
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "input_raster": "${input_raster}",
+    "output_filename": "T017_temperature_clip_nodata.tif",
+    "preserve_nodata": true
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "input_raster",
+      "output_filename"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the raster to a specific boundary while preserving nodata values and saving as T017_temperature_clip_nodata.tif."
+}

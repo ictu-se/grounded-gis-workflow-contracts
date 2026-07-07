@@ -1,0 +1,40 @@
+```json
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "flood_zones": {
+      "file_path": "flood_zones.gpkg",
+      "geometry_column": "geometry",
+      "crs": "EPSG:4326"
+    },
+    "census_tracts": {
+      "file_path": "census_tracts.gpkg",
+      "geometry_column": "geometry",
+      "crs": "EPSG:4269"
+    }
+  },
+  "params": {
+    "field": "zone_code",
+    "classes": [1, 2, 3],
+    "scheme": "sequential",
+    "cmap": "viridis",
+    "title": "Flood Exposure Area by Census Tract",
+    "legend_title": "Zone Code",
+    "source_note": ""
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326", "EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves creating a choropleth map of flood exposure area by census tract using the provided data. The color ramp is sequential, and the classes are defined based on the 'zone_code' field. The output file is saved as T028_flood_exposure_choropleth.png."
+}
+```

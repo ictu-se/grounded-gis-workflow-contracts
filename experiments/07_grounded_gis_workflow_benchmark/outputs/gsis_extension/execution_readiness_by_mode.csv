@@ -1,0 +1,4 @@
+mode,rows,exec_ready,exec_ready_rate,strict_ready,strict_ready_rate,top_blocker,top_blocker_count
+basic,360,6,0.0167,6,0.0167,data,248
+grounded,360,97,0.2694,92,0.2556,field,128
+geoguard,360,131,0.3639,124,0.3444,field,116

@@ -1,0 +1,32 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "output_filename": "T25_temperature_flood_school.gpkg",
+    "fields_to_extract": [
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ],
+    "layer_type": "vector"
+  },
+  "output": {
+    "filename": "T25_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates a tract-level layer with specified fields using zonal statistics operation."
+}

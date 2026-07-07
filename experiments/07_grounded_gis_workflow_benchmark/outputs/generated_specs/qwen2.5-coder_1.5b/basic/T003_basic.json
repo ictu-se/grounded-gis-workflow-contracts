@@ -1,0 +1,19 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "service_areas": "T002_hospitals.gpkg"
+  },
+  "params": {
+    "radius": 1,
+    "metric": "meters",
+    "safe_buffer": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {},
+  "rationale": "This task involves creating a dissolved buffer layer for hospital service areas in Los Angeles County, using safe metric buffering to ensure the boundaries are accurate and complete. The output is saved as T003_buffer_hospitals_dissolved.gpkg."
+}

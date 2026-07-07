@@ -1,0 +1,16 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "hospital_points"
+  },
+  "params": {
+    "field": "source_id",
+    "classes": "[0, 10, 20]",
+    "scheme": "sequential",
+    "cmap": "viridis",
+    "title": "Hospital Count per Census Tract",
+    "legend_title": "Legend Title",
+    "source_note": "Source Note"
+  }
+}

@@ -1,0 +1,18 @@
+```json
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T027_school_density_choropleth.png",
+    "output_fields": []
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": ["school_density"]
+  },
+  "validation": {},
+  "rationale": "This task requires creating a choropleth map of school density by census tract, which involves generating a PNG file with the specified filename and outputting the required fields. The validation is empty as no specific criteria are provided for the output."
+}
+```

@@ -1,0 +1,31 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      3857
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a 1 km buffer around each hospital point within Los Angeles County, compute the area in square meters for each buffer, and save the result as T005_buffer_hospitals_area.gpkg. The buffers are projected to EPSG:3857 for accurate area calculations."
+}

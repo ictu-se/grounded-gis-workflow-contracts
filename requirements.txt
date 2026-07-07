@@ -1,0 +1,9 @@
+# Reproducibility environment for the Geo-LLM workflow-contract experiments.
+# Tested with Python 3.10+.
+geopandas>=0.14
+matplotlib>=3.7
+numpy>=1.24
+pandas>=2.0
+rasterio>=1.3
+rasterstats>=0.19
+shapely>=2.0

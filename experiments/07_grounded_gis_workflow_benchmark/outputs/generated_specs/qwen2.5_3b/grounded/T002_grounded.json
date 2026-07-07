@@ -1,0 +1,32 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 3857,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [
+      {
+        "name": "POINT",
+        "epsg_code": 4326
+      }
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create buffer areas for hospitals, clip to county boundary, and save as specified file."
+}

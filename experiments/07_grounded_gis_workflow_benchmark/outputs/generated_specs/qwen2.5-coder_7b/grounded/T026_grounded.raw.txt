@@ -1,0 +1,29 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "sequential",
+    "cmap": "Blues",
+    "title": "Mean Temperature by Census Tract",
+    "legend_title": "Temperature (°C)",
+    "source_note": "Data from temperature_raster.tif"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["color_scheme", "legend_accuracy"]
+  },
+  "rationale": "Create a sequential blue choropleth map of mean temperature by census tract with specified title, legend, and source note."
+}

@@ -1,0 +1,4 @@
+mode,contracts,contract_compatible_rate,execution_success_rate,output_valid_rate,median_seconds
+basic,360,0.1194,0.1194,0.1194,0.000
+grounded,360,0.6417,0.6389,0.6389,0.102
+geoguard,360,0.6528,0.6472,0.6472,0.040

@@ -1,0 +1,21 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T27_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth PNG of school density by census tract with a clear legend and title."
+}

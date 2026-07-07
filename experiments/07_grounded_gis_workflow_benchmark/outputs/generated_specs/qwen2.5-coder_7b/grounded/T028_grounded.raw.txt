@@ -1,0 +1,29 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "flood_zones"
+  },
+  "params": {
+    "field": "sfha_tf",
+    "classes": 5,
+    "scheme": "Sequential",
+    "cmap": "Blues",
+    "title": "Flood Exposure by Census Tract",
+    "legend_title": "SFHA TF",
+    "source_note": "Data from flood_zones.gpkg"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["sequential_color_ramp", "legend_accuracy"]
+  },
+  "rationale": "Create a sequential color ramp choropleth map to visualize flood exposure by census tract using the SFHA TF field."
+}

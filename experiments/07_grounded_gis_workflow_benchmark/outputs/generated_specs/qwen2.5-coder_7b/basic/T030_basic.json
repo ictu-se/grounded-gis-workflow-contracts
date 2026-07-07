@@ -1,0 +1,32 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "variable1": "heat_exposure",
+    "variable2": "flood_exposure",
+    "variable3": "school_availability",
+    "color_scheme": "viridis",
+    "legend_title": "Combined Risk Map"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": [
+      "color_balance",
+      "legend_accuracy"
+    ]
+  },
+  "rationale": "This task involves creating a multivariate risk map using a choropleth approach to combine heat exposure, flood exposure, and school availability. The use of the 'viridis' color scheme helps in distinguishing between different levels of combined risk. The legend is titled appropriately to reflect the content of the map."
+}

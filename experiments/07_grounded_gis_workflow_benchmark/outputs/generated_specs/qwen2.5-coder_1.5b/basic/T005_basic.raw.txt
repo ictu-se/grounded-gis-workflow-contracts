@@ -1,0 +1,27 @@
+```json
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals": "path/to/hospitals.shp", // Path to the hospitals shapefile
+    "county_boundary": "path/to/los_angeles_county.shp" // Path to the Los Angeles County boundary shapefile
+  },
+  "params": {
+    "buffer_distance": 1000, // Buffer distance in meters
+    "projection": "EPSG:4326" // Projection code for the input data
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": ["name", "area_m2"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Point", "Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves creating buffers around hospitals within Los Angeles County, computing the area of each buffer in a projected CRS, and saving the results as a GeoPackage file. The output includes only the 'name' and 'area_m2' fields."
+}
+```

@@ -1,0 +1,32 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 3857,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [
+      "buffer(0)"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffering hospital points with a 1000 meter radius and clipping to the study boundary ensures that the service area is accurately defined within Los Angeles County."
+}

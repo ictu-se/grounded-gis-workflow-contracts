@@ -1,0 +1,6 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+ "inputs": {
+    "hospital_points": {"type": "vector", "source": "Los Angeles County"}
+  },"

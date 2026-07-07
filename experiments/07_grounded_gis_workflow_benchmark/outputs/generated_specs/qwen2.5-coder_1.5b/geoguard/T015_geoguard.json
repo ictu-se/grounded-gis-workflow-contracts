@@ -1,0 +1,37 @@
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": "school_points",
+    "group_field": "tract_id",
+    "count_field": [
+      "school_count",
+      "hospital_count"
+    ]
+  },
+  "params": {
+    "target_epsg": "EPSG:4326",
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "school_count",
+      "hospital_count"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To compute the number of schools and hospitals in each census tract, we join the census_tracts layer with the school_points layer on the tract_id field. We aggregate the count of schools and hospitals by tract_id and store the results in a new vector layer named T015_school_hospital_counts.gpkg."
+}

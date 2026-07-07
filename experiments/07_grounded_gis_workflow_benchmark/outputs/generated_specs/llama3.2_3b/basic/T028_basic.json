@@ -1,0 +1,25 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "census_tract": "flood_exposure_area",
+    "color_ramp": "sequential",
+    "output_filename": "T028_flood_exposure_choropleth.png"
+  },
+  "params": {},
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "short"
+}

@@ -1,0 +1,24 @@
+```json
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "school_data_vector.gpkg": {},
+    "hospital_data_vector.gpkg": {}
+  },
+  "params": {
+    "tract_id_field": "GEOID15" // Assuming this field is common in both datasets for joining purposes
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Common coordinate reference system for GIS data, but can be changed based on the datasets' CRS if different
+    "schema": [],
+    "geometry": ["POINT", "MULTIPOLYGON"],
+    "raster": []
+  },
+  "rationale": "To compute and join school and hospital counts per census tract, a point-based operation is suitable as it allows for precise spatial analysis."
+}
+```

@@ -1,0 +1,42 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "census_tracts"
+  },
+  "params": {
+    "field": "hospital_count",
+    "classes": [
+      "<1",
+      "1-5",
+      "6-10",
+      "11-20",
+      ">20"
+    ],
+    "scheme": "Sequential",
+    "cmap": "Blues",
+    "title": "Hospital Access by Census Tract",
+    "legend_title": "Number of Hospitals",
+    "source_note": "Data source: Hospital Points"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": [
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This operation creates a choropleth map of hospital access by census tract, using the number of hospitals as the data field."
+}

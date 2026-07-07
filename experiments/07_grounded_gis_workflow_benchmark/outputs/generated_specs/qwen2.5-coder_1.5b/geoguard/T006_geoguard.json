@@ -1,0 +1,33 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts.gpkg",
+    "input_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "EPSG:4326",
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326",
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "The task is to intersect Los Angeles County census tracts with flood zones, resulting in a polygon overlay that includes only the tracts within the flood zone boundaries. The output should be saved as T006_flood_tract_overlay.gpkg and include the 'tract_id' field."
+}

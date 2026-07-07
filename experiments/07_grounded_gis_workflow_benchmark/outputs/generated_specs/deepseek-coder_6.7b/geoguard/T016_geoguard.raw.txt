@@ -1,0 +1,25 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["temperature_raster.tif"],
+    "map_quality": ["Clip the temperature raster to the Los Angeles County study boundary"]
+  },
+  "rationale": "This task is about clipping a raster (the temperature raster) to a specific area defined by a polygon (the study boundary). This will allow us to see how the temperature changes within this particular area."
+}

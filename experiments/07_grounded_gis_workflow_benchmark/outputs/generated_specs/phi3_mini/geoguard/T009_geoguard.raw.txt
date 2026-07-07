@@ -1,0 +1,25 @@
+{
+  "task_id": "T009",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": "study_boundary.gpkg",
+    "source_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "4326", // Reprojecting flood zones to match the study boundary CRS for accurate intersection results
+    "aggregate_by": "tract_id",
+    "area_field": "flood_area"
+  },
+  "output": {
+    "filename": "T009_flood_summary_by end.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "flood_area_m2"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Ensuring both input layers are in the same CRS for accurate intersection results
+    "schema": [],
+    "geometry": [["MultiPolygon", "Point"], // Validating geometry types of inputs to ensure proper overlay operation
+    "raster": []
+  },
+  "rationale": "To estimate flood-zone area per census tract, intersecting the study boundary with flood zones and aggregating by tract_id is necessary. This requires both layers in EPSG:4326 for accurate geographic representation."
+}

@@ -1,0 +1,44 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": {
+      "type": "vector",
+      "source": "zonal_input_for_map.gpkg",
+      "fields": [
+        "tract_id",
+        "tract_name",
+        "land_area_m2",
+        "water_area_m2",
+        "temp_mean",
+        "temp_sum"
+      ]
+    }
+  },
+  "params": {
+    "field": "combined_risk_score",
+    "classes": 5,
+    "scheme": "quantile",
+    "cmap": "coolwarm",
+    "title": "Tract-Level Combined Heat, Flood Exposure, and School Availability Risk",
+    "legend_title": "Risk Score",
+    "source_note": "Data sources: temperature_raster.tif, flood_zones.gpkg, school_points.gpkg"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "The choropleth map will visualize a combined risk score for each census tract, integrating heat exposure (mean and sum of temperatures), flood zone presence, and school availability. This provides a comprehensive view of multiple risks affecting communities."
+}

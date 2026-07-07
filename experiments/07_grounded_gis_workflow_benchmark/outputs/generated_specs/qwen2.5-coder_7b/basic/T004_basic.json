@@ -1,0 +1,28 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": 1000,
+    "fields_to_preserve": [
+      "name",
+      "source_id"
+    ]
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "source_id"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1000 meters, preserving the hospital name and source_id fields."
+}

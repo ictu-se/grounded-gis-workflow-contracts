@@ -1,0 +1,29 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "viridis",
+    "title": "Multivariate Risk Map",
+    "legend_title": "Temperature Mean",
+    "source_note": "Combined heat, flood exposure, and school availability risk"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["Clear definition of classes", "Appropriate color scheme"]
+  },
+  "rationale": "The choropleth map communicates the risk level at a tract-level by using the mean temperature as the variable. The colors are chosen to represent different levels of temperatures in a sequential manner."
+}

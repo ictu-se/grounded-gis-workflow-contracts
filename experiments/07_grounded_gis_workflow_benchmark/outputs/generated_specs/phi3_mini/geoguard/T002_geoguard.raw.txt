@@ -1,0 +1,24 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": -1896, // EPSG:3857 is not used due to GISGuard's restrictions on metric CRS usage for buffers and area calculations. An alternative projected UTM zone may be chosen if available within the allowed range of 10^4-20^4
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input CRS must be converted to metric for buffering and area calculations, hence the use of an alternative UTM zone if necessary
+    "schema": [],
+    "geometry": ["source_id", "name"], // Required fields preserved or created as per GeoGuard rules
+    "raster": []
+  },
+  "rationale": "To create a buffered area around hospitals for service coverage analysis, ensuring metric calculations and alignment with county boundary."
+}

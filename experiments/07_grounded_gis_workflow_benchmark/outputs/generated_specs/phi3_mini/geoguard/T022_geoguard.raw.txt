@@ -1,0 +1,26 @@
+{
+  "task_id": "T022",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "source_a": "temperature_raster.tif",
+    "source_b": "census_tracts.gpkg"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_mean",
+    "align_polygons_to_raster_crs": true,
+    "output_filename": "T022_temperature_mean_by_tract.gpkg"
+  },
+  "output": {
+    "filename": "T022_temperature_mean_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean"]
+  },
+  "validation": {
+    "crs": [EPSG:4326, EPSG:4269],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": []
+  },
+  "rationale": "To compute the mean temperature per census tract area using zonal statistics. The raster and vector data must be in compatible CRS, hence reprojecting them to EPSG:4269 is necessary for accurate calculations."
+}

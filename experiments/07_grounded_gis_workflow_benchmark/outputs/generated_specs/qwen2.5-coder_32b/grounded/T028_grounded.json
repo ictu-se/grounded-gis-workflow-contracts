@@ -1,0 +1,33 @@
+{
+  "task_id": "T028",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "flood_zones.gpkg",
+    "input_b": "census_tracts.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "flood_exposure_intersection.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "zone_code"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4326
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "First, we need to intersect the flood zones with census tracts to determine which areas are exposed to flooding."
+}

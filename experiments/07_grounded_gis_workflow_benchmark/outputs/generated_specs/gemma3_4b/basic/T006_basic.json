@@ -1,0 +1,33 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "vector1": "LA_County_Census_Tracts",
+    "vector2": "Flood_Zones"
+  },
+  "params": {
+    "output_filename": "T006_flood_tract_overlay.gpkg",
+    "output_fields": [
+      "tract_id"
+    ]
+  },
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersecting census tracts with flood zones creates a spatial overlay representing areas within the county that are both census tracts and subject to flooding."
+}

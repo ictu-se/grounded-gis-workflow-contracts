@@ -1,0 +1,27 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "boundary_shapefile": "los_angeles_county.shp",
+    "output_filename": "T016_temperature_clip.tif"
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Los Angeles County boundary shapefile"
+    ],
+    "raster": [
+      "temperature raster data"
+    ]
+  },
+  "rationale": "To analyze temperature patterns within Los Angeles County by focusing on the specific area, excluding surrounding regions."
+}

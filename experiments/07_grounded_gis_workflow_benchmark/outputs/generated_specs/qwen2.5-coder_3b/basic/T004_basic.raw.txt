@@ -1,0 +1,28 @@
+```json
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "input_file": "hospitals.shp" // Assuming the input file is named hospitals.shp
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "preserve_fields": ["name", "source_id"]
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [
+      {"field": "name", "type": "string"},
+      {"field": "source_id", "type": "integer"}
+    ],
+    "geometry": ["point", "polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1000 meters and preserve the hospital name and source_id fields."
+}
+```

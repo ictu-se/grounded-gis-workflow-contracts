@@ -1,0 +1,35 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "layer": "zonal_input_for_map",
+    "field": "temp_mean,temp_sum,tract_name",
+    "classes": [
+      {"low": -10, "high": -5, "color": "#FFEDA0"},
+      {"low": -5, "high": 0, "color": "#FED976"},
+      {"low": 0, "high": 5, "color": "#FDAC2C"},
+      {"low": 5, "high": 10, "color": "#FC4E2A"}
+    ],
+    "scheme": "Quantiles",
+    "cmap": "Blues",
+    "title": "Tract-Level Heat Exposure and School Availability Risk Map",
+    "legend_title": "Heat Index (°C)",
+    "source_note": "Data sources: temperature_raster, census_tracts, school_points"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {"layer_name": "temperature_raster", "params": {"align_polygons_to_raster_crs": true}}
+    ],
+    "map_quality": []
+  },
+  "rationale": "This choropleth map will combine heat exposure data from the temperature raster with flood and school availability risk at the tract level, using census tracts as the base layer. The colors represent different levels of heat index, while the legend indicates these ranges."
+}

@@ -1,0 +1,23 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": 2500,
+    "crs": "EPSG:3857", // Metric CRS for distance
+    "clip_to_boundary": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": ["EPSG:3857"],
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create 2500 meter hospital service-area buffers using a metric CRS for distance, clip to the county boundary, and save as T002_buffer_hospitals_2500m.gpkg."
+}

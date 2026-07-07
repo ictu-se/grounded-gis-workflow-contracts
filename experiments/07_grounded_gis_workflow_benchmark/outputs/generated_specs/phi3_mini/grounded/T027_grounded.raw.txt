@@ -1,0 +1,28 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "school_points": ["school_points.gpkg"],
+    "zonal_input_for_map": ["zonal_input_for end of the buffer service area operation"]
+  },
+  "params": {
+    "field": "land_area_m2",
+    "classes": [0,1000,5000], // Assuming these classes represent school density ranges for illustrative purposes. Adjust as needed based on actual data distribution and desired visualization outcome.
+    "scheme": "Equal Interval", // Choose the classification method that best represents your data; options include 'Quantile', 'Natural Breaks (Jenks'), etc.
+    "cmap": "Blues", // Select a color scheme suitable for representing density variations, e.g., 'Reds' or 'Greens'.
+    "title": "School Density by Census Tract in Maplewood County",
+    "legend_title": "Number of Schools per 1000 Residents",
+    "source_note": "Data represents the number of schools within each census tract area, normalized to school density."
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input and output CRS must match for accurate geographic representation in the final visualization.
+    "schema": [],
+    "geometry": ["school_points", "zonal_input_for_map"],
+    "raster": []
+  },
+  "rationale": "To create a choropleth map that visually communicates school density across Maplewood County, we first calculate the number of schools within each census tract using zonal statistics based on land area. The resulting data is then classified into predefined ranges to facilitate comparison and visualization."
+}

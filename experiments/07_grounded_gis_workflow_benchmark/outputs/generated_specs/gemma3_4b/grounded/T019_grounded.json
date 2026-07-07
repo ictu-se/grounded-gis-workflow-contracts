@@ -1,0 +1,29 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster",
+    "mask": "study_boundary"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": null
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "temperature_raster"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County using the study boundary as a clipping mask."
+}

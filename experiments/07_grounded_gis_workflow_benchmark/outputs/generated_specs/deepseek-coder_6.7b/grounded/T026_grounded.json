@@ -1,0 +1,38 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg|tract_id,tract_name,land_area_m2,water_area_m2,temp_mean"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "Sequential-Blue",
+    "cmap": "Blues",
+    "title": "Mean Temperature by Census Tract",
+    "legend_title": "Temperature (\u00b0C)",
+    "source_note": "Source: National Weather Service"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [
+      "temperature_raster.tif"
+    ],
+    "map_quality": [
+      "Clear definition of classes",
+      "Correct color scheme"
+    ]
+  },
+  "rationale": "This choropleth map provides a visual representation of the mean temperature by census tract, which can be used to identify areas with high or low temperatures."
+}

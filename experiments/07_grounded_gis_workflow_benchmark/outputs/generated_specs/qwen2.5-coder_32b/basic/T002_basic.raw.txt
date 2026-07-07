@@ -1,0 +1,26 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals_layer": "path_to_hospitals_layer",
+    "county_boundary_layer": "path_to_county_boundary_layer"
+  },
+  "params": {
+    "buffer_distance": 2500,
+    "crs": "metric_crs_code",
+    "clip_to_boundary": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": ["metric_crs_code"],
+    "schema": [["name", "string"]],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create 2500 meter buffers around hospitals, clip to county boundary, and save as a geopackage with the required fields."
+}

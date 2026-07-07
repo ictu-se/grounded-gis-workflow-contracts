@@ -1,0 +1,49 @@
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "layer1": {
+      "filename": "tracts.gpkg",
+      "band": ""
+    },
+    "layer2": {
+      "filename": "temperature.tif",
+      "band": ""
+    }
+  },
+  "params": {
+    "category_field": "tract_id",
+    "statistics_fields": [
+      "mean"
+    ],
+    "zonal_stats_type": "simple"
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      {
+        "name": "tract_id",
+        "type": "string"
+      },
+      {
+        "name": "temp_mean",
+        "type": "float"
+      },
+      {
+        "name": "school_count",
+        "type": "integer"
+      }
+    ],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": []
+  },
+  "rationale": "Computes mean temperature and school count for each tract, then saves the combined tract layer with the specified fields."
+}

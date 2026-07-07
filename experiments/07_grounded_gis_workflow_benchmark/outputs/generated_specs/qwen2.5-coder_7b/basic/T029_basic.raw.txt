@@ -1,0 +1,25 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "title": "Hospital Count per Census Tract",
+    "legend_title": "Number of Hospitals",
+    "color_scheme": "YlOrRd",
+    "readable_borders": true,
+    "source_note": "Data from the U.S. Census Bureau and local health departments."
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Polygon", "MultiPolygon"],
+    "raster": [],
+    "map_quality": ["legend_position", "title_font_size"]
+  },
+  "rationale": "Generate a choropleth map to visualize the distribution of hospitals across census tracts, ensuring readability and including necessary metadata."
+}

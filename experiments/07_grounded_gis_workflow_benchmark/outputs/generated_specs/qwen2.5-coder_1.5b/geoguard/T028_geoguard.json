@@ -1,0 +1,39 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "flood_zones": {
+      "file": "flood_zones.gpkg",
+      "geometry": "Polygon",
+      "crs": "EPSG:4326"
+    },
+    "census_tracts": {
+      "file": "census_tracts.gpkg",
+      "geometry": "MultiPolygon",
+      "crs": "EPSG:4269"
+    }
+  },
+  "params": {
+    "stats": [
+      "mean",
+      "sum"
+    ],
+    "column_prefix": "",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task requires a choropleth map of flood exposure area by census tract. The flood zones are projected in EPSG:4326, and the census tracts are projected in EPSG:4269. The raster statistics include mean and sum, with an optional prefix for column names. The output is a vector layer with the specified filename and required fields."
+}

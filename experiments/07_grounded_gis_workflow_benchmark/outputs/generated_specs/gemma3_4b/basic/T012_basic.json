@@ -1,0 +1,37 @@
+{
+  "task_id": "T012",
+  "operation": "point_count_join",
+  "inputs": {},
+  "params": {
+    "output_filename": "T012_hospital_count_by_tract.gpkg",
+    "required_fields": [
+      "tract_id",
+      "hospital_count"
+    ]
+  },
+  "output": {
+    "filename": "T012_hospital_count_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [
+      {
+        "name": "tract_id",
+        "type": "int",
+        "spatial": "polygon"
+      },
+      {
+        "name": "hospital_count",
+        "type": "int"
+      }
+    ],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves counting the number of hospitals within each census tract using a point-count join operation and saving the results to a GeoPackage file."
+}

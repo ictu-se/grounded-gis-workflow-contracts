@@ -1,0 +1,39 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "school_points.gpkg",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "field": "land_area_m2",
+    "classes": [
+      1,
+      2,
+      3
+    ],
+    "scheme": "sequential",
+    "cmap": "viridis",
+    "title": "School Density by Census Tract",
+    "legend_title": "Density (sqm)",
+    "source_note": "Data from census_tracts.gpkg and temperature_raster.tif"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": [
+      "tract_id",
+      "school_density"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task requires a choropleth map of school density by census tract, which involves overlaying the school points with the temperature raster to calculate density. The output should be a PNG file with a clear legend and title, and the required fields should be preserved or created."
+}

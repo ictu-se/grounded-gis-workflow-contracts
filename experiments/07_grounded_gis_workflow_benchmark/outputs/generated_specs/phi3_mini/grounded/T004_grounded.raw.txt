@@ -1,0 +1,25 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4326,
+    "dissolve": true,
+    "fields": ["name", "source_id"]
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [EPSG:4326],
+    "schema": ["source_id", "name"],
+    "geometry": [],
+    "raster": []
+  },
+  "rationale": "To create buffers around hospitals within the study area, ensuring to preserve hospital names and source IDs for identification."
+}

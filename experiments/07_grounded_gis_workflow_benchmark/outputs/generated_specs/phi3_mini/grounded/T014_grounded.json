@@ -1,0 +1,33 @@
+{
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts.gpkg",
+    "join": "school_points.gpkg"
+  },
+  "params": {
+    "target_epsg": "4269",
+    "group_field": "tract_id",
+    "count_field": "school_id",
+    "predicate": "=",
+    "required_fields": [
+      "tract_id"
+    ]
+  },
+  "output": {
+    "filename": "T014_tracts_within_study_boundary.gpkg"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon",
+      "Point"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To identify census tracts with at least one school, we join the two datasets on 'tract_id' and count schools within each tract. The output will be a vector layer containing only those tracts that have associated schools."
+}

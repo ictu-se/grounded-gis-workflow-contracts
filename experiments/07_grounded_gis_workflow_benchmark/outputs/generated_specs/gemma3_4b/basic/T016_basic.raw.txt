@@ -1,0 +1,26 @@
+```json
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "T016_temperature.tif",
+    "boundary": "Los Angeles County study boundary.shp"
+  },
+  "params": {},
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "Temperature raster"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clipping the temperature raster to the Los Angeles County boundary using a raster clipping operation."
+}
+```

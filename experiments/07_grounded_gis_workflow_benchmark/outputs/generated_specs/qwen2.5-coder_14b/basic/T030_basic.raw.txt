@@ -1,0 +1,28 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "heat_data": "path/to/heat_data.shp",
+    "flood_data": "path/to/flood_data.shp",
+    "school_data": "path/to/school_data.shp"
+  },
+  "params": {
+    "color_scheme": "viridis",
+    "legend_title": "Multivariate Risk Index",
+    "breaks": [0, 25, 50, 75, 100],
+    "output_crs": "EPSG:4326"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves creating a multivariate risk map that combines heat, flood exposure, and school availability risks at the tract level. The output is a PNG file named T030_multivariate_risk_map.png."
+}

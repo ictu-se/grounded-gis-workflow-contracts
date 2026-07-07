@@ -1,0 +1,22 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T030_multivariate_risk_map.png", // The filename for the output map, following a consistent naming convention with task ID and purpose description
+    "file_type": "png" // Specifying that we want to save as PNG format which is commonly used in GIS applications due to its lossless compression characteristics
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "raster" // As we are creating a map that will visually represent risk levels, raster format is appropriate for choropleth maps where different colors denote varying degrees of risk or intensity
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Using WGS84 as the standard coordinate reference system which provides global coverage and compatibility with most GIS software
+    "schema": [], // No specific schema validation is required for this task, but placeholders are included in case future requirements arise
+    "geometry": ["school_boundaries", "heat_zones", "floodplain_areas"], // These fields represent the geographic entities that will be visualized on the map to show risk levels of heat exposure and flooding, as well as school locations for accessibility analysis
+    "raster": ["school_accessibility"] // A raster layer indicating how accessible schools are within each zone based on proximity or other factors like road networks
+  },
+  "rationale": "The map will help local authorities to identify areas with high heat and flood risks, as well as assess the accessibility of educational facilities in these zones. This information is crucial for emergency planning and resource allocation." // A brief explanation justifying the need for this multivariate risk analysis
+}
+```

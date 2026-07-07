@@ -1,0 +1,22 @@
+ {
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "path/to/original_temperature_raster.tif"
+  },
+  "params": {
+    "polygon": "path/to/los_angeles_county_boundary.shp"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the original raster and boundary shapefile are in EPSG:4326 (WGS84)
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County and save a compressed GeoTIFF."
+}

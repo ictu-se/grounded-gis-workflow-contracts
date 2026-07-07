@@ -1,0 +1,32 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": {
+      "type": "vector",
+      "file": "zonal_input_for_map.gpkg",
+      "fields": ["tract_id", "tract_name", "land_area_m2", "water_area_m2"]
+    }
+  },
+  "params": {
+    "field": "school_count",
+    "classes": 5,
+    "scheme": "quantile",
+    "cmap": "YlGnBu",
+    "title": "School Density by Census Tract",
+    "legend_title": "Number of Schools"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "The task requires creating a choropleth map of school density by census tract. The input layer is derived from zonal_input_for_map.gpkg, which already contains the necessary fields for generating the map. The field 'school_count' will be used to determine the color intensity in the choropleth map."
+}

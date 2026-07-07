@@ -1,0 +1,27 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "census_tracts_with_school_density",
+    "value_field": "school_density"
+  },
+  "params": {
+    "color_scheme": "YlGnBu",
+    "legend_title": "School Density",
+    "map_title": "Choropleth of School Density by Census Tract",
+    "output_format": "png"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": ["census_tract_id", "school_density"],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": ["high"]
+  },
+  "rationale": "Generate a high-quality PNG choropleth map showing school density by census tract with an appropriate color scheme and clear legend and title."
+}

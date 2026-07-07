@@ -1,0 +1,32 @@
+{
+  "task_id": "T007",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "census_tracts_layer": "/path/to/census/tracts.shp",
+    "flood_zones_layer": "/path/to/flood/zones.shp"
+  },
+  "params": {
+    "output_filename": "T007_flood_tract_overlay_area.gpkg",
+    "output_fields": [
+      "tract_id",
+      "flood_area_m2"
+    ],
+    "crs_output": "EPSG:3857"
+  },
+  "output": {
+    "filename": "T007_flood_tract_overlay_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a flood exposure overlay by intersecting census tracts and flood zones, compute flood_area_m2 in metric CRS, and save the result as T007_flood_tract_overlay_area.gpkg with tract_id and flood_area_m2 fields."
+}

@@ -1,0 +1,22 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": "EPSG:4326",
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {},
+  "rationale": "Create a buffer of 1000 meters around each hospital point in Los Angeles County and clip the result to the study boundary."
+}

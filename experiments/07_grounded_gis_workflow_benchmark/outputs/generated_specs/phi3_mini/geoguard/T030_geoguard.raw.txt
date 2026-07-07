@@ -1,0 +1,28 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "study_boundary": "study_boundary.gpkg",
+    "zonal_input_for_map": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": ["land_area_m2", "water_area_m2", "temp_mean"], // Combined heat and flood exposure fields from zonal statistics on land area, water area, and temperature mean respectively.
+    "classes": [0-10], // Classification scheme for risk levels based on combined metrics (e.g., 0=low to 10=high).
+    "cmap": ["#f7f7ff", "#ffe5f5"], // Sequential color ramp from low to high risk, with white as the highest value indicating extreme conditions.
+    "title": "Tract-Level Multivariate Risk Map for Combined Heat and Flood Exposure & School Availability",
+    "legend_title": "Risk Levels of Tracts Based on Multiple Factors",
+    "source_note": "This map integrates combined heat exposure, flood risk from FEMA zones, and school availability within census tract boundaries."
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png" // Output format as PNG for easy sharing on social media platforms.
+  },
+  "validation": {
+    "crs": ["EPSG:4269"], // Ensuring all input layers are in the same CRS before processing to avoid misalignment issues during overlay/sjoin operations and zonal statistics calculations.
+    "schema": [],
+    "geometry": [["study_boundary", "zonal_input_for_map"]], // Input geometries must be validated for integrity post-buffering or dissolving if necessary before exporting the choropleth map to avoid misalignment issues.
+    "raster": [],
+    "map_quality": ["Title and legend should clearly indicate risk levels, with readable borders", "The color ramp chosen reflects a gradient of increasing risk"] // Ensuring that the final visualization is clear and informative for decision-making purposes.
+  },
+  "rationale": "This map will provide an integrated view of multiple environmental risks within tract boundaries to aid in community planning efforts."
+}

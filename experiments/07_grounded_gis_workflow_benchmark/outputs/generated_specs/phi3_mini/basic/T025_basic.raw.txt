@@ -1,0 +1,25 @@
+```json
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "layer": ["temperature"],
+    "field": "temp_mean",
+    "output_fields": ["tract_id", "school_count", "flood_area_m2"],
+    "statistics": true,
+    "zone_ids": null // Assuming zone IDs are not provided and need to be extracted from the input data or predefined elsewhere in your workflow. If they exist as a separate layer, replace 'null' with its filename/path here.
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the data is in WGS84 coordinate reference system, adjust as necessary based on actual CRS of your input layers.
+    "schema": [],
+    "geometry": ["Polygon", "Point"], // Points for school locations and polygons for flood areas; replace with correct geometry types if different from the example provided herein.
+    "raster": []
+  },
+  "rationale": "To calculate zonal statistics of mean temperature within tract boundaries, count schools per tract, and measure total flood area in square meters."
+}
+```

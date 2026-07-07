@@ -1,0 +1,22 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "data_source": "multivariate_risk_data.csv", // Path to the CSV file containing the data
+    "output_filename": "T030_multivariate_risk_map.png", // Output filename for the PNG map
+    "color_scheme": "viridis", // Color scheme for the choropleth map
+    "legend_title": "Multivariate Risk Map", // Title of the legend
+    "legend_labels": ["Low Risk", "Moderate Risk", "High Risk"], // Labels for the legend
+    "legend_colors": ["blue", "yellow", "red"] // Colors for the legend
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {},
+  "rationale": "This map will show the combined heat, flood exposure, and school availability risk for each tract in a given area. The color scheme will be used to represent different levels of risk, with blue indicating low risk, yellow indicating moderate risk, and red indicating high risk. The legend will provide clear labels and colors to help users understand the meaning of each color."
+}
+```

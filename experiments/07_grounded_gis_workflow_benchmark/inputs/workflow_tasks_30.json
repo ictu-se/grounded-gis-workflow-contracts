@@ -1,0 +1,213 @@
+[
+  {
+    "task_id": "T001",
+    "type": "buffer_service_area",
+    "output": "T001_buffer_hospitals.gpkg",
+    "required_fields": ["name"],
+    "prompt": "Create 1000 meter service-area buffers around all hospital points in Los Angeles County and clip the result to the study boundary. Save a GeoPackage named T001_buffer_hospitals.gpkg."
+  },
+  {
+    "task_id": "T002",
+    "type": "buffer_service_area",
+    "output": "T002_buffer_hospitals_2500m.gpkg",
+    "required_fields": ["name"],
+    "prompt": "Create 2500 meter hospital service-area buffers, use a metric CRS for distance, clip to the county boundary, and save T002_buffer_hospitals_2500m.gpkg."
+  },
+  {
+    "task_id": "T003",
+    "type": "buffer_service_area",
+    "output": "T003_buffer_hospitals_dissolved.gpkg",
+    "required_fields": [],
+    "prompt": "Create a dissolved 1 km hospital coverage layer for Los Angeles County. Use safe metric buffering and save T003_buffer_hospitals_dissolved.gpkg."
+  },
+  {
+    "task_id": "T004",
+    "type": "buffer_service_area",
+    "output": "T004_buffer_hospitals_named.gpkg",
+    "required_fields": ["name", "source_id"],
+    "prompt": "Buffer hospitals by 1000 meters, preserve hospital name and source_id fields after clipping, and save T004_buffer_hospitals_named.gpkg."
+  },
+  {
+    "task_id": "T005",
+    "type": "buffer_service_area",
+    "output": "T005_buffer_hospitals_area.gpkg",
+    "required_fields": ["name", "area_m2"],
+    "prompt": "Create 1 km hospital buffers, clip to Los Angeles County, compute area_m2 for each clipped buffer in a projected CRS, and save T005_buffer_hospitals_area.gpkg."
+  },
+  {
+    "task_id": "T006",
+    "type": "overlay_intersection",
+    "output": "T006_flood_tract_overlay.gpkg",
+    "required_fields": ["tract_id"],
+    "prompt": "Intersect Los Angeles County census tracts with flood zones and save the polygon overlay as T006_flood_tract_overlay.gpkg."
+  },
+  {
+    "task_id": "T007",
+    "type": "overlay_intersection",
+    "output": "T007_flood_tract_overlay_area.gpkg",
+    "required_fields": ["tract_id", "flood_area_m2"],
+    "prompt": "Create a flood exposure overlay by intersecting census tracts and flood zones. Compute flood_area_m2 in a metric CRS and save T007_flood_tract_overlay_area.gpkg."
+  },
+  {
+    "task_id": "T008",
+    "type": "overlay_intersection",
+    "output": "T008_sfha_overlay.gpkg",
+    "required_fields": ["tract_id", "sfha_tf"],
+    "prompt": "Intersect census tracts with flood zones and preserve the tract_id and sfha_tf fields. Save T008_sfha_overlay.gpkg."
+  },
+  {
+    "task_id": "T009",
+    "type": "overlay_intersection",
+    "output": "T009_flood_summary_by_tract.gpkg",
+    "required_fields": ["tract_id", "flood_area_m2"],
+    "prompt": "Estimate flood-zone area per census tract. Intersect tracts and flood zones, aggregate flood area by tract_id, join it back to tracts, and save T009_flood_summary_by_tract.gpkg."
+  },
+  {
+    "task_id": "T010",
+    "type": "overlay_intersection",
+    "output": "T010_high_flood_tracts.gpkg",
+    "required_fields": ["tract_id", "flood_area_m2"],
+    "prompt": "Create a tract layer containing flood_area_m2 and keep only tracts with any flood exposure. Save T010_high_flood_tracts.gpkg."
+  },
+  {
+    "task_id": "T011",
+    "type": "point_count_join",
+    "output": "T011_school_count_by_tract.gpkg",
+    "required_fields": ["tract_id", "school_count"],
+    "prompt": "Count public schools inside each census tract and save the tract polygons with school_count as T011_school_count_by_tract.gpkg."
+  },
+  {
+    "task_id": "T012",
+    "type": "point_count_join",
+    "output": "T012_hospital_count_by_tract.gpkg",
+    "required_fields": ["tract_id", "hospital_count"],
+    "prompt": "Count hospitals inside each census tract and save the tract polygons with hospital_count as T012_hospital_count_by_tract.gpkg."
+  },
+  {
+    "task_id": "T013",
+    "type": "point_count_join",
+    "output": "T013_school_density_by_tract.gpkg",
+    "required_fields": ["tract_id", "school_count", "schools_per_km2"],
+    "prompt": "Count schools per census tract, compute schools_per_km2 using land area, and save T013_school_density_by_tract.gpkg."
+  },
+  {
+    "task_id": "T014",
+    "type": "point_count_join",
+    "output": "T014_tracts_with_schools.gpkg",
+    "required_fields": ["tract_id", "school_count"],
+    "prompt": "Create a census tract layer with school_count and keep only tracts with at least one school. Save T014_tracts_with_schools.gpkg."
+  },
+  {
+    "task_id": "T015",
+    "type": "point_count_join",
+    "output": "T015_school_hospital_counts.gpkg",
+    "required_fields": ["tract_id", "school_count", "hospital_count"],
+    "prompt": "For each census tract, compute both school_count and hospital_count, and save T015_school_hospital_counts.gpkg."
+  },
+  {
+    "task_id": "T016",
+    "type": "raster_clip",
+    "output": "T016_temperature_clip.tif",
+    "required_fields": [],
+    "prompt": "Clip the temperature raster to the Los Angeles County study boundary and save T016_temperature_clip.tif."
+  },
+  {
+    "task_id": "T017",
+    "type": "raster_clip",
+    "output": "T017_temperature_clip_nodata.tif",
+    "required_fields": [],
+    "prompt": "Clip the temperature raster to the county boundary, preserve nodata handling, and save T017_temperature_clip_nodata.tif."
+  },
+  {
+    "task_id": "T018",
+    "type": "raster_clip",
+    "output": "T018_temperature_clip_boundary_crs.tif",
+    "required_fields": [],
+    "prompt": "Clip temperature_raster.tif using study_boundary.gpkg. Reproject the boundary to the raster CRS before masking and save T018_temperature_clip_boundary_crs.tif."
+  },
+  {
+    "task_id": "T019",
+    "type": "raster_clip",
+    "output": "T019_temperature_clip_compressed.tif",
+    "required_fields": [],
+    "prompt": "Clip the temperature raster to Los Angeles County and save a compressed GeoTIFF named T019_temperature_clip_compressed.tif."
+  },
+  {
+    "task_id": "T020",
+    "type": "raster_clip",
+    "output": "T020_temperature_clip_metadata.tif",
+    "required_fields": [],
+    "prompt": "Clip the temperature raster to the study boundary while preserving CRS, transform, nodata, and metadata. Save T020_temperature_clip_metadata.tif."
+  },
+  {
+    "task_id": "T021",
+    "type": "zonal_statistics",
+    "output": "T021_temperature_zonal_stats.gpkg",
+    "required_fields": ["tract_id", "temp_mean", "temp_sum"],
+    "prompt": "Compute mean and sum temperature for each census tract using temperature_raster.tif and save T021_temperature_zonal_stats.gpkg."
+  },
+  {
+    "task_id": "T022",
+    "type": "zonal_statistics",
+    "output": "T022_temperature_mean_by_tract.gpkg",
+    "required_fields": ["tract_id", "temp_mean"],
+    "prompt": "Compute mean temperature per census tract, handle CRS alignment, and save T022_temperature_mean_by_tract.gpkg."
+  },
+  {
+    "task_id": "T023",
+    "type": "zonal_statistics",
+    "output": "T023_temperature_stats_hot_tracts.gpkg",
+    "required_fields": ["tract_id", "temp_mean", "temp_sum"],
+    "prompt": "Compute temperature zonal statistics for tracts and keep the hottest quartile by temp_mean. Save T023_temperature_stats_hot_tracts.gpkg."
+  },
+  {
+    "task_id": "T024",
+    "type": "zonal_statistics",
+    "output": "T024_temperature_school_join.gpkg",
+    "required_fields": ["tract_id", "temp_mean", "school_count"],
+    "prompt": "Compute mean temperature and school_count for each tract, then save a combined tract layer named T024_temperature_school_join.gpkg."
+  },
+  {
+    "task_id": "T025",
+    "type": "zonal_statistics",
+    "output": "T025_temperature_flood_school.gpkg",
+    "required_fields": ["tract_id", "temp_mean", "school_count", "flood_area_m2"],
+    "prompt": "Create a tract-level layer with temp_mean, school_count, and flood_area_m2. Save T025_temperature_flood_school.gpkg."
+  },
+  {
+    "task_id": "T026",
+    "type": "choropleth_export",
+    "output": "T026_temperature_choropleth.png",
+    "required_fields": [],
+    "prompt": "Create a choropleth PNG of mean temperature by census tract using a sequential blue color scheme, title, legend, and source note. Save T026_temperature_choropleth.png."
+  },
+  {
+    "task_id": "T027",
+    "type": "choropleth_export",
+    "output": "T027_school_density_choropleth.png",
+    "required_fields": [],
+    "prompt": "Create a choropleth PNG of school density by census tract with a clear legend and title. Save T027_school_density_choropleth.png."
+  },
+  {
+    "task_id": "T028",
+    "type": "choropleth_export",
+    "output": "T028_flood_exposure_choropleth.png",
+    "required_fields": [],
+    "prompt": "Create a choropleth PNG of flood exposure area by census tract with an appropriate sequential color ramp. Save T028_flood_exposure_choropleth.png."
+  },
+  {
+    "task_id": "T029",
+    "type": "choropleth_export",
+    "output": "T029_hospital_access_choropleth.png",
+    "required_fields": [],
+    "prompt": "Create a PNG map showing hospital count per census tract, with title, legend, readable borders, and source note. Save T029_hospital_access_choropleth.png."
+  },
+  {
+    "task_id": "T030",
+    "type": "choropleth_export",
+    "output": "T030_multivariate_risk_map.png",
+    "required_fields": [],
+    "prompt": "Create a tract-level PNG map that communicates combined heat, flood exposure, and school availability risk. Explain choices in code comments and save T030_multivariate_risk_map.png."
+  }
+]
+

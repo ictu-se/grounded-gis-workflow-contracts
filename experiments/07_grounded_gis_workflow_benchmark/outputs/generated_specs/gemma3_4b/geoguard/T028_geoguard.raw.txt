@@ -1,0 +1,33 @@
+```json
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "flood_zones"
+  },
+  "params": {
+    "field": "sfha_tf",
+    "classes": null,
+    "scheme": "Quantile",
+    "cmap": "YlGnBu",
+    "title": "Flood Exposure by Census Tract",
+    "legend_title": "SFHA Flood Risk",
+    "source_note": "Data from flood_zones.gpkg"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task requires creating a choropleth map of flood exposure based on the SFHA flood risk data. The `choropleth_export` operation is suitable for this purpose, and the specified parameters will generate an appropriate color ramp and title."
+}
+```

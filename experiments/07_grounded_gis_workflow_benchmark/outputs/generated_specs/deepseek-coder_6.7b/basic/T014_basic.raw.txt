@@ -1,0 +1,24 @@
+{
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "tract_layer": "",
+    "school_layer": ""
+  },
+  "params": {
+    "join_field": "tract_id"
+  },
+  "output": {
+    "filename": "T014_tracts_with_schools.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": ["Polygons"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task is to create a census tract layer with school count and only keep tracts with at least one school."
+}

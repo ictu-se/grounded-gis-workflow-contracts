@@ -1,0 +1,38 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg|tract_id,tract_name,land_area_m2,water_area_m2,temp_mean,temp"
+  },
+  "params": {
+    "field": "water_area_m2",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "viridis",
+    "title": "Flood Exposure by Census Tract",
+    "legend_title": "Flood Exposure Area (m\u00b2)",
+    "source_note": "Data from temperature raster and census tracts"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "title",
+      "legend",
+      "classification scheme",
+      "sequential color ramp",
+      "readable borders",
+      "source note"
+    ]
+  },
+  "rationale": "This choropleth map provides a visual representation of flood exposure area by census tract. The color scheme is sequential and represents the distribution of flood exposure areas."
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "T026",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": [
+      "mean"
+    ],
+    "column_prefix": "temp_mean",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269",
+      "temperature_raster"
+    ],
+    "schema": [],
+    "geometry": [
+      {
+        "field": "tract_id",
+        "type": "string"
+      },
+      {
+        "field": "temp_mean",
+        "type": "number"
+      }
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate mean temperature by census tract and create a choropleth map with sequential blue color scheme."
+}

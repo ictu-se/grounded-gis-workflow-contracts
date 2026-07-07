@@ -1,0 +1,30 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "clip_shapefile": "Los Angeles County shapefile path",
+    "output_format": "GeoTIFF",
+    "compression": "LZW"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "nodata_value",
+      "data_type"
+    ],
+    "map_quality": [
+      "visual_inspection"
+    ]
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County and save a compressed GeoTIFF named T019_temperature_clip_compressed.tif."
+}

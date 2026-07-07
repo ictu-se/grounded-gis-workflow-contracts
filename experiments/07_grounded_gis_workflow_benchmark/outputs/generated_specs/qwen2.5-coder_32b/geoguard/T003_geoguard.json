@@ -1,0 +1,31 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326",
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [
+      "buffer(0)"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals with a 1 km radius, dissolve the buffers to create a single coverage layer, and reproject to EPSG:3857 for metric calculations."
+}

@@ -1,0 +1,22 @@
+```json
+{
+  "task_id": "T011",
+  "operation": "point_count_join",
+  "inputs": {
+    "school_layer": "public_schools.gpkg",
+    "tract_polygon_layer": "census_tracts.gpkg"
+  },
+  "params": {},
+  "output": {
+    "filename": "T011_school_count_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the census tracts are in WGS84 coordinate system, but this should be verified for accuracy
+    "schema": [],
+    "geometry": ["Polygon", "Point"],
+    "raster": []
+  },
+  "rationale": "To determine the number of public schools within each census tract and save the results in a geopackage file with tract IDs as keys."
+}
+```

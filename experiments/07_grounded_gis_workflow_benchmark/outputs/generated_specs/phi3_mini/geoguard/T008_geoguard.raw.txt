@@ -1,0 +1,25 @@
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": "census_tracts.gpkg",
+    "source_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "4326", // Ensuring both inputs are in the same CRS for accurate intersection results
+    "aggregate_by": null,
+    "area_field": null
+  },
+  "output": {
+    "filename": "T008_sfha_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Both inputs must be in the same CRS for accurate intersection results
+    "schema": [],
+    "geometry": [["MultiPolygon"]], // Output geometry type after intersecting census tracts with flood zones
+    "raster": []
+  },
+  "map_quality": ["Ensure that all geometries are valid and repaired if necessary", "Geometry outputs should be accurate"],
+  "rationale": "To identify the intersection of census tracts within flood-prone areas, preserving relevant fields for further analysis."
+}

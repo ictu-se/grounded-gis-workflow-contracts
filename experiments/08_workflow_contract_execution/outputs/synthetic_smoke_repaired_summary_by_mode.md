@@ -1,0 +1,5 @@
+# Execution Summary by Mode
+
+|mode|contracts|contract_compatible_rate|execution_success_rate|output_valid_rate|median_seconds|
+|---|---|---|---|---|---|
+|basic|18|0.7778|0.7778|0.7778|0.013|

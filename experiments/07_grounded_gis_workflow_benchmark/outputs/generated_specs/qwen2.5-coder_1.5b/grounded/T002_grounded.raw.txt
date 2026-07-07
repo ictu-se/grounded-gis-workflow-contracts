@@ -1,0 +1,22 @@
+```json
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": "EPSG:4326",
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {},
+  "rationale": "Create a buffer service area of 2500 meters around each hospital point within the study boundary, using a metric CRS for distance and saving the result as T002_buffer_hospitals_2500m.gpkg. The output vector will contain only the 'name' field."
+}
+```

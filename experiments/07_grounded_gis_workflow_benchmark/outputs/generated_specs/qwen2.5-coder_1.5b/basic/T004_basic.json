@@ -1,0 +1,25 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals": "path/to/hospitals.shp"
+  },
+  "params": {
+    "radius": 1000,
+    "output_filename": "T004_buffer_hospitals_named.gpkg",
+    "output_fields": [
+      "name",
+      "source_id"
+    ]
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "source_id"
+    ]
+  },
+  "validation": {},
+  "rationale": "This task involves buffering a set of hospitals by 1000 meters, preserving the hospital name and source_id fields after clipping. The output is saved as T004_buffer_hospitals_named.gpkg with the specified fields."
+}

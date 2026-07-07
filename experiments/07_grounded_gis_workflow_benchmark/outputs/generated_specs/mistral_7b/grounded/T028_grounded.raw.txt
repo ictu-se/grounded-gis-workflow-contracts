@@ -1,0 +1,29 @@
+ {
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "zone_code",
+    "classes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+    "scheme": "sequential",
+    "cmap": "YlGnBu",
+    "title": "Flood Exposure Area by Census Tract",
+    "legend_title": "Flood Zone",
+    "source_note": "Data from flood_zones and census_tracts"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [4326],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["appropriate sequential color ramp"]
+  },
+  "rationale": "Creates a choropleth map of flood exposure area by census tract using the provided data and a sequential color ramp."
+}

@@ -1,0 +1,26 @@
+ {
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": "school_points"
+  },
+  "params": {
+    "target_epsg": "4269",
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "intersects(geom, geom)"
+  },
+  "output": {
+    "filename": "T014_tracts_with_schools.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Perform a point count join between census tracts and schools to calculate the number of schools in each tract. Only include tracts with at least one school."
+}

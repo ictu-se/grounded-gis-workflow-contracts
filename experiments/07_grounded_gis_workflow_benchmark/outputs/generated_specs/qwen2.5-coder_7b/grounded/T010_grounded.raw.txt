@@ -1,0 +1,26 @@
+{
+  "task_id": "T010",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts.gpkg",
+    "input_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "EPSG:4269",
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T010_high_flood_tracts.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "flood_area_m2"]
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": ["tract_id", "flood_area_m2"],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Overlay the census tracts with flood zones to calculate the flood area for each tract and keep only those with any flood exposure."
+}

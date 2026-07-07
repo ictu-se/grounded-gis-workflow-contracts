@@ -1,0 +1,42 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "hospital_points": "file hospital_points.gpkg",
+    "study_boundary": "file study_boundary.gpkg",
+    "census_tracts": "file census_tracts.gpkg",
+    "flood_zones": "file flood_zones.gpkg",
+    "school_points": "file school_points.gpkg",
+    "temperature_raster": "file temperature_raster.tif",
+    "zonal_input_for_map": "file zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "distance_m": 100,
+    "target_epsg": 3857,
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2",
+    "predicate": "within"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "temp_mean",
+      "temp_sum"
+    ]
+  },
+  "validation": {
+    "crs": [
+      3857
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This map will show the combined heat, flood exposure, and school availability risk for each tract. The heat layer is based on temperature data, the flood zone layer indicates potential flood risks, and the school availability layer shows the presence of schools within a certain distance from the study boundary."
+}

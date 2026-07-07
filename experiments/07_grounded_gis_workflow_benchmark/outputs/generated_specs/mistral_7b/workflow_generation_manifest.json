@@ -1,0 +1,632 @@
+[
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T001",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T001_basic.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T002",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T002_basic.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T003",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T003_basic.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T004",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T004_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T005",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T005_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T006",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T006_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T007",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T007_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T008",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T008_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T009",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T009_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T010",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T010_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T011",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T011_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T012",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T012_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T013",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T013_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T014",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T014_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T015",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T015_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T016",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T016_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T017",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T017_basic.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T018",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T018_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T019",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T019_basic.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T020",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T020_basic.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T021",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T021_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T022",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T022_basic.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T023",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T023_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T024",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T024_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T025",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T025_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T026",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T026_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T027",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T027_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T028",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T028_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T029",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T029_basic.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "basic",
+    "task_id": "T030",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/basic/T030_basic.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T001",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T001_grounded.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T002",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T002_grounded.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T003",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T003_grounded.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T004",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T004_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T005",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T005_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T006",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T006_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T007",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T007_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T008",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T008_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T009",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T009_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T010",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T010_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T011",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T011_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T012",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T012_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T013",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T013_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T014",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T014_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T015",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T015_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T016",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T016_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T017",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T017_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T018",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T018_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T019",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T019_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T020",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T020_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T021",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T021_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T022",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T022_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T023",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T023_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T024",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T024_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T025",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T025_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T026",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T026_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T027",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T027_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T028",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T028_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T029",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T029_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "grounded",
+    "task_id": "T030",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/grounded/T030_grounded.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T001",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T001_geoguard.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T002",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T002_geoguard.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T003",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T003_geoguard.json",
+    "status": "cached"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T004",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T004_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T005",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T005_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T006",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T006_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T007",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T007_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T008",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T008_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T009",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T009_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T010",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T010_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T011",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T011_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T012",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T012_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T013",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T013_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T014",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T014_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T015",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T015_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T016",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T016_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T017",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T017_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T018",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T018_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T019",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T019_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T020",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T020_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T021",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T021_geoguard.json",
+    "status": "failed"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T022",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T022_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T023",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T023_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T024",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T024_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T025",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T025_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T026",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T026_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T027",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T027_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T028",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T028_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T029",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T029_geoguard.json",
+    "status": "generated"
+  },
+  {
+    "model": "mistral:7b",
+    "mode": "geoguard",
+    "task_id": "T030",
+    "spec": "experiments/07_grounded_gis_workflow_benchmark/outputs/generated_specs/mistral_7b/geoguard/T030_geoguard.json",
+    "status": "generated"
+  }
+]

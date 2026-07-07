@@ -1,0 +1,34 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      3857
+    ],
+    "schema": [
+      "name"
+    ],
+    "geometry": [
+      "buffer(0) if invalid"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a buffer around hospital points to define the service area, clip it to the county boundary, and ensure the CRS is metric for accurate distance calculations."
+}

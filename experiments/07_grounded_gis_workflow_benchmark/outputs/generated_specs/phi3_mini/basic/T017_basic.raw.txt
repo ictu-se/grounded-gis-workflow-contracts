@@ -1,0 +1,22 @@
+```json
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "source_raster": "T017_temperature.tif",
+    "boundary_vector": "county_boundaries.shp"
+  },
+  "params": {},
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the county boundary vector data is in WGS84 coordinate reference system (CRS)
+    "schema": [],
+    "geometry": [{"county_boundaries.shp"}],
+    "raster": ["T017_temperature.tif"]
+  },
+  "rationale": "Clipping the temperature raster to county boundaries while preserving nodata values ensures that areas outside of interest are excluded, improving processing efficiency and data relevance."
+}
+```

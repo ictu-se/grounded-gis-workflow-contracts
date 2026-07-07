@@ -1,0 +1,29 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "hospital_points": "hospital_points.gpkg",
+    "study_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "field": "source_id",
+    "classes": [1,2,3], // Assuming these represent different hospital access levels based on proximity to hospitals within the study area
+    "scheme": ["Reds[5]"], // Sequential color ramp for easy interpretation of data density
+    "cmap": true,
+    "title": "Hospital Access by Census Tract",
+    "legend_title": "Number of Hospitals per Tier",
+    "source_note": "Data represents the number of hospitals within each census tract based on proximity to nearest hospital facilities."
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input CRS must be converted to EPSG:3857 for metric buffer and area calculations, but output can remain in original CRS if not required for visualization purposes.
+    "schema": [],
+    "geometry": [{"hospital_points", "study_boundary"}], // Input geometries must be aligned before overlaying to ensure accurate representation of study boundary within the map
+    "raster": ["temperature_raster"], // Raster data is not directly used but included for potential future analysis or mask creation.
+    "map_quality": [true] // Ensure high-quality visual output with readable borders and clear legend
+  },
+  "rationale": "To create a choropleth map that visually represents the distribution of hospitals across census tracts, providing insights into healthcare accessibility within different areas."
+}

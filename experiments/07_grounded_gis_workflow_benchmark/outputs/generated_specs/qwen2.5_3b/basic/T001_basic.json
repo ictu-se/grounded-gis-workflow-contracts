@@ -1,0 +1,35 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "geometries": [
+      {
+        "__typename": "Point",
+        "coordinates": [],
+        "properties": {}
+      }
+    ],
+    "distances": [
+      1000
+    ],
+    "output_filename": "T001_buffer_hospitals.gpkg",
+    "output_fields": [
+      "name"
+    ],
+    "study_boundary_crs": "",
+    "hospital_points_gpkg": ""
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create buffer areas around hospital points and clip the result to study boundary, saving as GeoPackage with specified fields."
+}

@@ -1,0 +1,35 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "align_mask_to_raster_crs": false,
+    "mask": "study_boundary",
+    "nodata": null,
+    "output_file_name": "T016_temperature_clip.tif"
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "temperature_raster.tif"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {
+        "name": "align_mask_to_raster_crs",
+        "message": "The align_mask_to_raster_crs parameter is not applicable for raster_clip operation."
+      },
+      {
+        "name": "nodata",
+        "message": "The nodata parameter is not applicable for raster_clip operation."
+      }
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the study boundary without preserving any fields or schema, as no specific output fields are required."
+}

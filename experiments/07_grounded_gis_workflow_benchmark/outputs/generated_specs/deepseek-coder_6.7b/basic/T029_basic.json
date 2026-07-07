@@ -1,0 +1,33 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "title": "Hospital Count per Census Tract",
+    "legend": "Number of Hospitals",
+    "border_readability": true,
+    "source_note": "Source: Health Department"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygons"
+    ],
+    "raster": [
+      "PNG"
+    ],
+    "map_quality": [
+      "Clear",
+      "Readable"
+    ]
+  },
+  "rationale": "This map provides a visual representation of the number of hospitals per census tract, which can be used to analyze accessibility and distribution of healthcare services."
+}

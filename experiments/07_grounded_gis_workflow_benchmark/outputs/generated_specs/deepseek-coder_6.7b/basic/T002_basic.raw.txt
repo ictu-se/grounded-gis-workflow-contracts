@@ -1,0 +1,25 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "data": "hospitals.gpkg",
+    "boundary": "county_boundary.geojson"
+  },
+  "params": {
+    "distance": 2500,
+    "crs": "metric"
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": ["metric"],
+    "schema": [],
+    "geometry": ["point"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task is to create service area buffers for hospitals using a metric CRS and clip them to the county boundary."
+}

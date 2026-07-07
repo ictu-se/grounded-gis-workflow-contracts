@@ -1,0 +1,26 @@
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "vector": "county_boundary.shp"
+  },
+  "params": {
+    "preserve_nodata": true
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "nodata_handling"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the county boundary while preserving nodata values and save the output as T017_temperature_clip_nodata.tif."
+}

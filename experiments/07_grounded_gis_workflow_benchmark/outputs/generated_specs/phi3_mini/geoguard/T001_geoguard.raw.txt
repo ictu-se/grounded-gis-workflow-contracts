@@ -1,0 +1,28 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": -4326, // Assuming the buffer service area needs to be in WGS84 for consistency with other data sources before clipping
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T0softly", T001_buffer_hospitals.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input CRS must be converted to EPSG:4326 for buffering and then back if clipping is needed in the same coordinate system as other data sources, otherwise use -4326 or equivalent metric CRS
+    "schema": [],
+    "geometry": ["Polygon", {"required_fields": ["name"]} // Ensure 'name' field exists after buffering and potential repair of invalid geometries with a 0-buffer to fix them if necessary
+    "raster": []
+  },
+  "map_quality": [
+    "Metric buffers must be calculated in projected CRS",
+    "Overlay/sjoin layers need to be aligned"
+  ],
+  "rationale": "To create a service area around hospitals within Los Angeles County for analysis, buffering the hospital points by 1000 meters and clipping them with study boundary ensures that only relevant areas are considered."
+}

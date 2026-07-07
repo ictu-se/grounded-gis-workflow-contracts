@@ -1,0 +1,1 @@
+{"task_id": "T013", "operation": "point_count_join", "inputs": {}, "params": {"join_fields": ["tract_id"], "fields": ["school_count", "schools_per_km2"]}, "output": {"filename": "T013_school_density_by_tract.gpkg", "type": "vector"}, "validation": {"crs": "EPSG:4326", "schema": [], "geometry": "Point", "raster": [], "map_quality": []}}

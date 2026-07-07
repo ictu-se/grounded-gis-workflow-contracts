@@ -1,0 +1,56 @@
+```json
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4269,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4326,
+      4269
+    ],
+    "schema": [
+      "source_id",
+      "name",
+      "org_name",
+      "addrln1",
+      "city",
+      "state",
+      "zip",
+      "url",
+      "boundary_id",
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "temp_mean",
+      "temp_sum",
+      "zone_code",
+      "zone_subty",
+      "sfha_tf",
+      "area_m2"
+    ],
+    "geometry": [
+      "Point"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create 1km buffers around hospitals, clip to Los Angeles County study boundary, and calculate the area of each buffer in m2."
+}
+```

@@ -1,0 +1,27 @@
+{
+  "task_id": "T013",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "school_points.gpkg",
+    "group_field": "tract_id",
+    "count_field": null, // This will be computed based on the join operation with census_tracts and zonal statistics output
+    "predicate": null // Not applicable for this task
+  },
+  "params": {
+    "target_epsg": "4326",
+    "group_field": "tract_id"
+  },
+  "output": {
+    "filename": "T013_school_density_byincome_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count"] // 'schools_per_km2' will be computed and added after the join operation with zonal statistics output
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Point", "MultiPolygon"], // Inputs are in EPSG:4326, but will be reprojected during the join operation with zonal statistics output which is expected to use CRS EPSG:4269 or equivalent for area calculations.
+    "raster": [],
+    "map_quality": ["Buffer service areas and overlays must align in terms of coordinate reference system, ensure geometry outputs are valid by repairing with buffer(0) if necessary."]
+  },
+  "rationale": "To count the number of schools within each census tract area using point-in-polygon join. Then calculate school density per square kilometer based on land area after converting from EPSG:4326 to a projected CRS for accurate metric calculations, and save results in T013_school_density_by_tract."
+}

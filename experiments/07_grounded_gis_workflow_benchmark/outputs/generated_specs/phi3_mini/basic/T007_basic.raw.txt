@@ -1,0 +1,25 @@
+```json
+{
+  "task_id": "T007",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "census_tracts.gpkg": {},
+    "flood_zones.gpkg": {}
+  },
+  "params": {
+    "output_filename": "T0 end with the task id and "_flood_tract_overlay_area" to indicate it's a vector file",
+    "metric_crs": "+proj=utm +zone=15 +datum=WGS84 +units=m +no_defs" // Example CRS, replace with the correct one for your region if different
+  },
+  "output": {
+    "filename": "T007_flood_tract_overlay_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["+proj=utm +zone=15 +datum=WGS84"], // Replace with the correct CRS for your region if different
+    "schema": [],
+    "geometry": ["tract_id", "flood_area_m2"],
+    "raster": []
+  },
+  "rationale": "To calculate and save the area of flood exposure by intersecting census tracts with known flood zones in square meters using a metric coordinate reference system for accuracy."
+}
+```

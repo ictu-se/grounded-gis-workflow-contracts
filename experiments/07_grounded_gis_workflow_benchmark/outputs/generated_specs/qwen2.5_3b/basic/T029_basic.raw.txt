@@ -1,0 +1,21 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T029_hospital_access_choropleth.png",
+    "type": "raster",
+    "required_fields": []
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a PNG map with choropleth style showing hospital count per census tract, including title, legend, readable borders, and source note."
+}

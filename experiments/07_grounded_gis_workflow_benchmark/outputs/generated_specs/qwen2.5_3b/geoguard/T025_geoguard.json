@@ -1,0 +1,34 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "stats": [
+      "mean",
+      "count"
+    ],
+    "column_prefix": "temp_mean__",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean__mean",
+      "temp_mean__count",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Perform zonal statistics on census_tracts and temperature_raster to get mean temperature, count of schools within tracts, and flood area per tract."
+}

@@ -1,0 +1,27 @@
+```json
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster.tif": {},
+    "study_boundary.gpkg": {}
+  },
+  "params": {
+    "output_filename": "T018_temperature_clip_boundary_crs.tif",
+    "reprojected_CRS": "+proj=longlat" // Assuming the original CRS is different and needs to be reprojected to WGS84 for compatibility reasons, as an example
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["+proj=longlat"], // Original CRS of the study boundary, which needs to be reprojected before clipping
+    "schema": [],
+    "geometry": [{"coordinates": [[...], [...]], // Coordinates defining the shapefile's geometry in WGS84 format after reprojection (to be filled with actual coordinates)
+              {"type": "Polygon", "crs": "+proj=longlat"}],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "The study boundary needs to be reprojected from its original CRS into WGS84 before clipping the temperature raster for accurate analysis."
+}
+```

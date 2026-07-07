@@ -1,0 +1,35 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "Quantile",
+    "cmap": "viridis",
+    "title": "Tract-Level Heat and Flood Risk Map",
+    "legend_title": "Temperature (Celsius)",
+    "source_note": "Data from temperature raster and census tracts."
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "temperature_raster.tif"
+    ],
+    "map_quality": []
+  },
+  "rationale": "This task requires creating a choropleth map to visualize the combined risk of heat and flood exposure, considering school availability. The zonal_input_for_map layer provides temperature data (temp_mean) and census tract information. We will use this data to create a map with a quantile classification scheme for temperature, using the 'viridis' color ramp.  The choropleth_export operation is suitable for generating a visually informative map."
+}
+```

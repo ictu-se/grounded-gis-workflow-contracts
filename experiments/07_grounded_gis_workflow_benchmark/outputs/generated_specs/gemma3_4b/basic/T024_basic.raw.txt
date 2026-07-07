@@ -1,0 +1,41 @@
+```json
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "target_layer": "temperature",
+    "zone_layer": "tracts",
+    "statistic_type": "mean",
+    "aggregate_field": "temp",
+    "group_by_field": "tract_id"
+  },
+  "params": {
+    "output_filename": "T024_temperature_school_join.gpkg",
+    "additional_statistics": [
+      {
+        "statistic_type": "count",
+        "aggregate_field": "school_count",
+        "group_by_field": "tract_id"
+      }
+    ],
+    "output_fields": ["tract_id", "temp_mean", "school_count"]
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean", "school_count"]
+  },
+  "validation": {
+    "crs": null,
+    "schema": [
+      {"name": "tract_id", "type": "int"},
+      {"name": "temp_mean", "type": "float"},
+      {"name": "school_count", "type": "int"}
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate mean temperature and school count for each tract using zonal statistics, then join the results into a single layer."
+}
+```

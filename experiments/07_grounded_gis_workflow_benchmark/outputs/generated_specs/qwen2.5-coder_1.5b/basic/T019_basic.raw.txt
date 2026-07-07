@@ -1,0 +1,29 @@
+```json
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "input_raster": "T019_temperature.tif",
+    "clip_shapefile": "Los_Angeles_County.shp"
+  },
+  "params": {},
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {
+        "min_value": -25,
+        "max_value": 40
+      }
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County and save a compressed GeoTIFF named T019_temperature_clip_compressed.tif."
+}
+```

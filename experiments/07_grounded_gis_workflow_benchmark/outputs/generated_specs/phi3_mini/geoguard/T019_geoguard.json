@@ -1,0 +1,32 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "file:///path/to/temperature_raster.tif"
+  },
+  "params": {
+    "mask": "file:///path/to/los_angeles_county_shapefile.shp",
+    "align_mask_to_raster_crs": "EPSG:3857",
+    "compression": "deflate"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "geometry": [],
+    "schema": [
+      {
+        "required": []
+      }
+    ],
+    "map_quality": [
+      "reprojected to EPSG:3857",
+      "compressed"
+    ]
+  },
+  "rationale": "Clipping the temperature raster requires reprojecting Los Angeles County shapefile from CRS EPSG:4326 to a projected system like EPSG:3857 for accurate area calculations, then compressing and saving as GeoTIFF."
+}

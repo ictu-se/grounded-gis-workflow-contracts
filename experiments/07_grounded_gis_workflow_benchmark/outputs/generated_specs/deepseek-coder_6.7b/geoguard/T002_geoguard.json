@@ -1,0 +1,33 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "Metric buffers and area calculations require projected CRS EPSG:3857 or equivalent.",
+      "Overlay/sjoin layers must be CRS-aligned."
+    ]
+  },
+  "rationale": "Creating a buffer of 2500 meters around the hospitals to represent their service areas, clipped within the county boundary. This will help in identifying potential risk zones for flooding and other disasters."
+}

@@ -1,0 +1,33 @@
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {},
+  "params": {
+    "fields": [
+      {
+        "field_name": "tract_id",
+        "type": "identifier"
+      },
+      {
+        "field_name": "school_point_count",
+        "type": "count"
+      },
+      {
+        "field_name": "hospital_point_count",
+        "type": "count"
+      }
+    ],
+    "output_filename": "T015_school_hospital_counts.gpkg",
+    "output_fields": [
+      "tract_id",
+      "school_count",
+      "hospital_count"
+    ]
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector"
+  },
+  "validation": {},
+  "rationale": "This operation joins census tract data with school and hospital point data to calculate the number of schools and hospitals within each tract, saving the result in a GeoPackage file."
+}

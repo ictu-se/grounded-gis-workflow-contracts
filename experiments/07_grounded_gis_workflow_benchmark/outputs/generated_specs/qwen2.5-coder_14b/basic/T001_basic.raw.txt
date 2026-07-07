@@ -1,0 +1,25 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospital_points": "path_to_hospital_points_file",
+    "study_boundary": "path_to_study_boundary_file"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "unit": "meters"
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a buffer around each hospital point to define a 1000 meter service area and clip it to the study boundary for analysis."
+}

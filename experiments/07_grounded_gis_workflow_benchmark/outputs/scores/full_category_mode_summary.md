@@ -1,0 +1,22 @@
+# Full Category Mode Summary
+
+|task_type|mode|JSON_VALID|DATA_VALID|FIELD_VALID|CRS_PLAN|MAP_PLAN|WPHR|PRS|tasks|
+|---|---|---|---|---|---|---|---|---|---|
+|buffer_service_area|basic|0.6000|0.0167|0.2083|0.1333|0.6000|0.6883|0.3985|60|
+|buffer_service_area|geoguard|0.8167|0.8000|0.7667|0.6833|0.8167|0.2267|0.7822|60|
+|buffer_service_area|grounded|0.8000|0.7333|0.7000|0.2000|0.8000|0.3533|0.6885|60|
+|choropleth_export|basic|0.7667|0.0000|0.7000|0.7667|0.2733|0.4100|0.5941|60|
+|choropleth_export|geoguard|0.8000|0.6667|0.4888|0.8000|0.6667|0.3322|0.6970|60|
+|choropleth_export|grounded|0.8333|0.6500|0.4391|0.8333|0.6967|0.3255|0.7123|60|
+|overlay_intersection|basic|0.7833|0.0667|0.0667|0.4167|0.7833|0.5767|0.5267|60|
+|overlay_intersection|geoguard|0.8333|0.8333|0.5833|0.5750|0.8333|0.2683|0.7637|60|
+|overlay_intersection|grounded|0.9000|0.8500|0.4694|0.4583|0.9000|0.3011|0.7456|60|
+|point_count_join|basic|0.8167|0.0000|0.1256|0.7333|0.8167|0.5115|0.5769|60|
+|point_count_join|geoguard|0.9000|0.8333|0.5425|0.9000|0.9000|0.1882|0.8196|60|
+|point_count_join|grounded|0.8833|0.8500|0.5294|0.8833|0.8833|0.2041|0.8078|60|
+|raster_clip|basic|0.7167|0.1500|0.7167|0.6833|0.7167|0.4100|0.6322|60|
+|raster_clip|geoguard|0.8667|0.7000|0.8667|0.8667|0.8667|0.1667|0.8445|60|
+|raster_clip|grounded|0.8333|0.6667|0.8333|0.8333|0.8333|0.2000|0.8111|60|
+|zonal_statistics|basic|0.7833|0.0833|0.0361|0.6833|0.7833|0.5361|0.5518|60|
+|zonal_statistics|geoguard|0.8167|0.7833|0.4225|0.8167|0.8167|0.2822|0.7350|60|
+|zonal_statistics|grounded|0.8333|0.8167|0.4028|0.8333|0.8333|0.2761|0.7391|60|

@@ -1,0 +1,29 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "school_points"
+  },
+  "params": {
+    "field": "tract_id",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "viridis",
+    "title": "School Density Choropleth Map",
+    "legend_title": "Number of Schools per Census Tract",
+    "source_note": "Data source: school_points.gpkg"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["title", "legend", "classification scheme", "sequential color ramp", "readable borders", "source note"]
+  },
+  "rationale": "This task aims to create a choropleth map of school density by census tract, with clear legend and title."
+}

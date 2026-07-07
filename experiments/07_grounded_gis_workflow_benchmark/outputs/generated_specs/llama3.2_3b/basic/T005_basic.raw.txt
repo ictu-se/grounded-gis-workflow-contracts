@@ -1,0 +1,24 @@
+{
+    "task_id": "T005",
+    "operation": "buffer_service_area",
+    "inputs": {
+        "input_layer": "hospital_points.shp",
+        "distance": 1000,
+        "crs": "EPSG:4326",
+        "clip": "los_angeles_county.shp"
+    },
+    "params": {},
+    "output": {
+        "filename": "T005_buffer_hospitals_area.gpkg",
+        "type": "vector",
+        "required_fields": ["name", "area_m2"]
+    },
+    "validation": {
+        "crs": ["EPSG:4326"],
+        "schema": [],
+        "geometry": ["Point"],
+        "raster": [],
+        "map_quality": []
+    },
+    "rationale": "short"
+}

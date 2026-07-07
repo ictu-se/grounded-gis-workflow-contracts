@@ -1,0 +1,31 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "combined_risk_score",
+    "classes": [1, 2, 3, 4],
+    "scheme": "quantiles",
+    "cmap": "Reds",
+    "title": "Tract-Level Multivariate Risk Map",
+    "legend_title": "Combined Heat, Flood Exposure, and School Availability Risk",
+    "source_note": "Data sources: temperature_raster.tif, flood_zones.gpkg, school_points.gpkg"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["MultiPolygon"],
+    "raster": [],
+    "map_quality": ["high"]
+  },
+  "rationale": "This map combines heat, flood exposure, and school availability risks at the tract level to provide a comprehensive view of potential vulnerabilities."
+}
+```

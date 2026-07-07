@@ -1,0 +1,20 @@
+```json
+{
+  "task_id": "T009",
+  "operation": "overlay_intersection",
+  "inputs": {},
+  "params": {
+    "output": {
+      "filename": "T009_flood_summary_by end result.gpkg"
+    },
+    "validation": {
+        "crs": ["EPSG:4326"], // Assuming the data is in WGS84 coordinate system, but this should be verified with actual CRS of input datasets
+        "schema": [], 
+        "geometry": ["Polygon", "Point"], 
+        "raster": []
+    },
+    "map_quality": [90] // Assuming a high-resolution dataset for accurate flood zone mapping, but this should be verified with actual data quality standards.
+  },
+  "rationale": "To estimate the area of each census tract within flood zones and save it in a geopackage format."
+}
+```

@@ -1,0 +1,32 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": ["zonal_statistics"],
+    "from": [
+      {"name": "zonal_statistics", "epsg": "4326"},
+      {"name": "temperature_raster", "crs": "EPSG:4326"}
+    ]
+  },
+  "params": {
+    "field": ["temp_mean"],
+    "classes": [{"min": -10, "max": 50, "step": 5},
+    "scheme": "sequential",
+    "cmap": "Blues",
+    "title": "Mean Temperature by Census Tract",
+    "legend_title": "Temperature (°C)",
+    "source_note": "Data from temperature raster and zonal statistics"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": ["temp_mean"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [{"name": "zonal_statistics"}, {"name": "temperature_raster"}],
+    "raster": []
+  },
+  "rationale": "To visualize the mean temperature distribution across different census tracts using a sequential blue color scheme for easy interpretation."
+}

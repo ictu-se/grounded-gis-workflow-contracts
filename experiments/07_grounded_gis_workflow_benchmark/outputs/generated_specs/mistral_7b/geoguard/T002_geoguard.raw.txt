@@ -1,0 +1,28 @@
+ {
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "clip_boundary": {
+    "source": "school_points"
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": [3857],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates a 2500 meter buffer around hospitals, clips the result to the county boundary, and saves the output as T002_buffer_hospitals_2500m.gpkg with required field 'name'."
+}

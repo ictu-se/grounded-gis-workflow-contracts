@@ -1,0 +1,25 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 4326,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "geometry": [
+      "Point"
+    ]
+  },
+  "rationale": "Buffer hospitals by 1000 meters, preserve hospital name and source_id fields after clipping."
+}

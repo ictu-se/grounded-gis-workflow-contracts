@@ -1,0 +1,24 @@
+```json
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "title": "Hospital Access by Census Tract",
+    "legend": {
+      "type": "color",
+      "colors": ["blue", "green", "yellow", "red"],
+      "labels": ["0-10", "11-20", "21-30", "31+"]
+    },
+    "readable_borders": true,
+    "source_note": "Data from the US Census Bureau"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {},
+  "rationale": "This map will visually represent the number of hospitals per census tract, with a clear legend and readable borders. The source note provides context for the data used."
+}
+```

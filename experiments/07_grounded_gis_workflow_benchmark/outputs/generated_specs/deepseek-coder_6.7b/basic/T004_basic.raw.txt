@@ -1,0 +1,7 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+ "inputs": {
+    "layer": "hospitals.gpkg",
+    "field": "name, source_id"
+  },"

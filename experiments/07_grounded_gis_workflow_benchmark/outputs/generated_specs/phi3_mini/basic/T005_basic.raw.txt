@@ -1,0 +1,19 @@
+```json
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": "1km",
+    "crs": ["EPSG:32618"], // Los Angeles County CRS code (Albers Equal Area Conic)
+    "output_filename": "T005_buffer_hospitals_area.gpkg"
+  },
+  "validation": {
+    "crs": ["EPSG:32618"], // Los Angeles County CRS code (Albers Equal Area Conic)
+    "schema": [{"name": "name", "type": "string"}, {"area_m2": "number"}], 
+    "geometry": [],
+    "raster": []
+  },
+  "rationale": "To create buffers around hospitals within Los Angeles County to assess service areas, with the area calculated in square meters for each buffer."
+}
+```

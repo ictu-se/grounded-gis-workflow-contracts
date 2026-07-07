@@ -1,0 +1,28 @@
+ {
+  "task_id": "T013",
+  "operation": "point_count_join",
+  "inputs": {
+    "schools": {"filename": "schools.shp", "type": "vector"},
+    "tracts": {"filename": "tracts.shp", "type": "vector"}
+  },
+  "params": {
+    "join_fields": ["tract_id"],
+    "aggregation_field": "school_count"
+  },
+  "output": {
+    "filename": "T013_school_density_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [
+      {"name": "tract_id", "type": "integer"},
+      {"name": "school_count", "type": "integer"},
+      {"name": "schools_per_km2", "type": "real"}
+    ],
+    "geometry": ["polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Count schools per census tract and compute schools_per_km2 using land area from tracts layer."
+}

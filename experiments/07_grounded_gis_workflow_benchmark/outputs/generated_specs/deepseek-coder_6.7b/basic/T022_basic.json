@@ -1,0 +1,35 @@
+{
+  "task_id": "T022",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "raster": "temperature.tif",
+    "vector": "census_tracts.shp"
+  },
+  "params": {
+    "stats": [
+      "mean"
+    ]
+  },
+  "output": {
+    "filename": "T022_temperature_mean_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [
+      "8-bit unsigned integer"
+    ],
+    "map_quality": []
+  },
+  "rationale": "This task computes the mean temperature per census tract, handles CRS alignment, and saves the result as a GeoPackage file."
+}

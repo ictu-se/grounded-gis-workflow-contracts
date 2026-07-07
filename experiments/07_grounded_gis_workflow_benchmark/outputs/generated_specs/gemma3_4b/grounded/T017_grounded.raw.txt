@@ -1,0 +1,31 @@
+```json
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster",
+    "mask": "study_boundary"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": null
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "temperature_raster"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the study boundary, preserving nodata values."
+}
+```

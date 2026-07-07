@@ -1,0 +1,31 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals": "path/to/hospital/points.shp",
+    "study_boundary": "path/to/study/boundary.shp"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "output_crs": "EPSG:4326"
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create service-area buffers around hospitals and clip to study boundary."
+}

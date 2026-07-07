@@ -1,0 +1,24 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": ["hospital_points.gpkg"],
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000, // Converted to meters for a 1 km buffer as Los Angeles County is approximately 394 square miles and the average block size in LA is about 275 feet (84.1 m)
+    "target_epsg": -167, // EPSG:4326 -> UTM Zone 18N for better metric calculations
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4269"], // CRS for metric calculations, as per GeoGuard rules
+    "schema": [],
+    "geometry": [{"required_fields": ["source_id", "name"]],
+    "raster": []
+  },
+  "rationale": "To create a dissolved buffer around hospitals within Los Angeles County for better metric calculations, ensuring the output is in UTM Zone 18N and includes required fields."
+}

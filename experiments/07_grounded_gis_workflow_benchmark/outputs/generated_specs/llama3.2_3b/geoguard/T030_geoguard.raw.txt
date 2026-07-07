@@ -1,0 +1,32 @@
+{
+    "task_id": "T030",
+    "operation": "choropleth_export",
+    "inputs": {
+        "layer": "zonal_input_for_map"
+    },
+    "params": {
+        "field": "temp_mean",
+        "classes": [
+            {"class": 0, "label": "Low"},
+            {"class": 1, "label": "Moderate"},
+            {"class": 2, "label": "High"}
+        ],
+        "scheme": "quantiles",
+        "cmap": "viridis",
+        "title": "Multivariate Risk Map",
+        "legend_title": "Risk Level",
+        "source_note": "Generated using GeoGuard"
+    },
+    "output": {
+        "filename": "T030_multivariate_risk_map.png",
+        "type": "png"
+    },
+    "validation": {
+        "crs": ["EPSG:4326"],
+        "schema": [],
+        "geometry": [],
+        "raster": [],
+        "map_quality": []
+    },
+    "rationale": "This choropleth map combines heat, flood exposure, and school availability risk at the tract level."
+}

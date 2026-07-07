@@ -1,0 +1,28 @@
+{
+  "task_id": "T026",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_mean",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T026_temperature_zonal_statistics.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {"name": "temperature_raster", "crs": ["4326"]}
+    ],
+    "map_quality": []
+  },
+  "rationale": "Calculate mean temperature by census tract and export as a vector file for choropleth map creation."
+}

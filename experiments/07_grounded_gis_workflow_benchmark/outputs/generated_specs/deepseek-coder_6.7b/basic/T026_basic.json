@@ -1,0 +1,35 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data": "mean temperature by census tract",
+    "color_scheme": "sequential blue"
+  },
+  "params": {
+    "title": "Mean Temperature Choropleth Map",
+    "legend": "Temperature (\u00b0F)",
+    "source_note": "Source: Local Weather Station Network"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "raster|png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygons"
+    ],
+    "raster": [
+      "PNG format"
+    ],
+    "map_quality": [
+      "Clear definition of color scheme",
+      "Title and source note visible"
+    ]
+  },
+  "rationale": "This task is to create a choropleth map visualizing the mean temperature by census tract using a sequential blue color scheme, with a title, legend, and source note."
+}

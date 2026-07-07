@@ -1,0 +1,27 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "input_features": "/path/to/hospitals.shp",  <!-- Replace with actual input path -->
+    "distance_meters": 1000,
+    "output_filename": "T004_buffer_hospitals_named.gpkg",
+    "fields_to_preserve": ["name", "source_id"]
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "source_id"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1000 meters and preserve specified fields."
+}

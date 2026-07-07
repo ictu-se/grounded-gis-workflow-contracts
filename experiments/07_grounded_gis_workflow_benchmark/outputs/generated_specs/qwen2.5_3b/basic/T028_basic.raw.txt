@@ -1,0 +1,18 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T028_flood_exposure_choropleth.png",
+    "color_ramp": "sequential"
+  },
+  "output": {"filename": "T028_flood_exposure_choropleth.png", "type": "png", "required_fields": []},
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map of flood exposure area using census tracts with an appropriate sequential color ramp and save as PNG."
+}

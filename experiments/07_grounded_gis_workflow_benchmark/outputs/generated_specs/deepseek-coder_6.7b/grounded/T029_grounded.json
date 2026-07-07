@@ -1,0 +1,35 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg|tract_id,tract_name,land_area_m2,water_area_m2,temp_mean,temp"
+  },
+  "params": {
+    "field": "hospital_count",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "viridis",
+    "title": "Hospital Access Choropleth Map",
+    "legend_title": "Number of Hospitals per Census Tract",
+    "source_note": "Data source: census tracts and hospital points"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": [
+      "readable borders"
+    ]
+  },
+  "rationale": "This map provides a visual representation of the number of hospitals per census tract, which can help in understanding the accessibility and distribution of healthcare services."
+}

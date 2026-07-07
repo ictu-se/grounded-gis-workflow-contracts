@@ -1,0 +1,22 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "input_raster": "temperature_raster",  <!-- Replace with actual input raster name -->
+    "output_filename": "T016_temperature_clip.tif",
+    "study_area": "Los Angeles County study boundary"  <!-- Replace with actual study area definition -->
+  },
+  "output": {"filename": "T016_temperature_clip.tif", "type": "raster", "required_fields": []},
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "input_raster has valid CRS and is in the same projection as study area",
+      "output raster has no nodata values"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip temperature raster to Los Angeles County boundary and save as T016_temperature_clip.tif without validation fields."
+}

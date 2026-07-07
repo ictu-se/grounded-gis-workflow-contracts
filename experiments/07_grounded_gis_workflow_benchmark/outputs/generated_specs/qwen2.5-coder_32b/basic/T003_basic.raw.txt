@@ -1,0 +1,25 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "layer": "hospitals_in_la_county.shp"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "unit": "meters",
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1 km and dissolve the buffers to create a single coverage layer for Los Angeles County."
+}

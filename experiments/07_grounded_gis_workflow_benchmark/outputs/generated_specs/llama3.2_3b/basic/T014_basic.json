@@ -1,0 +1,18 @@
+{
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "census_tracts": "path/to/census/tracts.shp",
+    "schools": "path/to/schools.shp"
+  },
+  "params": {
+    "join_on": [
+      "tract_id"
+    ],
+    "output_filename": "T014_tracts_with_schools.gpkg",
+    "required_fields": [
+      "tract_id",
+      "school_count"
+    ]
+  }
+}

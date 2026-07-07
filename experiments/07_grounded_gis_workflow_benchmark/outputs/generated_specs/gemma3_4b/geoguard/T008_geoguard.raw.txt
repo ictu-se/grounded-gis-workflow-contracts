@@ -1,0 +1,32 @@
+```json
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts",
+    "input_b": "flood_zones"
+  },
+  "params": {
+    "target_epsg": 4269,
+    "aggregate_by": "centroid"
+  },
+  "output": {
+    "filename": "T008_sfha_overlay.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "sfha_tf"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4269
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersect census tracts and flood zones to create a new vector layer containing the intersection of tract boundaries with flood zone polygons. The resulting layer will preserve the tract_id and sfha_tf fields."
+}
+```

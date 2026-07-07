@@ -1,0 +1,28 @@
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "vector_layer": "hospitals.gpkg"
+  },
+  "params": {
+    "distance": 1000,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T004_buffer_hospitals_named.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      "name",
+      "source_id"
+    ],
+    "geometry": [
+      "polygon"
+    ]
+  },
+  "rationale": "Buffer hospitals by 1000 meters, preserving hospital name and source_id fields. Clip the resulting polygons to avoid overlaps."
+}

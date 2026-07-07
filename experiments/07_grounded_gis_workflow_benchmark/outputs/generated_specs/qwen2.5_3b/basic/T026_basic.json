@@ -1,0 +1,26 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_format": "png",
+    "output_filename": "T026_temperature_choropleth.png",
+    "color_scheme": "sequential_blue",
+    "title": "",
+    "legend": true,
+    "source_note": ""
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map PNG of mean temperature by census tract using specified color scheme and metadata."
+}

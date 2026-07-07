@@ -1,0 +1,59 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": [
+      "temp_mean",
+      "sfha_tf",
+      "school_count"
+    ],
+    "classes": [
+      {
+        "min": -10,
+        "max": 25,
+        "label": "Low"
+      },
+      {
+        "min": 26,
+        "max": 45,
+        "label": "Moderate"
+      },
+      {
+        "min": 46,
+        "max": 70,
+        "label": "High"
+      }
+    ],
+    "scheme": "Sequential",
+    "cmap": "YlGnBu",
+    "title": "Combined Heat, Flood Exposure, and School Availability Risk",
+    "legend_title": "Risk Level",
+    "source_note": "Data sourced from various GIS layers"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": [
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "temp_mean",
+      "sfha_tf",
+      "school_count"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "The choropleth map is created by aggregating temperature mean, flood exposure (SFHA TF), and school count at the tract level. The risk levels are determined based on predefined classes, and a sequential color ramp is used to visually represent the data."
+}

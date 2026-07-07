@@ -1,0 +1,31 @@
+{
+  "task_id": "T020",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "boundary": "study_boundary.shp"
+  },
+  "params": {
+    "preserve_crs": true,
+    "transform": true,
+    "nodata": true,
+    "metadata": true
+  },
+  "output": {
+    "filename": "T020_temperature_clip_metadata.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "crs",
+      "nodata",
+      "metadata"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the study boundary while preserving CRS, transform, nodata, and metadata."
+}

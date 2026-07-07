@@ -1,0 +1,33 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "flood_zones"
+  },
+  "params": {
+    "field": "sfha_tf",
+    "classes": null,
+    "scheme": "sequential",
+    "cmap": "YlGnBu",
+    "title": "Flood Exposure by Census Tract",
+    "legend_title": "SFHA Floodplain (1=No, 0=Yes)",
+    "source_note": "Data from flood_zones.gpkg"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task requires creating a choropleth map of flood exposure using the flood_zones data. The sfha_tf field represents SFHA floodplain status, which will be used as the basis for the choropleth."
+}

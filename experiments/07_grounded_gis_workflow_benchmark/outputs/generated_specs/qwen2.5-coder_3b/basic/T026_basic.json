@@ -1,0 +1,21 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "census_tract_temperature_data.csv",
+    "color_scheme": "sequential_blue",
+    "title": "Mean Temperature by Census Tract",
+    "legend_title": "Temperature (\u00b0C)",
+    "source_note": "Data source: U.S. Census Bureau"
+  },
+  "params": {
+    "output_filename": "T026_temperature_choropleth.png",
+    "resolution": "high"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png"
+  },
+  "validation": {},
+  "rationale": "This task involves creating a choropleth map of mean temperature by census tract using a sequential blue color scheme, with a title, legend, and source note. The output is saved as a PNG file."
+}

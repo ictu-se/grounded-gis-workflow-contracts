@@ -1,0 +1,36 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "layer": "flood_zones",
+    "field": "sfha_tf",
+    "classes": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "scheme": "Quantitative",
+    "cmap": "Blues",
+    "title": "Flood Exposure by Census Tract",
+    "legend_title": "Flood Severity Levels",
+    "source_note": "Data source: Flood Zones"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map of flood exposure areas using census tracts as the base layer with an appropriate sequential color ramp."
+}

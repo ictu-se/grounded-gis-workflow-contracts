@@ -1,0 +1,14 @@
+{
+  "task_id": "T013",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "school_points.gpkg",
+    "join": "census_tracts.gpkg"
+  },
+  "params": {
+    "target_epsg": "4326",
+    "group_field": "tract_name",
+    "count_field": "school_id",
+    "predicate": "1=1"
+  }
+}

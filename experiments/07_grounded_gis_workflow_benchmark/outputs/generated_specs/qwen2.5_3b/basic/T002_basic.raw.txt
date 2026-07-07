@@ -1,0 +1,25 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance_meters": 2500,
+    "crs_input": "EPSG:4326", 
+    "crs_output": "EPSG:6933",
+    "clip_by_geometry": {"type": "Feature", "properties": {}, "geometry": {}},
+    "output_filename": "T002_buffer_hospitals_2500m.gpkg"
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates a buffer area around hospitals, clips the result to county boundaries, and saves the output in GeoPackage format with 'name' field included."
+}

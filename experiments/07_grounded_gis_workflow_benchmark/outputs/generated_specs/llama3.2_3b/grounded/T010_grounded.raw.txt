@@ -1,0 +1,1 @@
+{"task_id": "T010", "operation": "overlay_intersection", "inputs": {"input_a": "census_tracts.gpkg", "input_b": "flood_zones.gpkg"}, "params": {"target_epsg": "4269", "aggregate_by": "tract_area_m2", "area_field": "water_area_m2", "output_vector": "T010_high_flood_tracts.gpkg"}}

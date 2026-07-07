@@ -1,0 +1,36 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "combined_risk_score",
+    "classes": 5,
+    "scheme": "quantile",
+    "cmap": "YlOrRd",
+    "title": "Tract-Level Combined Heat, Flood Exposure, and School Availability Risk",
+    "legend_title": "Risk Score",
+    "source_note": "Data sources: temperature_raster.tif, flood_zones.gpkg, school_points.gpkg"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "buffer(0)"
+    ],
+    "raster": [],
+    "map_quality": [
+      "readable_borders",
+      "sequential_color_ramp"
+    ]
+  },
+  "rationale": "The choropleth map uses a quantile scheme to classify tracts based on their combined risk score, which integrates heat exposure (mean temperature), flood risk (binary presence of flood zones), and school availability (count of schools within a buffer). The YlOrRd color ramp visually represents increasing risk from yellow to dark red."
+}

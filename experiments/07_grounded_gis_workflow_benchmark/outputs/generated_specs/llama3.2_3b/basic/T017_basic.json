@@ -1,0 +1,29 @@
+{
+  "task_id": "T017",
+  "operation": "raster_clip",
+  "inputs": {
+    "input_raster": "temperature",
+    "clip_vector": "county_boundary"
+  },
+  "params": {
+    "nodata_value": null,
+    "output_filename": "T017_temperature_clip_nodata.tif"
+  },
+  "output": {
+    "filename": "T017_temperature_clip_nodata.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [
+      "vector"
+    ],
+    "raster": [
+      "raster"
+    ],
+    "map_quality": []
+  },
+  "rationale": "short"
+}

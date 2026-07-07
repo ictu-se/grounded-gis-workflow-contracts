@@ -1,0 +1,29 @@
+```json
+{
+  "task_id": "T013",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": "school_points"
+  },
+  "params": {
+    "target_epsg": "EPSG:4269",
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T013_school_density_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "school_count", "schools_per_km2"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To count schools per census tract, we use the point_count_join operation to join the census_tracts and school_points layers based on their intersection. We then calculate the number of schools in each census tract using the 'school_count' field. Finally, we compute the average number of schools per square kilometer by dividing the total number of schools by the land area of each census tract."
+}
+```

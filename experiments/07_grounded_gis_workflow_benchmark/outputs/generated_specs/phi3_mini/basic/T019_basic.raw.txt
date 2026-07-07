@@ -1,0 +1,21 @@
+```json
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "path/to/LA_county_temperature.tif"
+  },
+  "params": {},
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the temperature raster is in WGS84 coordinate reference system, which needs to be validated and possibly transformed if not.
+    "schema": [],
+    "geometry": [{"type":"Polygon","coordinates":[[[-118.2975, 34.0500], [-118.2975, 34.2000], [-117.6250, 34.2000], [-117.6250, 34.050 end]]}, // Boundary coordinates of Los Angeles County
+    "map_quality": ["high"]
+  },
+  "rationale": "Clipping the temperature raster to LA County provides a focused dataset for localized climate analysis."
+}
+```

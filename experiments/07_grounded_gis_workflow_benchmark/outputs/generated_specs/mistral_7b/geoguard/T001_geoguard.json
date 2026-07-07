@@ -1,0 +1,29 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      3857
+    ],
+    "schema": [
+      "name"
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates 1000 meter service-area buffers around all hospital points in Los Angeles County and clips the result to the study boundary."
+}

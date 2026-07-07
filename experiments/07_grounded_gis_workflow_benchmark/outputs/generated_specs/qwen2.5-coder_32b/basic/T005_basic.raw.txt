@@ -1,0 +1,25 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals_layer": "path_to_hospitals_layer.shp",
+    "los_angeles_county_layer": "path_to_los_angeles_county_layer.shp"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "projected_crs": "EPSG:32611" // UTM zone 11N
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": ["name", "area_m2"]
+  },
+  "validation": {
+    "crs": ["EPSG:32611"],
+    "schema": ["name:string", "area_m2:float"],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create 1 km buffers around hospitals, clip them to Los Angeles County boundaries, calculate the area in square meters using a projected CRS, and save the results as a GeoPackage."
+}

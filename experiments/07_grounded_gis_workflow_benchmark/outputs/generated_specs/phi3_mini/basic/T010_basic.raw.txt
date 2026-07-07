@@ -1,0 +1,20 @@
+```json
+{
+  "task_id": "T010",
+  "operation": "overlay_intersection",
+  "inputs": {},
+  "params": {
+    "output": {
+      "filename": "T01 end high flood tracts.gpkg"
+    },
+    "validation": {
+      "crs": ["EPSG:4326"], // Assuming the input data is in WGS84 coordinate system, which needs to be checked and confirmed for accuracy
+      "schema": [],
+      "geometry": ["Polygon", "Point"], // Expecting flood areas as polygons or points representing tract centroids/boundaries
+      "raster": []
+    },
+    "map_quality": [95] // Assuming a high-resolution requirement for accuracy in identifying flood exposure, but this can be adjusted based on actual needs
+  },
+  "rationale": "The overlay intersection operation is used to identify tracts with any significant flood risk by intersecting them with known flood zones or historical data. This process ensures that only those areas within the high-risk zone are included in T010_high_flood_tracts, providing a focused dataset for emergency planning and response."
+}
+```

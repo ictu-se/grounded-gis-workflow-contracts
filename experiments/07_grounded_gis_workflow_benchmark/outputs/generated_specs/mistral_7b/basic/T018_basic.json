@@ -1,0 +1,26 @@
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "vector": "study_boundary.gpkg"
+  },
+  "params": {
+    "output_crs": "{raster_crs}",
+    "mask": true
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": [
+      "{raster_crs}"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster using the study boundary, reprojecting the boundary to match the raster's CRS before masking."
+}

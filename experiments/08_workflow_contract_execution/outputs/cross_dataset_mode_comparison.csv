@@ -1,0 +1,7 @@
+data_profile,mode,contracts,valid_artifacts,valid_rate
+geoguard,basic,360,268,0.7444
+synthetic,basic,360,268,0.7444
+geoguard,geoguard,360,301,0.8361
+synthetic,geoguard,360,301,0.8361
+geoguard,grounded,360,304,0.8444
+synthetic,grounded,360,304,0.8444

@@ -1,0 +1,15 @@
+[
+  "qwen2.5-coder:1.5b",
+  "qwen2.5-coder:3b",
+  "qwen2.5-coder:7b",
+  "qwen2.5-coder:14b",
+  "qwen2.5-coder:32b",
+  "deepseek-coder:6.7b",
+  "qwen2.5:3b",
+  "qwen3:4b",
+  "llama3.2:3b",
+  "phi3:mini",
+  "mistral:7b",
+  "gemma3:4b"
+]
+

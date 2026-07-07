@@ -1,0 +1,25 @@
+{
+  "task_id": "T019",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "census_tracts.gpkg"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["nodata_value=-9999", "compression=DEFLATE"],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the boundaries of Los Angeles County using census tracts as the mask. Ensure the CRS alignment and set a nodata value for compression."
+}

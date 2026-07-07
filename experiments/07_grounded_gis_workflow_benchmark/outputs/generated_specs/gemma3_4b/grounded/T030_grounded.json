@@ -1,0 +1,33 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "equalinterval",
+    "cmap": "viridis",
+    "title": "Tract-Level Heat and Flood Risk",
+    "legend_title": "Temperature (Celsius)",
+    "source_note": "Data from temperature raster and census tracts."
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "temperature_raster.tif"
+    ],
+    "map_quality": []
+  },
+  "rationale": "This operation creates a choropleth map visualizing the combined risk of heat exposure (based on temperature) and flood exposure using census tracts as the base layer."
+}

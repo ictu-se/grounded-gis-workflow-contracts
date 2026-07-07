@@ -1,0 +1,19 @@
+```json
+{
+  "task_id": "T004",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": 1000, // Buffer distance in meters (required)
+    "output_filename": "T004_buffer_hospitals_named.gpkg"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Common CRS for geographic data, assuming WGS84; adjust if necessary based on the actual coordinate reference system of input hospitals layer
+    "schema": [],
+    "geometry": ["name", "source_id"], // Required fields to be preserved after clipping operation
+    "raster": []
+  },
+  "map_quality": [10], // Quality level, with higher numbers indicating better resolution (optional)
+  "rationale": "To create a buffer zone around hospitals for service area analysis without altering the original hospital locations and details"
+}
+```

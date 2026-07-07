@@ -1,0 +1,22 @@
+```json
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": "1km",
+    "metric": true,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Assuming the input data is in WGS84, which needs to be transformed for metric buffering; otherwise specify appropriate CRS with meters as units
+    "schema": [],
+    "geometry": ["Polygon", "MultiPolygon"],
+    "raster": []
+  },
+  "rationale": "To create a dissolved layer representing the service area around hospitals in Los Angeles County for emergency response planning, ensuring all buffered areas are within safe metric distances."
+}
+```

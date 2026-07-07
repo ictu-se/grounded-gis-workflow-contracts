@@ -1,0 +1,23 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data": {
+      "type": "vector",
+      "source": "tract_data.shp",
+      "fields": ["heat", "flood_exposure", "school_availability"]
+    },
+    "style": {
+      "color": "#FF0000",
+      "fillOpacity": 0.5,
+      "legend": [
+        {"field": "heat", "label": "Combined Heat Risk"},
+        {"field": "flood_exposure", "label": "Flood Exposure Risk"},
+        {"field": "school_availability", "label": "School Availability Risk"}
+      ]
+    },
+    "output_filename": "T030_multivariate_risk_map.png"
+  }
+}
+```

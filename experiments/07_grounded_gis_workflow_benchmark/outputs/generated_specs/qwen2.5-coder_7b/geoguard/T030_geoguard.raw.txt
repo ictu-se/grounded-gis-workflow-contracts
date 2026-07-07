@@ -1,0 +1,36 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "YlOrRd",
+    "cmap": "YlOrRd",
+    "title": "Tract-Level Heat Risk",
+    "legend_title": "Average Temperature (°C)",
+    "source_note": "Data from temperature_raster.tif and census_tracts.gpkg"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": [
+      "title",
+      "legend_title",
+      "classification_scheme",
+      "sequential_color_ramp",
+      "readable_borders",
+      "source_note"
+    ]
+  },
+  "rationale": "This choropleth map will visually represent the heat risk at the tract level using average temperature data. The use of a sequential color ramp (YlOrRd) helps in distinguishing between different levels of heat exposure."
+}

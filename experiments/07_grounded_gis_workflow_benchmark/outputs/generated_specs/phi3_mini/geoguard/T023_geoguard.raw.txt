@@ -1,0 +1,26 @@
+{
+  "task_id": "T023",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "source_a": "temperature_raster.tif",
+    "source_b": "study_boundary.gpkg"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true,
+    "aggregate_by": null, // Not required for this task but can be used to aggregate results by tract if needed.
+    "area_field": null // Only relevant when aggregating area-based statistics like sum or mean over multiple polygons.
+  },
+  "output": {
+    "filename": "T023_temperature_stats_hot_tracts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input CRS must be converted to EPSG:3857 for metric calculations, but since we're using zonal statistics which don't require this and the output is vector-based, it can remain in source_id.
+    "schema": ["temp_mean", "temp_sum"], // Required fields must be preserved or created as per GeoGuard rules.
+    "geometry": [], // No specific geometry validation needed for zonal statistics task itself but should ensure no invalid geometries post-processing if necessary.
+    "raster": [] // Not applicable since the output is vector, not raster format.
+  },
+  "rationale": "To compute temperature mean and sum within each tract of a study area while identifying the hottest quartile based on these statistics."
+}

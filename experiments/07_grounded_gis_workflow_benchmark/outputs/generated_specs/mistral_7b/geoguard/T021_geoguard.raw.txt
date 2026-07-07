@@ -1,0 +1,25 @@
+ {
+  "task_id": "T021",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts.gpkg",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "stats": ["mean", "sum"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T021_temperature_zonal_stats.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [4326, 3857], // Ensure both input CRS are aligned for overlay operations
+    "schema": ["tract_id"], // Required output field
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculate mean and sum temperature for each census tract using zonal statistics."
+}

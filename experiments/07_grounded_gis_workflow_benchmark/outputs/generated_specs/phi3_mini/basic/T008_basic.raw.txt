@@ -1,0 +1,20 @@
+```json
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {},
+  "params": {
+    "output": {
+      "filename": "T008_sfha_overlay.gpkg"
+    },
+    "validation": {
+      "crs": ["EPSG:4326"], // Assuming the census tracts and flood zones are in WGS 84 coordinate reference system (CRS) for this example, but should be verified with actual data sources.
+      "schema": [],
+      "geometry": ["Polygon", "Point"],
+      "raster": []
+    },
+    "map_quality": ["high"] // Assuming high-resolution raster or vector data is required to accurately represent the intersection results, but this can be adjusted based on actual requirements.
+  },
+  "rationale": "To identify areas within census tracts that are also in flood zones for disaster preparedness planning."
+}
+```

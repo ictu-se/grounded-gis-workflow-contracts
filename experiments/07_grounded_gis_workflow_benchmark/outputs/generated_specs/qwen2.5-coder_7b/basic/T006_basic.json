@@ -1,0 +1,21 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {},
+  "params": {},
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersect Los Angeles County census tracts with flood zones and save the polygon overlay as T006_flood_tract_overlay.gpkg."
+}

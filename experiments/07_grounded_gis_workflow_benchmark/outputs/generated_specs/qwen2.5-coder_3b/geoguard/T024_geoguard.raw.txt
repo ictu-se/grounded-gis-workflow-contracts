@@ -1,0 +1,28 @@
+```json
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts.gpkg",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "stats": ["mean", "count"],
+    "column_prefix": "",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean", "school_count"]
+  },
+  "validation": {
+    "crs": ["EPSG:3857"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Compute mean temperature and school count for each tract."
+}
+```

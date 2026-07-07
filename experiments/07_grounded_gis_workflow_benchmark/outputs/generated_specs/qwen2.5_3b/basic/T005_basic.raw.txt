@@ -1,0 +1,24 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": 1,
+    "geometry_source": "hospitals_layer",
+    "output_crs": "LA_County_Projected_CRS",
+    "output_filename": "T005_buffer_hospitals_area.gpkg",
+    "output_fields": ["name", "area_m2"]
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates buffers around hospitals, clips to LA County boundary, computes area in projected CRS, and saves as GeoPackage with specified fields."
+}

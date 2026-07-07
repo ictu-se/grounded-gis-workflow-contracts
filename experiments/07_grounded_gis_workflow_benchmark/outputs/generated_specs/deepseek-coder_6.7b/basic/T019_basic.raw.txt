@@ -1,0 +1,22 @@
+{
+  "task_id": "T019",
+  "operation": "clip_raster",
+  "inputs": {
+    "filename": "temperature.tif",
+    "crs": "EPSG:4326"
+  },
+  "params": {
+    "geometry": "Los Angeles County boundary shapefile.shp"
+  },
+  "output": {
+    "filename": "T019_temperature_clip_compressed.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "geometry": ["Los Angeles County boundary shapefile.shp"],
+    "raster": [{"min": -50, "max": 50}]
+  },
+  "rationale": "Clip the temperature raster to Los Angeles County for analysis."
+}

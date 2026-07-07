@@ -1,0 +1,29 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "sequential",
+    "cmap": "Blues",
+    "title": "Flood Exposure Area by Census Tract",
+    "legend_title": "Mean Temperature (°C)",
+    "source_note": "Data source: Various GIS layers"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map to visualize flood exposure area by census tract using the mean temperature as an indicator."
+}

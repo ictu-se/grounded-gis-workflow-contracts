@@ -1,0 +1,31 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospital_points": "path_to_hospital_points.shp",
+    "study_boundary": "path_to_study_boundary.shp"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "units": "meters"
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create 1000 meter buffers around hospital points and clip to study boundary, saving as a GeoPackage."
+}

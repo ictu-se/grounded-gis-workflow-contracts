@@ -1,0 +1,36 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "census_tract_school_data.geojson",
+    "attribute_field": "school_density"
+  },
+  "params": {
+    "color_scheme": "YlOrRd",
+    "title": "School Density by Census Tract",
+    "legend_title": "School Density per Census Tract",
+    "legend_position": "bottomright",
+    "map_scale": "1:50000"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      "GeoJSON"
+    ],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": [
+      "high"
+    ]
+  },
+  "rationale": "Create a clear and visually appealing choropleth map to represent school density by census tract, ensuring the legend and title are easily understandable."
+}

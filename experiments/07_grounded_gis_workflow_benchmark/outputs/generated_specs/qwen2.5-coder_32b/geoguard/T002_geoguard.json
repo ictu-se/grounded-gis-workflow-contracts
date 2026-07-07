@@ -1,0 +1,32 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": 3857,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [
+      "buffer(0)"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffering hospital points with a 2500 meter radius using EPSG:3857 for accurate metric calculations, clipping to the study boundary, and ensuring valid geometry."
+}

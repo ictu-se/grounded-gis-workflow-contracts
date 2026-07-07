@@ -1,0 +1,25 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": "EPSG:4269", // Align with study_boundary's CRS
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [
+      {"rule": "buffer(0) if invalid", "exception_field": null}
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffering and dissolving in EPSG:4269 to ensure alignment with study_boundary's CRS."
+}

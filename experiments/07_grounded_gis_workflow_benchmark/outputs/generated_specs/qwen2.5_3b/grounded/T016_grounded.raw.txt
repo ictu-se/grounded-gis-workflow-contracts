@@ -1,0 +1,20 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {},
+  "params": {
+    "align_mask_to_raster_crs": false,
+    "mask": "study_boundary.gpkg",
+    "nodata": null,
+    "target_epsg": 4269
+  },
+  "output": {"filename": "T016_temperature_clip.tif", "type": "raster", "required_fields": []},
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the study boundary layer in EPSG:4269"
+}

@@ -1,0 +1,19 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {},
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean", "school_count", "flood_area_m2"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves calculating zonal statistics for a set of features, which includes calculating the mean temperature, school count and flood area."
+}

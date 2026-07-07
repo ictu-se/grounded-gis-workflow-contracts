@@ -1,0 +1,27 @@
+```json
+{
+  "task_id": "T022",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "temperature_data": "path/to/temperature_data.shp", // Replace with the actual path to your temperature data shapefile
+    "tract_data": "path/to/tract_data.shp" // Replace with the actual path to your tract data shapefile
+  },
+  "params": {
+    "statistic": "mean",
+    "output_field": "temp_mean"
+  },
+  "output": {
+    "filename": "T022_temperature_mean_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean"]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves computing the mean temperature for each census tract using zonal statistics. The input data includes both temperature and tract shapefiles, which are then aligned to ensure accurate calculations. The output is a geopackage containing the tract IDs and their corresponding mean temperatures."
+}
+```

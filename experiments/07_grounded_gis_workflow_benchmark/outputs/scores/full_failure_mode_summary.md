@@ -1,0 +1,7 @@
+# Full Failure Mode Summary
+
+|mode|json_invalid|tool_invalid|data_invalid|field_weak|crs_weak|schema_weak|map_plan_weak|output_name_wrong|tasks|
+|---|---|---|---|---|---|---|---|---|---|
+|basic|92|2|249|168|83|36|46|9|360|
+|geoguard|58|7|25|140|39|33|9|12|360|
+|grounded|55|8|31|155|89|45|10|19|360|

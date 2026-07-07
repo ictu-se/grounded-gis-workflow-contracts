@@ -1,0 +1,40 @@
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "raster": [
+      "temperature.tif"
+    ],
+    "vector": [
+      "schools.gpkg"
+    ]
+  },
+  "params": {
+    "stats": [
+      "mean"
+    ]
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [
+      "temperature.tif"
+    ],
+    "map_quality": []
+  },
+  "rationale": "This task computes the mean temperature for each tract and counts the number of schools in each tract."
+}

@@ -1,0 +1,25 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "heat_data": "",
+    "flood_exposure_data": "",
+    "school_availability_risk_data": ""
+  },
+  "params": {
+    "combine_method": "sum" // This is the method to combine heat, flood exposure and school availability risk data. The choice of this parameter depends on how these three factors are represented in your data (e.g., if they're all percentages or proportions).
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "vector|raster|png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["CRS of the input data"], // The CRS should be consistent across all three datasets.
+    "schema": [], // No specific schema requirements for this task.
+    "geometry": ["Polygons"], // Expected geometry type is Polygon or MultiPolygon.
+    "raster": [], // No specific raster requirements for this task.
+    "map_quality": [] // The quality of the map should be visually assessed by a human.
+  },
+  "rationale": "This task requires creating a choropleth map that communicates combined heat, flood exposure, and school availability risk."
+}

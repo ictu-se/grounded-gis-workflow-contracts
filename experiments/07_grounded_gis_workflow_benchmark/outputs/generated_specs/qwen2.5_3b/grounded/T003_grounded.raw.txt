@@ -1,0 +1,30 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary",
+    "distance_m": 1000,
+    "target_epsg": 4269,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [
+      {
+        "name": "the_geom",
+        "srs_id": 4269
+      }
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffering and dissolving the hospital points within the study boundary to create a 1 km coverage layer in Los Angeles County's coordinate system."
+}

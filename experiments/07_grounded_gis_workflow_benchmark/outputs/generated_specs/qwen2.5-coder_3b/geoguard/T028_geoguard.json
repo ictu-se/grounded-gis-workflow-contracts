@@ -1,0 +1,37 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": 5,
+    "scheme": "Sequential",
+    "cmap": "Blues",
+    "title": "Flood Exposure by Census Tract",
+    "legend_title": "Average Temperature (\u00b0C)",
+    "source_note": "Data from temperature_raster.tif"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": [
+      "tract_id",
+      "tract_name",
+      "land_area_m2",
+      "water_area_m2",
+      "temp_mean"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This operation creates a choropleth map of flood exposure area by census tract using the average temperature as the data source. The Sequential color ramp is used to visually represent the range of temperatures."
+}

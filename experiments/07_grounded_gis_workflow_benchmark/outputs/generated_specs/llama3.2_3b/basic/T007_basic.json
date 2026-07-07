@@ -1,0 +1,35 @@
+{
+  "task_id": "T007",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "census_tracts": "path/to/census/tracts.shp",
+    "flood_zones": "path/to/flood/zones.shp",
+    "output_filename": "T007_flood_tract_overlay_area.gpkg"
+  },
+  "params": {
+    "crs": "EPSG:4326",
+    "metric": true,
+    "required_fields": [
+      "tract_id",
+      "flood_area_m2"
+    ]
+  },
+  "output": {
+    "filename": "T007_flood_tract_overlay_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "short"
+}

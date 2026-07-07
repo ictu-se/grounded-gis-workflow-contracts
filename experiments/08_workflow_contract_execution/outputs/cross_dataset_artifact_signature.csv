@@ -1,0 +1,13 @@
+data_profile,task_type,contracts,valid_artifacts,valid_rate,median_rows_or_pixels_valid,mean_rows_or_pixels_valid
+geoguard,buffer_service_area,180,133,0.7389,116.0,91.8
+synthetic,buffer_service_area,180,133,0.7389,6.0,4.9
+geoguard,choropleth_export,180,142,0.7889,130511.0,148652.6
+synthetic,choropleth_export,180,142,0.7889,38558.0,38716.4
+geoguard,overlay_intersection,180,151,0.8389,1696.0,1631.2
+synthetic,overlay_intersection,180,151,0.8389,26.0,26.6
+geoguard,point_count_join,180,156,0.8667,2498.0,2272.6
+synthetic,point_count_join,180,156,0.8667,30.0,27.3
+geoguard,raster_clip,180,145,0.8056,44.0,67.7
+synthetic,raster_clip,180,145,0.8056,3000.0,3000.0
+geoguard,zonal_statistics,180,146,0.8111,2498.0,2020.5
+synthetic,zonal_statistics,180,146,0.8111,30.0,25.8

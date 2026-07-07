@@ -1,0 +1,36 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 32611,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      32611
+    ],
+    "schema": [
+      "name",
+      "area_m2"
+    ],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffering hospitals with a 1 km radius, clipping to Los Angeles County boundary, and calculating area in UTM zone 11N for accurate measurements."
+}

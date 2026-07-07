@@ -1,0 +1,18 @@
+{
+  "task_id": "T0static.getRandom(123);",
+  "operation": "random",
+  "inputs": {},
+  "params": {
+    "minValue": null,
+    "maxValue": null,
+    "count": 5
+  },
+  "output": {"filename": "...", "type": "array"},
+  "validation": {
+    "crs": [],
+    "schema": ["integer"],
+    "geometry": [],
+    "raster": []
+  },
+  "rationale": "Generates an array of five random integers between minValue and maxValue."
+}

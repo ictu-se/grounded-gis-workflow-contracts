@@ -1,0 +1,35 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "temp_mean", // Using mean temperature as a proxy for heat risk
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "YlOrRd", // Sequential color ramp suitable for heat risk
+    "title": "Tract-Level Multivariate Risk Map: Heat, Flood Exposure, and School Availability",
+    "legend_title": "Mean Temperature (°C)",
+    "source_note": "Data sources: Census Tracts, Temperature Raster, Flood Zones, School Points"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["buffer(0) if invalid"],
+    "raster": [],
+    "map_quality": [
+      "Readable borders",
+      "Sequential color ramp",
+      "Title and legend included"
+    ]
+  },
+  "rationale": "This map combines heat risk (mean temperature), flood exposure, and school availability to provide a comprehensive view of tract-level risks. The sequential color ramp YlOrRd is used for heat risk, with quantile classification to ensure meaningful differentiation across the range of temperatures."
+}
+```

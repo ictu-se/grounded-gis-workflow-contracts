@@ -1,0 +1,25 @@
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": [
+      { "min": -1, "max": 0, "color": "#ADD8E6" },
+      { "min": 0, "max": 10, "color": "#87CEEB" },
+      { "min": 11, "max": 20, "color": "#4682B4" }
+    ],
+    "scheme": "sequential",
+    "cmap": "Blues",
+    "title": "Mean Temperature by Census Tract",
+    "legend_title": "Temperature (°C)",
+    "source_note": "Source: National Centers for Environmental Information"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  }
+}

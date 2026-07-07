@@ -1,0 +1,28 @@
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "point_features": "hospital_points_los_angeles_county.shp",
+    "buffer_distance": 1000,
+    "clip_to_boundary": true
+  },
+  "params": {},
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name"
+    ]
+  },
+  "validation": {
+    "crs": "EPSG:4326",
+    "schema": [],
+    "geometry": [
+      "POLYGON",
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Creates 1000m service areas around hospital points in LA County and clips the result to the county boundary."
+}

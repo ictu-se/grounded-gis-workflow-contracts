@@ -1,0 +1,5 @@
+task_type,contracts,contract_compatible_rate,execution_success_rate,output_valid_rate,top_error
+buffer_service_area,5,0.6000,0.6000,0.6000,FileNotFoundError
+overlay_intersection,5,0.8000,0.8000,0.8000,FileNotFoundError
+point_count_join,5,0.8000,0.8000,0.8000,FileNotFoundError
+raster_clip,3,1.0000,1.0000,1.0000,

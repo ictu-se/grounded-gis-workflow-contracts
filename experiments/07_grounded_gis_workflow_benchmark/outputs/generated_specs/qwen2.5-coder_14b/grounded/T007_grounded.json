@@ -1,0 +1,33 @@
+{
+  "task_id": "T007",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts.gpkg",
+    "input_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "aggregate_by": "tract_id",
+    "area_field": "flood_area_m2"
+  },
+  "output": {
+    "filename": "T007_flood_tract_overlay_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4326
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersect census tracts with flood zones to calculate the flood area for each tract in a metric CRS."
+}

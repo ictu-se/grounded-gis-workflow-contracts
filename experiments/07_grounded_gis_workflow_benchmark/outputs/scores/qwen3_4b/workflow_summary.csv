@@ -1,0 +1,4 @@
+model,mode,JSON_VALID,TOOL_VALID,DATA_VALID,FIELD_VALID,CRS_PLAN,SCHEMA_PLAN,MAP_PLAN,OUTPUT_NAME,PHR,WPHR,PRS,tasks
+qwen3:4b,basic,0,0,0,0,0,0,0,0,1.0,1.0,0,30
+qwen3:4b,geoguard,0,0,0,0,0,0,0,0,1.0,1.0,0,30
+qwen3:4b,grounded,0,0,0,0,0,0,0,0,1.0,1.0,0,30

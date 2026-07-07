@@ -1,0 +1,36 @@
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 3857,
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "name",
+      "area_m2"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [
+      "name",
+      "area_m2"
+    ],
+    "geometry": [
+      "buffer(0)"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Buffer hospitals by 1 km, clip to study boundary, compute area in a projected CRS for accurate metric calculations."
+}

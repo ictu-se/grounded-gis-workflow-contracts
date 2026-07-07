@@ -1,0 +1,29 @@
+ {
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": ["Low", "Medium", "High"],
+    "scheme": "sequential",
+    "cmap": "viridis",
+    "title": "Combined Heat Risk",
+    "legend_title": "Heat Index (°C)",
+    "source_note": "Data from temperature_raster and zonal_input_for_map"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["title", "legend", "classification scheme", "sequential color ramp", "readable borders", "source note"]
+  },
+  "rationale": "Creating a tract-level heat risk map using temperature data from the zonal_input_for_map layer. The map will be visually appealing and informative, providing insights into combined heat risk across different areas."
+}

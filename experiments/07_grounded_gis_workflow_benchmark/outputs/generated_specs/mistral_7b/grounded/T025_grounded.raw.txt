@@ -1,0 +1,92 @@
+ {
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": ["mean"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_temperature.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": ["tract_id", "temp_mean"]
+  },
+  "rationale": "Calculate the mean temperature for each census tract."
+},
+{
+  "task_id": "T025",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "zonal_input_for_map",
+    "join": "school_points"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T025_school_count.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": ["tract_id", "school_count"]
+  },
+  "rationale": "Join the school points with the tract layer to count schools per tract."
+},
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "flood_zones"
+  },
+  "params": {
+    "stats": ["sum"],
+    "column_prefix": "flood_area_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_flood_area.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": ["tract_id", "flood_area_m2"]
+  },
+  "rationale": "Calculate the sum of flood areas for each census tract."
+},
+{
+  "task_id": "T025",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "zonal_input_for_map",
+    "input_b": "T025_temperature.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "aggregate_by": "tract_id",
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "T025_temperature_school.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": ["tract_id", "temp_mean", "school_count", "land_area_m2"]
+  },
+  "rationale": "Merge the temperature and school count layers with tract layer to get temp_mean, school_count, and land area per tract."
+},
+{
+  "task_id": "T025",
+  "

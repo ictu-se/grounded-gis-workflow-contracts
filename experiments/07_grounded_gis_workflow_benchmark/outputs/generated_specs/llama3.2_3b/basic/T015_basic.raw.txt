@@ -1,0 +1,48 @@
+{
+    "task_id": "T015",
+    "operation": "point_count_join",
+    "inputs": {
+        "census_tracts": {
+            "type": "vector",
+            "filename": "census_tracts.shp"
+        },
+        "schools": {
+            "type": "vector",
+            "filename": "schools.shp"
+        },
+        "hospitals": {
+            "type": "vector",
+            "filename": "hospitals.shp"
+        }
+    },
+    "params": {
+        "join_field": "tract_id",
+        "output_filename": "T015_school_hospital_counts.gpkg",
+        "required_fields": ["tract_id", "school_count", "hospital_count"]
+    },
+    "output": {
+        "type": "vector",
+        "filename": "T015_school_hospital_counts.gpkg"
+    },
+    "validation": {
+        "crs": "EPSG:4326",
+        "schema": [
+            {
+                "name": "tract_id",
+                "type": "integer"
+            },
+            {
+                "name": "school_count",
+                "type": "integer"
+            },
+            {
+                "name": "hospital_count",
+                "type": "integer"
+            }
+        ],
+        "geometry": [],
+        "raster": [],
+        "map_quality": []
+    },
+    "rationale": "Compute school and hospital counts for each census tract."
+}

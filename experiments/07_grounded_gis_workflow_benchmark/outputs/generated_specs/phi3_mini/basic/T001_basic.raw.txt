@@ -1,0 +1,23 @@
+```json
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {},
+  "params": {
+    "distance": "1000m",
+    "output_filename": "T001_buffer_hospitals.gpkg"
+  },
+  "output": {
+    "filename": "T0soft-buffered_service_area_around_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": [4326], // Assuming Los Angeles County's study boundary is in WGS84 coordinate reference system (World Geodetic System 1984)
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": []
+  },
+  "rationale": "To create a buffer of 1000 meters around all hospitals in Los Angeles County to analyze accessibility and service coverage within the county's boundary."
+}
+```

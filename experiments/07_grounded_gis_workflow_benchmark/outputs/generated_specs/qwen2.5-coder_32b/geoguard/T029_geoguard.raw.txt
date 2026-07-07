@@ -1,0 +1,57 @@
+{
+  "task_id": "T029",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts.gpkg",
+    "join": "hospital_points.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "group_field": "tract_id",
+    "count_field": "hospital_count",
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "census_tracts_with_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "hospital_count"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["buffer(0)"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Join hospital points to census tracts to count hospitals per tract."
+}
+
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "census_tracts_with_hospitals.gpkg"
+  },
+  "params": {
+    "field": "hospital_count",
+    "classes": 5,
+    "scheme": "quantile",
+    "cmap": "Blues",
+    "title": "Hospital Access by Census Tract",
+    "legend_title": "Number of Hospitals",
+    "source_note": "Data source: hospital_points.gpkg, census_tracts.gpkg"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["buffer(0)"],
+    "raster": [],
+    "map_quality": ["readable_borders", "sequential_color_ramp"]
+  },
+  "rationale": "Create a choropleth map showing hospital count per census tract with specified title, legend, and source note."
+}

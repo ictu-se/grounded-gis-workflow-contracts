@@ -1,0 +1,32 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "census_tracts.gpkg",
+    "input_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": 4269,
+    "aggregate_by": "",
+    "area_field": ""
+  },
+  "output": {
+    "filename": "T006_flood_tract_overlay.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id"
+    ]
+  },
+  "validation": {
+    "crs": [
+      4269
+    ],
+    "schema": [],
+    "geometry": [
+      "MultiPolygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersecting the LA County census tracts with flood zones to identify areas at risk."
+}

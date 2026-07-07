@@ -1,0 +1,1 @@
+{"task_id": "T028", "operation": "choropleth_export", "inputs": {"layer": "flood_zones"}, "params": {"field": "zone_code", "classes": "[0, 1, 2, 3]", "scheme": "sequential", "cmap": "viridis", "title": "Flood Exposure Area", "legend_title": "Zone Code", "source_note": ""}, "output": {"filename": "T028_flood_exposure_choropleth.png", "type": "png"}}

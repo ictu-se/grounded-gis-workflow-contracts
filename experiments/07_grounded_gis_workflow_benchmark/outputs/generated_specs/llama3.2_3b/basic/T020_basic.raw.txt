@@ -1,0 +1,27 @@
+{
+    "task_id": "T020",
+    "operation": "raster_clip",
+    "inputs": {
+        "input_raster": "temperature",
+        "study_boundary": "boundary"
+    },
+    "params": {
+        "output_filename": "T020_temperature_clip_metadata.tif",
+        "preserve_crs": true,
+        "transform": true,
+        "nodata": true
+    },
+    "output": {
+        "filename": "T020_temperature_clip_metadata.tif",
+        "type": "raster",
+        "required_fields": []
+    },
+    "validation": {
+        "crs": ["EPSG:4326"],
+        "schema": [],
+        "geometry": [],
+        "raster": ["temperature"],
+        "map_quality": []
+    },
+    "rationale": "short"
+}

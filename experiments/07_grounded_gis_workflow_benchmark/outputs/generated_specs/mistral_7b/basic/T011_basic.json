@@ -1,0 +1,35 @@
+{
+  "task_id": "T0101",
+  "operation": "point_count_join",
+  "inputs": {
+    "tract_polygons": "tracts.shp",
+    "school_points": "schools.shp"
+  },
+  "params": {
+    "join_field1": "GEOID",
+    "join_field2": "GEOID"
+  },
+  "output": {
+    "filename": "T011_school_count_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      [
+        "tract_id",
+        "string"
+      ],
+      [
+        "school_count",
+        "integer"
+      ]
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Count the number of schools within each census tract polygon."
+}

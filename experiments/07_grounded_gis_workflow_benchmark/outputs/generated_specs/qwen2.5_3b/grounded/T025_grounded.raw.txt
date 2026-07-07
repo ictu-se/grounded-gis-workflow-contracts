@@ -1,0 +1,33 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": ["mean", "count"],
+    "column_prefix": "temp_mean__",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean__mean",
+      "temp_mean__count",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": ["EPSG:4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      {"field": "temperature_raster", "type": "integer"}
+    ],
+    "map_quality": []
+  },
+  "rationale": "First, calculate the mean and count of temperature for each tract. Then, add a field for flood_area_m2 from the census_tracts layer."
+}

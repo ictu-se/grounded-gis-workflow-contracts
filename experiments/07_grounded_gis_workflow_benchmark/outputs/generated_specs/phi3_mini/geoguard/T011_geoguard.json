@@ -1,0 +1,31 @@
+{
+  "task_id": "T011",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "school_points.gpkg",
+    "join": "census_tracts.gpkg"
+  },
+  "params": {
+    "group_field": "tract_id",
+    "count_field": "school_id",
+    "predicate": "intersects",
+    "target_epsg": "4326",
+    "output_epsg": "4326"
+  },
+  "output": {
+    "filename": "T011_school_count_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "intersects"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To count the number of public schools within each census tract, intersect school points with tract polygons and join based on 'tract_id'."
+}

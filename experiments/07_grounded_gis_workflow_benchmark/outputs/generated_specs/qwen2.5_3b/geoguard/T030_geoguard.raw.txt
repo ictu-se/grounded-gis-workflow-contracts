@@ -1,0 +1,35 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "layer": "zonal_input_for_map",
+    "field": "temp_mean,temp_sum,tract_name",
+    "classes": [
+      {"class": -1, "label": "Very Low Risk"},
+      {"class": 0, "label": "Low Risk"},
+      {"class": 1, "label": "Moderate Risk"},
+      {"class": 2, "label": "High Risk"}
+    ],
+    "scheme": "Quantitative",
+    "cmap": "Reds",
+    "title": "Tract-Level Heat and Flood Exposure with School Availability Risk",
+    "legend_title": "Risk Level",
+    "source_note": "Data sources: temperature_raster, flood_zones, school_points"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["4269"],
+    "schema": [],
+    "geometry": [
+      {"rule": "buffer(0) if invalid geometry", "exception": "repair with buffer(0)"}
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map using tract-level data for temperature, flood exposure, and school availability risk. Use the census_tracts layer as the base for the map."
+}

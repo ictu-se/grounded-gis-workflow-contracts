@@ -1,0 +1,11 @@
+{
+  "task_id": "T021",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "output_filename": "T021_temperature_zonal_stats.gpkg",
+    "required_fields": "['tract_id', 'temp_mean', 'temp_sum']"
+  }
+}

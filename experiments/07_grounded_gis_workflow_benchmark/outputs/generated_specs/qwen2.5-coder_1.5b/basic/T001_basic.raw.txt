@@ -1,0 +1,20 @@
+```json
+{
+  "task_id": "T001",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals": "path/to/hospital_points.shp"
+  },
+  "params": {
+    "radius": 1000,
+    "study_boundary": "path/to/study_boundary.shp"
+  },
+  "output": {
+    "filename": "T001_buffer_hospitals.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {},
+  "rationale": "Create a service-area buffer around each hospital point in Los Angeles County and clip the result to the study boundary. The output is saved as a GeoPackage named T001_buffer_hospitals.gpkg with only the 'name' field."
+}
+```

@@ -1,0 +1,25 @@
+ {
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "vector_data": "schools_by_census_tract",
+    "style": {
+      "palette": "YlGnBu",
+      "classify": true,
+      "property": "density"
+    }
+  },
+  "params": {},
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["band_count=1"],
+    "map_quality": []
+  },
+  "rationale": "Creates a choropleth map of school density by census tract, using the YlGnBu color palette and classifying the data for clear visualization."
+}

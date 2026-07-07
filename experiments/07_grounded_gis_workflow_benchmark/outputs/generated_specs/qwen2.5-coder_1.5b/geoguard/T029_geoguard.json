@@ -1,0 +1,47 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "hospital_points": {
+      "file_path": "hospital_points.gpkg",
+      "geometry_column": "geom",
+      "crs": "EPSG:4326"
+    },
+    "census_tracts": {
+      "file_path": "census_tracts.gpkg",
+      "geometry_column": "geom",
+      "crs": "EPSG:4269"
+    }
+  },
+  "params": {
+    "field": "school_id",
+    "classes": [
+      1,
+      2,
+      3
+    ],
+    "scheme": "sequential",
+    "cmap": "viridis",
+    "title": "Hospital Access by Census Tract",
+    "legend_title": "Number of Schools",
+    "source_note": "Data from the Department of Education"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": [
+      "tract_id",
+      "school_id"
+    ]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This map will show the number of schools in each census tract, providing a visual representation of hospital access. The choropleth chart uses sequential colors to differentiate between different school counts, making it easy to identify areas with high or low hospital access."
+}

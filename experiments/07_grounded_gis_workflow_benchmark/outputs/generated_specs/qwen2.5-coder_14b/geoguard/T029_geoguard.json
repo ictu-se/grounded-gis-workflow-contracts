@@ -1,0 +1,35 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map.gpkg"
+  },
+  "params": {
+    "field": "hospital_count",
+    "classes": 5,
+    "scheme": "quantiles",
+    "cmap": "Blues",
+    "title": "Hospital Count per Census Tract",
+    "legend_title": "Number of Hospitals",
+    "source_note": "Data source: GeoGuard GIS Analysis"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "buffer(0) if invalid"
+    ],
+    "raster": [],
+    "map_quality": [
+      "title, legend, classification scheme, sequential color ramp, readable borders, and source note"
+    ]
+  },
+  "rationale": "Create a choropleth map showing the number of hospitals per census tract with appropriate styling and metadata."
+}

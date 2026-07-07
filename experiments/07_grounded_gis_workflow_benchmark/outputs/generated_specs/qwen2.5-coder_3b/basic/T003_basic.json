@@ -1,0 +1,29 @@
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "input_layer": "hospitals",
+    "output_layer": "T003_buffer_hospitals_dissolved.gpkg"
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "safe_metric": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Dissolves hospitals within a 1 km buffer to create a continuous coverage area."
+}

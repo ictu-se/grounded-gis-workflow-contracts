@@ -1,0 +1,32 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "layer": "school_points",
+    "field": "count(school_id)",
+    "classes": [
+      {"low": 1, "high": 5, "label": "Low Density"},
+      {"low": 6, "high": 10, "label": "Moderate"},
+      {"low": 11, "high": 20, "label": "High"}
+    ],
+    "scheme": "Quantiles",
+    "cmap": "Blues",
+    "title": "School Density by Census Tract",
+    "legend_title": "Number of Schools per Tract",
+    "source_note": "Data source: school_points.gpkg"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create a choropleth map of school density by census tract with specified parameters and save as PNG."
+}

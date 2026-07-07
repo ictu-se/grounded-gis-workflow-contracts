@@ -1,0 +1,34 @@
+```json
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "output": "T025_temperature_flood_school.gpkg",
+    "fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ]
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ]
+  },
+  "validation": {
+    "crs": null,
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Calculates zonal statistics (mean temperature, school count, and flood area) for each tract and saves the results to a new vector layer."
+}
+```

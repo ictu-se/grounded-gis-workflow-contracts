@@ -1,0 +1,44 @@
+```json
+{
+  "task_id": "T011",
+  "operation": "point_count_join",
+  "inputs": {},
+  "params": {
+    "target_features": "public_schools",
+    "join_feature": "census_tracts",
+    "output_filename": "T011_school_count_by_tract.gpkg",
+    "output_fields": [
+      "tract_id",
+      "school_count"
+    ]
+  },
+  "output": {
+    "filename": "T011_school_count_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "school_count"
+    ]
+  },
+  "validation": {
+    "crs": [],
+    "schema": [
+      {
+        "name": "tract_id",
+        "type": "int",
+        "spatial": "polygon"
+      },
+      {
+        "name": "school_count",
+        "type": "int"
+      }
+    ],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves joining public school points to census tracts and counting the number of schools within each tract, saving the results as a vector file."
+}
+```

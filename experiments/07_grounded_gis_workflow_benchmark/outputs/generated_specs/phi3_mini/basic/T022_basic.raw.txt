@@ -1,0 +1,24 @@
+```json
+{
+  "task_id": "T022",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "data_source": "temperature_dataset.tif", // Assuming the temperature data is in a raster format and stored as TIFF file named 'temperature_dataset.tif' within an accessible directory or S3 bucket path
+  },
+  "params": {
+    "statistic": "mean"
+  },
+  "output": {
+    "filename": "T022_temperature_mean_by_tract.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean"]
+  },
+  "validation": {
+    "crs": [4326], // Assuming the Census tracts are in WGS84 coordinate reference system (EPSG:4326) and need to be aligned with this CRS for analysis purposes
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": []
+  },
+  "rationale": "To compute the mean temperature per census tract, aligning data in WGS84 ensures compatibility with most GIS software and facilitates accurate zonal statistics computation."
+}
+```

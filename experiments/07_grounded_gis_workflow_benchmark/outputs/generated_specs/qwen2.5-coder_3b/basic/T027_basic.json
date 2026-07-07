@@ -1,0 +1,19 @@
+{
+  "task_id": "T027",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data_source": "census_tract_school_data.csv",
+    "variable_name": "school_density",
+    "color_scheme": "viridis"
+  },
+  "params": {
+    "title": "School Density by Census Tract",
+    "legend_title": "School Density (per capita)"
+  },
+  "output": {
+    "filename": "T027_school_density_choropleth.png",
+    "type": "png"
+  },
+  "validation": {},
+  "rationale": "This task involves creating a choropleth map to visualize school density across census tracts. The data is sourced from a CSV file, and the color scheme used is 'viridis' for visual appeal."
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "T018",
+  "operation": "raster_clip",
+  "inputs": {
+    "input_raster": "temperature_raster.tif",
+    "study_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "output_filename": "T018_temperature_clip_boundary_crs.tif",
+    "reproject_to_crs": true
+  },
+  "output": {
+    "filename": "T018_temperature_clip_boundary_crs.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": ["temperature_raster.tif", "study_boundary.gpkg"],
+    "map_quality": []
+  },
+  "rationale": "Clip temperature_raster.tif using study_boundary.gpkg. Reproject the boundary to the raster CRS before masking and save T018_temperature_clip_boundary_crs.tif."

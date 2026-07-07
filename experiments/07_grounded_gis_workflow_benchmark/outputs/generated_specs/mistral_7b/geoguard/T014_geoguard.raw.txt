@@ -1,0 +1,26 @@
+ {
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": "school_points"
+  },
+  "params": {
+    "target_epsg": "4326",
+    "group_field": "tract_id",
+    "count_field": "school_count",
+    "predicate": "intersects(geometry, geometry)"
+  },
+  "output": {
+    "filename": "T014_tracts_with_schools.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": ["4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Perform a point count join between census tracts and schools to create a new layer with school counts for each tract. Filters out tracts without any schools."
+}

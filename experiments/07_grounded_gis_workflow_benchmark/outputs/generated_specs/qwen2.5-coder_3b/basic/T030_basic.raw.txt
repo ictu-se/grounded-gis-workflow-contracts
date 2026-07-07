@@ -1,0 +1,32 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    // Input data sources for heat, flood exposure, and school availability risk
+    "heat_risk_data": "...",
+    "flood_exposure_data": "...",
+    "school_availability_data": "..."
+  },
+  "params": {
+    // Parameters for choropleth mapping
+    "color_scheme": "sequential", // Example color scheme
+    "legend_title": "Risk Levels",
+    "legend_labels": ["Low", "Medium", "High"]
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    // Validation criteria for the map
+    "crs": ["EPSG:4326"], // Ensure the CRS is correct
+    "schema": [], // No specific schema required for this task
+    "geometry": [], // No specific geometry validation needed
+    "raster": [], // No raster-specific validation needed
+    "map_quality": ["high"] // High quality map expected
+  },
+  "rationale": "This map combines heat, flood exposure, and school availability risk at the tract level to provide a comprehensive view of potential hazards."
+}
+```

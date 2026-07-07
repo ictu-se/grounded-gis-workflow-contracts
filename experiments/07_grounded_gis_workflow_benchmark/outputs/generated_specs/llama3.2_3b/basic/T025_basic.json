@@ -1,0 +1,25 @@
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {},
+  "params": {
+    "output_fields": [
+      "tract_id",
+      "temp_mean",
+      "school_count",
+      "flood_area_m2"
+    ]
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "short"
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": [
+      "flood_zones"
+    ],
+    "zonal_statistics": [
+      {
+        "polygons": "census_tracts",
+        "raster": "temperature_raster"
+      }
+    ]
+  },
+  "params": {
+    "field": "temp_mean",
+    "classes": [
+      "Low Exposure",
+      "Medium Exposure",
+      "High Exposure"
+    ],
+    "scheme": "sequential",
+    "cmap": "Blues",
+    "title": "Flood Exposure by Census Tracts",
+    "legend_title": "Average Temperature and Flood Zone Classification",
+    "source_note": "This map shows the average temperature within census tracts overlaid with flood zone classifications based on exposure risk."
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      {
+        "required": true,
+        "field": "boundary"
+      },
+      {
+        "required": false,
+        "field": "school_id"
+      }
+    ],
+    "raster": []
+  },
+  "rationale": "To create a choropleth map that visualizes the flood exposure risk by census tracts using temperature data as an indicator of potential water presence and overlaying it with existing flood zone classifications, we first need to calculate zonal statistics for each tract. This involves buffering or clipping services if necessary due to CRS mismatches between datasets."
+}

@@ -1,0 +1,10 @@
+# Execution Readiness by Family
+
+|task_family|basic_ready_rate|basic_ready_count|grounded_ready_rate|grounded_ready_count|geoguard_ready_rate|geoguard_ready_count|
+|---|---|---|---|---|---|---|
+|Buffer|0.000|0|0.183|11|0.617|37|
+|Choropleth|0.000|0|0.283|17|0.350|21|
+|Overlay|0.000|0|0.000|0|0.033|2|
+|Point-count|0.000|0|0.317|19|0.317|19|
+|Raster|0.100|6|0.667|40|0.700|42|
+|Zonal|0.000|0|0.167|10|0.167|10|

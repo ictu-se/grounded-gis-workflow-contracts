@@ -1,0 +1,33 @@
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "layer1": {
+      "filename": "census_tracts.gpkg",
+      "required_fields": [
+        "tract_id"
+      ]
+    },
+    "layer2": {
+      "filename": "flood_zones.gpkg",
+      "required_fields": [
+        "sfha_tf"
+      ]
+    }
+  },
+  "params": {},
+  "output": {
+    "filename": "T008_sfha_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [
+      "polygon"
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Intersecting census tracts with flood zones to identify areas within SFHA, preserving tract_id and sfha_tf fields."
+}

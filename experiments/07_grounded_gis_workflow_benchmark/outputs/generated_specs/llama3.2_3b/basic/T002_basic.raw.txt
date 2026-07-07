@@ -1,0 +1,1 @@
+{"task_id": "T002", "operation": "buffer_service_area", "inputs": {}, "params": {"distance": 2500, "crs": "EPSG:4326"}, "output": {"filename": "T002_buffer_hospitals_2500m.gpkg", "type": "vector", "required_fields": ["name"]}}

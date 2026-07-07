@@ -1,0 +1,34 @@
+```json
+{
+  "task_id": "T025",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "census_tracts",
+    "raster": "temperature_raster"
+  },
+  "params": {
+    "stats": ["mean", "count", "area"],
+    "column_prefix": "",
+    "align_polygons_to_raster_crs": true,
+    "target_epsg": 3857
+  },
+  "output": {
+    "filename": "T025_temperature_flood_school.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean", "school_count", "flood_area_m2"]
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269",
+      "EPSG:3857"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "EPSG:4326"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Calculate temperature statistics (mean, sum, area) and school count for each census tract using zonal statistics based on the temperature raster. The output will be a vector layer with the requested fields."
+}
+```

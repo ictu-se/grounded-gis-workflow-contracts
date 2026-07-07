@@ -1,0 +1,32 @@
+{
+  "task_id": "T012",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "study_boundary.gpkg",
+    "join": "hospital_points.gpkg"
+  },
+  "params": {
+    "target_epsg": "4269",
+    "group_field": "tract_id",
+    "count_field": "source_id",
+    "predicate": "intersects"
+  },
+  "output": {
+    "filename": "T012_hospital_count_by_tract.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      [
+        "source_id"
+      ]
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "To count the number of hospitals within each census tract, intersect hospital points with study boundaries and join based on 'tract_id'."
+}

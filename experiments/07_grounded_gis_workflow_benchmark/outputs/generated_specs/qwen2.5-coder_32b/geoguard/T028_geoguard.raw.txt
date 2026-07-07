@@ -1,0 +1,79 @@
+{
+  "task_id": "T028",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "input_a": "flood_zones.gpkg",
+    "input_b": "census_tracts.gpkg"
+  },
+  "params": {
+    "target_epsg": 4326,
+    "aggregate_by": ["tract_id", "tract_name"],
+    "area_field": "land_area_m2"
+  },
+  "output": {
+    "filename": "flood_exposure_census_tracts.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["buffer(0)"]
+  },
+  "rationale": "First, we need to intersect the flood zones with census tracts to calculate the exposure area by tract."
+}
+
+{
+  "task_id": "T028",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "polygons": "flood_exposure_census_tracts.gpkg",
+    "raster": "temperature_raster.tif"
+  },
+  "params": {
+    "stats": ["sum"],
+    "column_prefix": "temp_",
+    "align_polygons_to_raster_crs": true
+  },
+  "output": {
+    "filename": "flood_exposure_with_temp.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["buffer(0)"]
+  },
+  "rationale": "Next, we calculate the temperature statistics for each flood-exposed census tract."
+}
+
+{
+  "task_id": "T028",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "flood_exposure_with_temp.gpkg"
+  },
+  "params": {
+    "field": "temp_sum",
+    "classes": 5,
+    "scheme": "quantile",
+    "cmap": "Blues",
+    "title": "Flood Exposure Area by Census Tract with Temperature Sum",
+    "legend_title": "Temperature Sum (°C)",
+    "source_note": "Data source: GeoGuard"
+  },
+  "output": {
+    "filename": "T028_flood_exposure_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": ["readable_borders", "sequential_color_ramp"]
+  },
+  "rationale": "Finally, we create a choropleth map of flood exposure area by census tract with temperature sum using a sequential color ramp."
+}

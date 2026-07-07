@@ -1,0 +1,33 @@
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {
+    "data": {
+      "type": "vector",
+      "source": "hospital_data",
+      "fields": ["NAME", "COUNT"]
+    },
+    "map_settings": {
+      "title": "Hospital Count per Census Tract",
+      "legend": true,
+      "border_color": "#000",
+      "border_width": 1
+    }
+  },
+  "params": {
+    "output_filename": "T029_hospital_access_choropleth.png"
+  },
+  "output": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Short"
+}

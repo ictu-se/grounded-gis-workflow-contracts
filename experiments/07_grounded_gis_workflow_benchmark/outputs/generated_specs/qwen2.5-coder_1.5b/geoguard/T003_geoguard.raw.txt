@@ -1,0 +1,28 @@
+```json
+{
+  "task_id": "T003",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points.gpkg",
+    "clip_boundary": "study_boundary.gpkg"
+  },
+  "params": {
+    "distance_m": 1000,
+    "target_epsg": 3857,
+    "dissolve": true
+  },
+  "output": {
+    "filename": "T003_buffer_hospitals_dissolved.gpkg",
+    "type": "vector",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": ["EPSG:4326", "EPSG:3857"],
+    "schema": [],
+    "geometry": ["Point"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves creating a dissolved 1 km hospital coverage layer for Los Angeles County. The input data includes hospital points and study boundary, which are then buffered to create a service area. The output is saved as T003_buffer_hospitals_dissolved.gpkg, preserving the required fields."
+}
+```

@@ -1,0 +1,25 @@
+```json
+{
+  "task_id": "T024",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "temperature_data": ".../path_to_temperature_raster.tif",
+    "school_boundaries": ".../path_to_schools_vector.gpkg"
+  },
+  "params": {
+    "statistics": ["mean"],
+    "fields": ["temp"]
+  },
+  "output": {
+    "filename": "T024_temperature_school_join.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [3857], // Assuming the data is in Web Mercator projection, which needs to be reprojected for accurate zonal statistics if not already using it
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": []
+  },
+  "rationale": "To calculate mean temperature and count of schools within each tract area."
+}
+```

@@ -1,0 +1,36 @@
+{
+  "task_id": "T014",
+  "operation": "point_count_join",
+  "inputs": {
+    "tracts": "tracts.shp",
+    "schools": "schools.shp"
+  },
+  "params": {
+    "field_tract_id_tracts": "tract_id",
+    "field_tract_id_output": "tract_id",
+    "field_school_count": "school_count"
+  },
+  "output": {
+    "filename": "T014_tracts_with_schools.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [
+      [
+        "tract_id",
+        "integer"
+      ],
+      [
+        "school_count",
+        "integer"
+      ]
+    ],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Join schools data to tracts data, keeping only tracts with at least one school by filtering on non-zero school counts."
+}

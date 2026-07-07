@@ -1,0 +1,30 @@
+{
+  "task_id": "T01 end of the task description. Please provide a complete JSON object based on this instruction.",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": "flood_zones: flood_zones.gpkg",
+    "source_b": "study_boundary: study_boundary.gpkg"
+  },
+  "params": {
+    "target_epsg": "4269",
+    "aggregate_by": null,
+    "area_field": null
+  },
+  "output": {
+    "filename": "T01_high_flood_tracts.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4269"
+    ],
+    "schema": [],
+    "geometry": [
+      [
+        "MultiPolygon"
+      ]
+    ],
+    "raster": []
+  },
+  "rationale": "The overlay_intersection operation is used to identify tracts within the study boundary that intersect with flood zones, which indicates potential high-flood exposure areas. The output will be a vector layer containing only these identified tracts."
+}

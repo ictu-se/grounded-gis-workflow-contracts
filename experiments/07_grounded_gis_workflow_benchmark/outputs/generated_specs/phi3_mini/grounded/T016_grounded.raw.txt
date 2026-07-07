@@ -1,0 +1,23 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "temperature_raster": "file:///path/to/temperature_raster.tif",
+    "mask": "file:///path/to/study_boundary.gpkg"
+  },
+  "params": {
+    "align_mask_to extraneous information is omitted for brevity and simplicity.",
+    "nodata": -9999 // Assuming this value represents no-data in the temperature raster, adjust as necessary based on actual data specifications.
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster"
+  },
+  "validation": {
+    "crs": ["EPSG:4326"], // Input and output CRS for the temperature raster must match, as specified in task details.
+    "schema": [],
+    "geometry": [{"source_id": null, "name": null}], // No specific geometry validation required since input is a raster file with predefined extent within Los Angeles County boundary.
+    "raster": ["temperature"]
+  },
+  "rationale": "Clipping the temperature data to match the study area reduces processing time and memory usage, providing relevant information for analysis."
+}

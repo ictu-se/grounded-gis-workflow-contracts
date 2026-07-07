@@ -1,0 +1,25 @@
+{
+  "task_id": "T021",
+  "operation": "zonal_statistics",
+  "inputs": {
+    "temperature_raster": "temperature_raster.tif",
+    "census_tracts_vector": "path_to_census_tracts_vector.gpkg"
+  },
+  "params": {
+    "stats": ["mean", "sum"],
+    "prefix": "temp_"
+  },
+  "output": {
+    "filename": "T021_temperature_zonal_stats.gpkg",
+    "type": "vector",
+    "required_fields": ["tract_id", "temp_mean", "temp_sum"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": ["Polygon"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Compute mean and sum temperature for each census tract using the provided raster data and save the results in a GeoPackage file."
+}

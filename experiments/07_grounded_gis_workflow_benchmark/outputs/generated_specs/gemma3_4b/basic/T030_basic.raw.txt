@@ -1,0 +1,39 @@
+```json
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "output_filename": "T030_multivariate_risk_map.png",
+    "raster_layer_name": "tract",
+    "color_scheme": "viridis",
+    "legend_title": "Risk Level",
+    "scale_break_values": [
+      0,
+      10,
+      25,
+      50,
+      100
+    ],
+    "crs": "EPSG:4326",
+    "map_quality": "high"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "tract"
+    ],
+    "raster": [],
+    "map_quality": "high"
+  },
+  "rationale": "This task generates a choropleth map visualizing combined heat, flood exposure, and school availability risk at the tract level. The 'viridis' color scheme is chosen for its perceptual uniformity and suitability for representing multi-dimensional data. Scale breaks are defined to clearly delineate risk levels."
+}
+```

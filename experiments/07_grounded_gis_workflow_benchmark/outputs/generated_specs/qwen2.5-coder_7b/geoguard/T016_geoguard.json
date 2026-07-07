@@ -1,0 +1,29 @@
+{
+  "task_id": "T016",
+  "operation": "raster_clip",
+  "inputs": {
+    "raster": "temperature_raster.tif",
+    "mask": "study_boundary.gpkg|boundary_id=Los_Angeles_County"
+  },
+  "params": {
+    "align_mask_to_raster_crs": true,
+    "nodata": -9999
+  },
+  "output": {
+    "filename": "T016_temperature_clip.tif",
+    "type": "raster",
+    "required_fields": []
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [],
+    "raster": [
+      "align_mask_to_raster_crs"
+    ],
+    "map_quality": []
+  },
+  "rationale": "Clip the temperature raster to the Los Angeles County study boundary and save T016_temperature_clip.tif."
+}

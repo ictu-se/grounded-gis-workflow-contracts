@@ -1,0 +1,30 @@
+```json
+{
+  "task_id": "T026",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "data_source": "mean_temperature_by_census_tract.csv", // Assuming this CSV file contains the necessary temperature data by census tract and is in a compatible format for GIS processing tools like QGIS or ArcGIS Pro
+    "output_filename": "T026_temperature_choropleth.png",
+    "color_scheme": {
+      "type": "sequential blue"
+    },
+    "title": "Mean Temperature by Census Tract",
+    "legend": true, // Indicates that a legend should be included in the output PNG file for interpretation of temperature ranges
+    "source_note": "Data sourced from National Weather Service"
+  },
+  "output": {
+    "filename": "T026_temperature_choropleth.png",
+    "type": "raster", // Choropleth maps are typically raster images to represent data density or intensity with color shading
+    "required_fields": ["census tract ID"] // Assuming this field is necessary for the GIS tool being used and present in the input CSV file
+  },
+  "validation": {
+    "crs": [4326], // WGS84 coordinate reference system, commonly used for mapping applications
+    "schema": ["integer", "string"], // Expected data types of fields within 'mean_temperature_by_census_tract.csv' (assuming integer temperatures and string census tract IDs)
+    "geometry": true, // Indicates that the input CSV file contains valid geometry for each census tract or can be geocoded to create it
+    "raster": false, // As we are creating a raster image from vector data based on temperature values
+    "map_quality": ["high"] // Assuming high-resolution output is required and appropriate settings have been configured in the GIS software
+  },
+  "rationale": "To visually represent mean temperatures across census tracts, enhancing interpretability of climate patterns within a region."
+}
+```

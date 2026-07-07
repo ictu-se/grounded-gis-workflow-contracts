@@ -1,0 +1,32 @@
+```json
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {},
+  "params": {
+    "output_filename": "T015_school_hospital_counts.gpkg",
+    "output_fields": [
+      "tract_id",
+      "school_count",
+      "hospital_count"
+    ]
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "school_count",
+      "hospital_count"
+    ]
+  },
+  "validation": {
+    "crs": null,
+    "schema": [],
+    "geometry": ["POINT"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Compute school and hospital counts for each census tract using a point count join operation and save the results to a GeoPackage file."
+}
+```

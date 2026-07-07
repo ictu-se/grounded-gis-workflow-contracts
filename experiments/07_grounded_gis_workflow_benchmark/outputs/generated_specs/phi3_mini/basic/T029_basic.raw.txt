@@ -1,0 +1,19 @@
+```json
+{
+  "task_id": "T029",
+  "operation": "choropleth_export",
+  "inputs": {},
+  "params": {
+    "filename": "T029_hospital_access_choropleth.png",
+    "type": "raster",
+    "required_fields": ["title", "legend", "borders"],
+    "validation": {
+      "crs": ["WGS84"],
+      "schema": [],
+      "geometry": ["polygon"],
+      "map_quality": ["high resolution"]
+    },
+    "rationale": "To visualize the distribution of hospitals across census tracts, providing a clear and detailed map for healthcare access analysis."
+  }
+}
+```

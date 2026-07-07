@@ -1,0 +1,7 @@
+{
+  "task_id": "T008",
+  "operation": "overlay_intersection",
+ "inputs": {
+    "census_tracts": {"type": "vector", "required": true},
+    "flood_zones": {"type": "vector", "required": true}
+  },"

@@ -1,0 +1,34 @@
+```json
+{
+  "task_id": "T005",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "hospitals": {
+      "type": "vector",
+      "crs": "EPSG:4326",
+      "fields": ["name"]
+    },
+    "los_angeles_county": {
+      "type": "polygon",
+      "crs": "EPSG:4326"
+    }
+  },
+  "params": {
+    "buffer_distance": 1000,
+    "output_crs": "EPSG:3857"
+  },
+  "output": {
+    "filename": "T005_buffer_hospitals_area.gpkg",
+    "type": "vector",
+    "required_fields": ["name", "area_m2"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326", "EPSG:3857"],
+    "schema": [],
+    "geometry": ["buffered polygons"],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create hospital buffers, clip to LA County, compute area in projected CRS, save as GPKG."
+}
+```

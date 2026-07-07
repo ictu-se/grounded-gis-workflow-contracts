@@ -1,0 +1,28 @@
+```json
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "input_layer": "T001_hospitals.shp", // Assuming T001_hospitals is the input layer containing hospital data
+    "radius": 2500,
+    "crs": "EPSG:4326" // Using WGS84 for metric distance
+  },
+  "params": {
+    "output_filename": "T002_buffer_hospitals_2500m.gpkg",
+    "output_fields": ["name"]
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": ["EPSG:4326"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "This task involves creating a buffer service area for hospitals in a metric CRS, clipping the result to the county boundary, and saving the output as a GeoPackage file. The required fields are 'name' from the input layer."
+}
+```

@@ -1,0 +1,24 @@
+{
+  "task_id": "T030",
+  "operation": "choropleth_export",
+  "inputs": {
+    "layer": "zonal_input_for_map"
+  },
+  "params": {
+    "field": "temp_mean", // temperature mean value
+    "classes": [
+      { "class": 0, "label": "Low Risk" },
+      { "class": 1, "label": "Moderate Risk" },
+      { "class": 2, "label": "High Risk" }
+    ],
+    "scheme": "quantiles", // use quantile scheme
+    "cmap": "viridis", // use viridis colormap
+    "title": "Multivariate Risk Map",
+    "legend_title": "Risk Level",
+    "source_note": "Generated using GIS copilot planner"
+  },
+  "output": {
+    "filename": "T030_multivariate_risk_map.png",
+    "type": "png"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "task_id": "T006",
+  "operation": "overlay_intersection",
+  "inputs": {
+    "source_a": "study_boundary.gpkg",
+    "source_b": "flood_zones.gpkg"
+  },
+  "params": {
+    "target_epsg": "4326",
+    "aggregate_by": null,
+    "area_field": null
+  },
+  "output": {
+    "filename": "T0static/flood_tract_overlay.gpkg",
+    "type": "vector"
+  },
+  "validation": {
+    "crs": [
+      "EPSG:4326"
+    ],
+    "schema": [],
+    "geometry": [
+      "Polygon"
+    ],
+    "raster": []
+  },
+  "rationale": "To identify the extent of Los Angeles County census tracts that intersect with flood zones for emergency planning purposes."
+}

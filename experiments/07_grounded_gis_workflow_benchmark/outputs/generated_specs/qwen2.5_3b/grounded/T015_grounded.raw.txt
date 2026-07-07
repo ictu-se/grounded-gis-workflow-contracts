@@ -1,0 +1,31 @@
+{
+  "task_id": "T015",
+  "operation": "point_count_join",
+  "inputs": {
+    "target": "census_tracts",
+    "join": ["school_points", "hospital_points"]
+  },
+  "params": {
+    "target_epsg": 4269,
+    "group_field": ["tract_id"],
+    "count_field": ["school_count", "hospital_count"],
+    "predicate": ["school_points.school_id IS NOT NULL AND hospital_points.source_id IS NOT NULL"]
+  },
+  "output": {
+    "filename": "T015_school_hospital_counts.gpkg",
+    "type": "vector",
+    "required_fields": [
+      "tract_id",
+      "school_count",
+      "hospital_count"
+    ]
+  },
+  "validation": {
+    "crs": ["4269"],
+    "schema": [],
+    "geometry": [],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "First, join census_tracts with school_points and hospital_points based on tract_id. Then count the number of schools and hospitals in each tract."
+}

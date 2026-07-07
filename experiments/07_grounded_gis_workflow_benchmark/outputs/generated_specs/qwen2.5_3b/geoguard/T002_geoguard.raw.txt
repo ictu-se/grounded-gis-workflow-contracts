@@ -1,0 +1,31 @@
+{
+  "task_id": "T002",
+  "operation": "buffer_service_area",
+  "inputs": {
+    "source": "hospital_points",
+    "clip_boundary": "study_boundary"
+  },
+  "params": {
+    "distance_m": 2500,
+    "target_epsg": "EPSG:4269",
+    "dissolve": false
+  },
+  "output": {
+    "filename": "T002_buffer_hospitals_2500m.gpkg",
+    "type": "vector",
+    "required_fields": ["name"]
+  },
+  "validation": {
+    "crs": [
+      {"field": "study_boundary", "expected_crs": "EPSG:4269"},
+      {"field": "hospital_points", "expected_crs": "EPSG:4326"}
+    ],
+    "schema": [],
+    "geometry": [
+      {"operation": "buffer(0)", "fields": ["name"], "reason": "Repair invalid geometries if any exist."}
+    ],
+    "raster": [],
+    "map_quality": []
+  },
+  "rationale": "Create buffer areas for hospitals within 2500 meters, clip to county boundary, and ensure all required fields are preserved."
+}
